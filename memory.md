@@ -2,6 +2,7 @@
 
 ## المستخدم
 - الاسم: —
+- جيثب: mohamed-elmoge
 - اللغة: العربية (رئيسية)
 - الاهتمامات: أمن سيبراني، برمجة
 
@@ -12,5 +13,6 @@
 - OS: Windows
 - تحديث الذاكرة: تلقائي في نهاية كل رد
 
-## ملاحظات
-- الذاكرة في: C:\Users\MOHAMM~1\AppData\Local\Temp\opencode\memory.md
+## مسارات
+- ملف الذاكرة المحلي: C:\Users\Mohammed Elmouge\opencode-memory\memory.md
+- GitHub: https://github.com/mohamed-elmoge/opencode-memory
