@@ -15,4 +15,4 @@
 
 ## مسارات
 - ملف الذاكرة المحلي: C:\Users\Mohammed Elmouge\opencode-memory\memory.md
-- GitHub: https://github.com/mohamed-elmoge/opencode-memory
+- GitHub: https://github.com/jminoktit/opencode-memory
