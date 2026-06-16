@@ -1,0 +1,315 @@
+{
+  "projects": {
+    "C:\\": {
+      "name": "General (C:\\)",
+      "topics": {
+        "session-naming": {
+          "keywords": ["session", "title", "memory", "directory", "مسار", "جلسة", "حفظ"],
+          "entries": [
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "طلب تحسين حفظ الذاكرة بإضافة المسار (directory) لكل جلسة",
+              "details": "المستخدم طلب إن كل entry في الذاكرة يضم المسار اللي كانت شغالة فيه (directory). بدل ما المشروع بس، نعرف إحنا كنا فين بالضبط. تم إضافة حقل directory لكل entry.",
+              "session_id": "ses_12d4afab9ffe2o2MyTraE1z2mT"
+            }
+          ]
+        },
+        "memory-system": {
+          "keywords": ["ذاكرة", "memory", "memory system", "نظام ذاكرة", "instructions", "تعليمات", "plugin", "opencode-memory", "persistent", "SQLite"],
+          "entries": [
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "بناء نظام ذاكرة دائم لـ opencode - من plugin لداتا بيز متكاملة",
+              "details": "بعد مناقشة حدود Aider وعدم حفظه للجلسات، المستخدم طلب build نظام ذاكرة دائم. المسار: 1) plugin اسمه opencode-memory بيقرا SQLite بتاعة opencode ويحط past sessions في system提示. 2) طلب تحسين للنظام يبقى متأصل مش plugin. 3) اتعمل instructions file في ~/.config/opencode/instructions/memory.md بيتحمل في كل session. 4) اتعملت داتا بيز organized by project → topic → entries في ~/.local/share/opencode/opencode-memory.json. 5) اتضاف memory_search tool في plugin. 6) اتضاف directory field لكل entry عشان يعرف المسار اللي كانت شغالة فيه.",
+              "decisions": ["ذاكرة دائمة في JSON file مش SQLite (أسهل للقراءة/التحرير)", "topic extraction من عنوان الجلسة تلقائي", "directory field لكل entry"],
+              "session_id": "ses_12d53c276ffe7ImTUiGJAUhmBC",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_ما-هو-Aider-ونظام-الذاكرة.json"
+            }
+          ]
+        },
+        "opencode-exploration": {
+          "keywords": ["opencode", "aider", "ai", "cli", "tool", "pair programming"],
+          "entries": [
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "سأل عن Aider - أداة AI برمجة زوجية عبر CLI",
+              "details": "Aider هي أداة AI برمجة زوجية تشتغل من terminal. بتستخدم LLM. بتشتغل مع ChatGPT, Claude, وغيرهم. بتاخد سياق الكود وتعمل تغييرات مباشرة. اتكلمنا عن مميزاتها (CLI-first, multi-model, git-native, repo map, open source) وعن حدودها (context window, output tokens, repo map size). وعن إنها مش بتحفظ الجلسات.",
+              "session_id": "ses_12d53c276ffe7ImTUiGJAUhmBC"
+            },
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "استكشاف هيكل opencode بالكامل - Rust binary مع SQLite database",
+              "details": "opencode عبارة عن Rust binary (~153MB) مثبت في AppData/Roaming/npm. عنده SQLite database في .local/share/opencode/opencode.db بجداول session, message, part. عنده plugin API و SDK client. بيستخدم event bus architecture. الملفات بتتخزن في storage/session_diff. وعنده memory feature في opencode-memory/memory.md.",
+              "session_id": "ses_12d4afab9ffe2o2MyTraE1z2mT"
+            }
+          ]
+        },
+        "stats-math": {
+          "keywords": ["statistics", "math", "sample variance", "binomial", "distribution", "classes", "data"],
+          "entries": [
+            {
+              "date": "2026-06-04",
+              "directory": "C:\\",
+              "summary": "سأل عن تعريف sample variance - تباين العينة",
+              "details": "Sample variance = s² = Σ(xi - x̄)² / (n-1). مقسوم على n-1 مش n عشان unbiased estimator.",
+              "session_id": "ses_16e3fe3cbffeZLTuzZXpD2EtFy"
+            },
+            {
+              "date": "2026-06-03",
+              "directory": "C:\\",
+              "summary": "Mean of binomial distribution = n*p",
+              "details": "Mean of binomial = n*p, where n = number of trials, p = probability of success. Variance = n*p*q.",
+              "session_id": "ses_1720e4a4effe1AkbAEFNBaD0ZU"
+            },
+            {
+              "date": "2026-06-02",
+              "directory": "C:\\",
+              "summary": "More classes as data size increases",
+              "details": "Prefer more classes as dataset grows for better granularity.",
+              "session_id": "ses_1677af27affekgZxnEMLO9t3fA"
+            }
+          ]
+        },
+        "general-tech": {
+          "keywords": ["storage controller", "sms card", "laptop", "hardware", "دخل ثابت", "passive income"],
+          "entries": [
+            {
+              "date": "2026-06-16",
+              "directory": "C:\\",
+              "summary": "سأل عن storage controller - جهاز تحكم بالتخزين في الكمبيوتر",
+              "details": "Storage controller هو جهاز أو software بيدير التخزين في الكمبيوتر (SSD, HDD). بيتحكم في قراءة وكتابة البيانات. أنواع: SATA Controller, NVMe Controller, RAID Controller.",
+              "session_id": "ses_132d621f6ffeaXZl7aYUlI2crj"
+            },
+            {
+              "date": "2026-06-16",
+              "directory": "C:\\",
+              "summary": "سأل عن تشغيل SMS card في اللابتوب - بطاقة اتصالات في بوردة اللابتوب",
+              "details": "SMS card (WWAN card) في اللابتوب عشان يدخل شريحة اتصال. محتاج antenna, drivers من الشركة, و SIM card. غالباً في فتحة مخصصة جنب WiFi card.",
+              "session_id": "ses_133acce4dffePMAxQ7fhVbMoi7"
+            },
+            {
+              "date": "2026-06-16",
+              "directory": "C:\\",
+              "summary": "سأل عن فكرة دخل ثابت - اقترحت مشاريع لدخل ثابت",
+              "details": "اقترحت أفكار لدخل ثابت: freelancing, dropshipping, content creation, SaaS, affiliate marketing.",
+              "session_id": "ses_13271b147ffeB6cVJ5J4XgSwRM"
+            }
+          ]
+        },
+        "web-dev": {
+          "keywords": ["موقع تواصل اجتماعي", "social media", "عربي", "خطوط عريضة", "JS printing", "javascript"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "C:\\",
+              "summary": "خطوط عريضة لموقع تواصل اجتماعي عربي",
+              "details": "اتكلمنا عن موقع تواصل اجتماعي عربي: features أساسية (profile, posts, comments, likes, messaging, notifications), tech stack (React/Vue, Node/Django, PostgreSQL), monetization (ads, premium subscriptions).",
+              "session_id": "ses_17fb4558fffeWCooHOSZu1QvqZ"
+            },
+            {
+              "date": "2026-05-24",
+              "directory": "C:\\",
+              "summary": "Understanding JS Printing Techniques",
+              "details": "شرح الفرق بين console.log, document.write, innerHTML, alert, وطرق الطباعة المختلفة في JavaScript.",
+              "session_id": "ses_19a36a1c5ffe3qRhchRA1mGVVa"
+            }
+          ]
+        }
+      }
+    },
+    "P:\\aura-book": {
+      "name": "aura-book",
+      "topics": {
+        "project-exploration": {
+          "keywords": ["aura-book", "explore", "project", "structure", "codebase", "backend", "frontend", "agent"],
+          "entries": [
+            {
+              "date": "2026-06-15",
+              "directory": "P:\\aura-book",
+              "summary": "Explore project gaps - تفقد الميزات الناقصة في aura-book",
+              "details": "فحص الميزات الموجودة والناقصة: cart (frontend only, no backend model), Product model, contact form API, admin panel for orders, user order history, search functionality.",
+              "session_id": "ses_12f00f41cffeDedJEWmieNvpAX"
+            },
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "Explore backend structure - فحص Django backend بالكامل",
+              "details": "قراءة كل models.py, views.py, serializers.py, urls.py, admin.py في P:\\aura-book\\backend. فهم URL routing و database models.",
+              "session_id": "ses_1900cad8cffe4j4dPzwK231uoM"
+            },
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "Explore frontend structure - فحص Vue frontend بالكامل",
+              "details": "قراءة كل Vue component files, Pinia stores, router, main.js, vite.config.js في P:\\aura-book\\frontend.",
+              "session_id": "ses_1900cabe1ffedMuFKYkbQBAB02"
+            },
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "Explore AI agent code - فحص كود AI agent في aura-book",
+              "details": "قراءة agent views, urls, models, serializers في backend. وفهم agent_app و agent_back codes.",
+              "session_id": "ses_190de3f7bffe4io7c10Dya3FO7"
+            },
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "Explore product structure - منتجات aura-book",
+              "details": "هيكل المنتجات في aura-book.",
+              "session_id": "ses_190e3a190ffe4ff3zSdO2mn2jz"
+            }
+          ]
+        },
+        "facebook-login": {
+          "keywords": ["facebook", "login", "auth", "authentication", "تسجيل الدخول"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "إزالة Facebook من تسجيل الدخول في aura-book",
+              "details": "طلب إزالة Facebook login option من واجهة تسجيل الدخول في مشروع aura-book.",
+              "session_id": "ses_19199fc9cffeXXihu2SuVDo9e9",
+              "decisions": ["إزالة Facebook من خيارات تسجيل الدخول"]
+            },
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "Find Facebook login code - البحث عن كود Facebook login",
+              "details": "البحث في codebase عن Facebook login implementation.",
+              "session_id": "ses_19199d37affefEcSGiPACL3GQw"
+            }
+          ]
+        },
+        "logo-branding": {
+          "keywords": ["شعار", "logo", "aura", "أخضر", "ذهبي", "تصميم", "design"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "شعار your aura أخضر وكتاب ذهبي - تصميم شعار للمشروع",
+              "details": "طلب تصميم شعار لمشروع your aura باللون الأخضر مع كتاب ذهبي.",
+              "session_id": "ses_191012060ffeR0fF7jPQySvLkI"
+            }
+          ]
+        },
+        "vite-config": {
+          "keywords": ["vite", "allow url", "إعداد", "configuration"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "كيفية إعداد allow url في Vite - تكوين Vite للسماح URLs إضافية",
+              "details": "سأل عن إعداد allow url في Vite configuration. تكوين server.allowedHosts أو server.cors في vite.config.js.",
+              "session_id": "ses_19013bd84ffeeIgwBC1Mw0Tt2T"
+            }
+          ]
+        },
+        "ngrok-testing": {
+          "keywords": ["ngrok", "test", "اختبار", "aura-book"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book",
+              "summary": "اختبار مشروع aura-book على ngrok",
+              "details": "اختبار مشروع P:aura-book على ngrok للوصول الخارجي.",
+              "session_id": "ses_1ad681390ffety3bxbGI7bqjOC"
+            }
+          ]
+        }
+      }
+    },
+    "P:\\langc": {
+      "name": "langc",
+      "topics": {
+        "lang-docs": {
+          "keywords": ["lang", "programming", "language", "compiler", "interpreter", "documentation", "widget"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\langc",
+              "summary": "استكشاف كامل لمشروع لغة البرمجة Lang في P:langc",
+              "details": "فحص شامل: lexer, parser, interpreter, C compiler, JS compiler, HTML bundler. كل widgets و APIs بتاعتها. نظام الـ IDE features (obfuscation, sharing, live preview). Web framework features. Theme system. Shape system. الهدف كان عمل توثيق HTML شامل.",
+              "session_id": "ses_1863d4898ffeLZXilzAyBP5sMg"
+            }
+          ]
+        }
+      }
+    },
+    "P:\\": {
+      "name": "P Drive Projects",
+      "topics": {
+        "projects-overview": {
+          "keywords": ["project", "explore", "P:", "مشاريع", "ai-agent-oop", "portfolio", "sedap-talkha", "mini-llm", "sketchup-web"],
+          "entries": [
+            {
+              "date": "2026-05-25",
+              "directory": "P:\\",
+              "summary": "استكشاف كل المشاريع في P: لعمل CV",
+              "details": "فحص 10 مشاريع في P:\\. شمل: ai-agent-oop, AI_Meeting_Summerizing, aura-book, django_projects, flask_projects, frontend_projects, portfolio, sedap-talkha, sketchup-web, mini-llm-env. كل مشروع بلغة وإطار عمل مختلف.",
+              "session_id": "ses_15bca63d4ffej9Uet9WtnrPVin"
+            },
+            {
+              "date": "2026-05-25",
+              "directory": "P:\\",
+              "summary": "سأل عن عمل CV",
+              "details": "سأل إذا كان ممكن أعمل CV. تم استكشاف المشاريع في P:.",
+              "session_id": "ses_15bcccd31ffeQ7PtKa2tPzWmxo"
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web": {
+      "name": "mohassil-web",
+      "topics": {
+        "navigation": {
+          "keywords": ["mohassil-web", "الانتقال", "الذهاب", "folder navigation"],
+          "entries": [
+            {
+              "date": "2026-06-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
+              "summary": "الانتقال إلى مجلد mohassil-web",
+              "details": "طلب الانتقال إلى C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
+              "session_id": "ses_137a04685ffehp0UaLJj2OmBeh"
+            },
+            {
+              "date": "2026-06-14",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
+              "summary": "الذهاب إلى mohassil-web",
+              "details": "طلب الذهاب إلى مجلد mohassil-web",
+              "session_id": "ses_13dab15d1ffe6nXMRGhjhba25I"
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Mohammed Elmouge\\aura-book": {
+      "name": "aura-book (local)",
+      "topics": {
+        "initial-setup": {
+          "keywords": ["aura-book", "الذهاب", "الانتقال", "project setup"],
+          "entries": [
+            {
+              "date": "2026-05-28",
+              "directory": "C:\\Users\\Mohammed Elmouge\\aura-book",
+              "summary": "الذهاب إلى aura-book - التنقل لمشروع aura-book",
+              "details": "طلبات متعددة للذهاب إلى مشروع aura-book في C:\\Users\\Mohammed Elmouge\\aura-book",
+              "session_id": "ses_19279016effeyzyvfc35XbkLC3"
+            },
+            {
+              "date": "2026-05-28",
+              "directory": "P:\\aura-book4",
+              "summary": "الانتقال إلى P:aura-book4",
+              "details": "طلب الانتقال إلى مسار مختلف للمشروع",
+              "session_id": "ses_1920bcfd8ffeoKgKEbZ0Jid01K"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
