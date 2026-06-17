@@ -37,7 +37,8 @@
               "directory": "C:\\",
               "summary": "إضافة 3 أدوات لعرض الجلسات السابقة في plugin الميموري",
               "details": "تم تطوير opencode-memory.ts ليضيف 3 أدوات: 1) list_sessions - يعرض آخر الجلسات مع title, directory, date, tokens. 2) get_session - يشوف محتوى جلسة معينة (كل الرسائل مع الـ roles). 3) search_sessions - يدور على جلسة بكلمة مفتاحية في العنوان. بيستخدم sqlite3 CLI على opencode.db مباشرة.",
-              "session_id": "ses_12d3a1514ffeGbxtvQCZbTvhFm"
+              "session_id": "ses_12d3a1514ffeGbxtvQCZbTvhFm",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
             }
           ]
         },
