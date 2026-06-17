@@ -30,13 +30,21 @@
           ]
         },
         "session-viewer": {
-          "keywords": ["sessions", "جلسات", "past sessions", "list sessions", "session viewer", "opencode-memory.ts", "plugin", "SQLite"],
+          "keywords": ["sessions", "جلسات", "past sessions", "list sessions", "session viewer", "opencode-memory.ts", "plugin", "SQLite", "sidebar", "web UI", "index.html"],
           "entries": [
             {
               "date": "2026-06-17",
               "directory": "C:\\",
               "summary": "إضافة 3 أدوات لعرض الجلسات السابقة في plugin الميموري",
               "details": "تم تطوير opencode-memory.ts ليضيف 3 أدوات: 1) list_sessions - يعرض آخر الجلسات مع title, directory, date, tokens. 2) get_session - يشوف محتوى جلسة معينة (كل الرسائل مع الـ roles). 3) search_sessions - يدور على جلسة بكلمة مفتاحية في العنوان. بيستخدم sqlite3 CLI على opencode.db مباشرة.",
+              "session_id": "ses_12d3a1514ffeGbxtvQCZbTvhFm",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
+            },
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "إعادة تصميم web UI - sidebar للجلسات من SQLite + chat view",
+              "details": "تم إعادة تصميم index.html بالكامل: 1) sidebar (320px) يعرض كل الجلسات من SQLite (119 session) مع title, date, message count, tokens. 2) search box لفلترة الجلسات. 3) chat view يعرض المحادثة عند النقر على جلسة - رسائل المستخدم يمين و AI يسار. 4) export.ps1 - script PowerShell يصدر sessions-data.json من opencode.db (batch queries عشان السرعة). 5) start.ps1 - script يشغل http-server ويفتح المتصفح.",
               "session_id": "ses_12d3a1514ffeGbxtvQCZbTvhFm",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
             }

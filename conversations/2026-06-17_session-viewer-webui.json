@@ -1,0 +1,25 @@
+﻿{
+    "messages":  [
+                     {
+                         "content":  "فاكر الجلسه اللي فاتت",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "أهلاً بك! حسب ما اتكلمنا قبل كده...",
+                         "role":  "assistant"
+                     },
+                     {
+                         "content":  "انا عاوز اعدل في شكل الصفحه دي احنا هنحط left side bar يكون فيها الجلسات",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "تم إعادة تصميم index.html مع sidebar للجلسات و chat view",
+                         "role":  "assistant"
+                     }
+                 ],
+    "topic":  "session-viewer",
+    "date":  "2026-06-17",
+    "summary":  "إعادة تصميم Web UI بالكامل - ChatGPT-style sidebar مع session list من SQLite",
+    "title":  "إعادة تصميم web UI - sidebar الجلسات",
+    "project":  "C:\\\\"
+}
