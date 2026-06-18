@@ -17,12 +17,15 @@
   .search-box input:focus { border-color: #10a37f; }
   .sidebar-content { flex: 1; overflow-y: auto; padding: 4px 0; }
 
-  .session-item { padding: 10px 14px; cursor: pointer; border-bottom: 1px solid #2a2a2a; transition: background 0.15s; }
+  .session-item { padding: 10px 14px; cursor: pointer; border-bottom: 1px solid #2a2a2a; transition: background 0.15s; position: relative; }
   .session-item:hover { background: #2a2a2a; }
   .session-item.active { background: #10a37f18; border-right: 3px solid #10a37f; }
-  .session-item .s-title { font-size: 13px; font-weight: 500; color: #ececec; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .session-item .s-title { font-size: 13px; font-weight: 500; color: #ececec; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 210px; }
   .session-item .s-meta { display: flex; gap: 10px; font-size: 11px; color: #777; flex-wrap: wrap; }
   .session-item .s-meta span { display: flex; align-items: center; gap: 3px; }
+  .session-item .continue-btn { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); background: #10a37f; color: #fff; border: none; border-radius: 6px; padding: 4px 10px; font-size: 11px; cursor: pointer; opacity: 0; transition: opacity 0.15s; white-space: nowrap; }
+  .session-item:hover .continue-btn { opacity: 1; }
+  .session-item .continue-btn:hover { background: #0d8c6b; }
 
   .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
   .placeholder { flex: 1; display: flex; align-items: center; justify-content: center; }
@@ -139,6 +142,7 @@ function renderSidebar() {
         <span>📂 ${dir}</span>
         <span>⚡ ${tokens}</span>
       </div>
+      <button class="continue-btn" onclick="event.stopPropagation(); continueSession('${s.id}', '${escHtmlAttr(s.title)}')">▶ متابعة</button>
     `;
     div.onclick = () => showSession(s.id);
     container.appendChild(div);
@@ -178,10 +182,48 @@ function showSession(id) {
     }
   }
 
+  const continueBar = document.createElement('div');
+  continueBar.style.cssText = 'text-align:center;padding:20px 0;border-top:1px solid #2a2a2a;margin-top:10px';
+  continueBar.innerHTML = `<button onclick="continueSession('${s.id}', '${escHtmlAttr(s.title)}')" style="background:#10a37f;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;cursor:pointer">▶ متابعة هذه المحادثة</button>`;
+  container.appendChild(continueBar);
+
   container.scrollTop = container.scrollHeight;
 
   document.querySelectorAll('.session-item').forEach(el => el.classList.remove('active'));
   document.querySelector(`.session-item[data-id="${id}"]`)?.classList.add('active');
+}
+
+async function continueSession(id, title) {
+  try {
+    const res = await fetch('/api/continue', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sessionId: id, title: title || '' })
+    });
+    const data = await res.json();
+    if (data.ok) {
+      showToast('✅ تم فتح الجلسة في terminal جديد');
+      return;
+    }
+  } catch {}
+  const cmd = `opencode -s "${id}"`;
+  try {
+    await navigator.clipboard.writeText(cmd);
+    showToast('📋 تم نسخ الأمر! الصقه في terminal:\n' + cmd);
+  } catch {
+    showToast('📋 شغل الأمر ده في terminal:\n' + cmd);
+  }
+}
+
+function showToast(msg) {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#171717;border:1px solid #3f3f3f;border-radius:12px;padding:12px 20px;font-size:13px;color:#ececec;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,0.5);white-space:pre-wrap;text-align:center;max-width:90vw';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 5000);
 }
 
 function filterSessions(query) {
@@ -213,6 +255,10 @@ function escHtml(text) {
   const d = document.createElement('div');
   d.textContent = text;
   return d.innerHTML;
+}
+function escHtmlAttr(text) {
+  if (!text) return '';
+  return text.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
 loadData();

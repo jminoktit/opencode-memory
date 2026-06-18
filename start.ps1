@@ -1,7 +1,9 @@
-param([switch]$Refresh)
+param(
+  [switch]$Refresh,
+  [int]$Port = 8080
+)
 
 $dir = Split-Path $PSCommandPath -Parent
-$port = 8080
 
 Write-Host "🚀 OpenCode Session Viewer" -ForegroundColor Cyan
 Write-Host "══════════════════════════" -ForegroundColor Cyan
@@ -9,11 +11,14 @@ Write-Host "══════════════════════�
 if ($Refresh -or !(Test-Path "$dir\sessions-data.json")) {
   Write-Host "📦 Exporting sessions from opencode.db..." -ForegroundColor Yellow
   & "$dir\export.ps1"
-  Write-Host "" -ForegroundColor Yellow
 }
 
-Write-Host "🌐 Server: http://localhost:$port" -ForegroundColor Green
+$url = "http://localhost:$Port"
+Write-Host ""
+Write-Host "🌐 Session Viewer: $url" -ForegroundColor Green
 Write-Host "📂 Folder: $dir" -ForegroundColor Gray
-Write-Host "Press Ctrl+C to stop`n" -ForegroundColor Gray
+Write-Host ""
 
-npx http-server $dir -p $port -c-1 --silent
+Start-Process $url
+
+node "$dir\server.js"

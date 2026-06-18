@@ -311,6 +311,20 @@
     "C:\\Users\\Mohammed Elmouge\\aura-book": {
       "name": "aura-book (local)",
       "topics": {
+        "settings-and-auth": {
+          "keywords": ["settings", "register", "تسجيل", "إعدادات", "forgot password", "change password", "email", "Gmail", "SendGrid", "profile", "password reset"],
+          "entries": [
+            {
+              "date": "2026-06-18",
+              "directory": "C:\\Users\\Mohammed Elmouge\\aura-book",
+              "summary": "اختبار التسجيل + إنشاء Settings page + Forgot Password + تعديل إعدادات الإيميل",
+              "details": "1) اختبار التسجيل: كل endpoints شغالة (send-verification, verify-email, login). 2) إنشاء Settings.vue صفحة إعدادات كاملة: Profile (username, email), GROQ API Key (بيتخزن مشفر), Change Password (backend + frontend), Sign Out. 3) إنشاء ForgotPassword.vue: step 1 (email), step 2 (code + new password) مع backend endpoints (forgot-password, reset-password) وإيميل template reset_password.html. 4) إعدادات الإيميل: رجوع لـ Gmail SMTP مع fallback للـ console في DEBUG mode لو فشل الإرسال.",
+              "decisions": ["Settings page فيها 4 أقسام (Profile, API Key, Change Password, Sign Out)", "Forgot Password يعيد استخدام EmailVerification model", "ChangePasswordView بيتطلب old_password + new_password", "Gmail SMTP هو الأساسي مع fallback للـ console في DEBUG"],
+              "session_id": "<session_id>",
+              "github_url": ""
+            }
+          ]
+        },
         "initial-setup": {
           "keywords": ["aura-book", "الذهاب", "الانتقال", "project setup"],
           "entries": [
