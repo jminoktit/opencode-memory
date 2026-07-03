@@ -1,4 +1,4 @@
-{
+﻿{
     "projects":  {
                      "C:\\":  {
                                   "name":  "General (C:\\)",
@@ -9,28 +9,28 @@
                                                                                          "title",
                                                                                          "memory",
                                                                                          "directory",
-                                                                                         "مسار",
-                                                                                         "جلسة",
-                                                                                         "حفظ"
+                                                                                         "Ù…Ø³Ø§Ø±",
+                                                                                         "Ø¬Ù„Ø³Ø©",
+                                                                                         "Ø­ÙØ¸"
                                                                                      ],
                                                                         "entries":  [
                                                                                         {
                                                                                             "date":  "2026-06-17",
                                                                                             "directory":  "C:\\",
-                                                                                            "summary":  "طلب تحسين حفظ الذاكرة بإضافة المسار (directory) لكل جلسة",
-                                                                                            "details":  "المستخدم طلب إن كل entry في الذاكرة يضم المسار اللي كانت شغالة فيه (directory). بدل ما المشروع بس، نعرف إحنا كنا فين بالضبط. تم إضافة حقل directory لكل entry.",
+                                                                                            "summary":  "Ø·Ù„Ø¨ ØªØ­Ø³ÙŠÙ† Ø­ÙØ¸ Ø§Ù„Ø°Ø§ÙƒØ±Ø© Ø¨Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ù…Ø³Ø§Ø± (directory) Ù„ÙƒÙ„ Ø¬Ù„Ø³Ø©",
+                                                                                            "details":  "Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø·Ù„Ø¨ Ø¥Ù† ÙƒÙ„ entry ÙÙŠ Ø§Ù„Ø°Ø§ÙƒØ±Ø© ÙŠØ¶Ù… Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ù„ÙŠ ÙƒØ§Ù†Øª Ø´ØºØ§Ù„Ø© ÙÙŠÙ‡ (directory). Ø¨Ø¯Ù„ Ù…Ø§ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø¨Ø³ØŒ Ù†Ø¹Ø±Ù Ø¥Ø­Ù†Ø§ ÙƒÙ†Ø§ ÙÙŠÙ† Ø¨Ø§Ù„Ø¶Ø¨Ø·. ØªÙ… Ø¥Ø¶Ø§ÙØ© Ø­Ù‚Ù„ directory Ù„ÙƒÙ„ entry.",
                                                                                             "session_id":  "ses_12d4afab9ffe2o2MyTraE1z2mT"
                                                                                         }
                                                                                     ]
                                                                     },
                                                  "memory-system":  {
                                                                        "keywords":  [
-                                                                                        "ذاكرة",
+                                                                                        "Ø°Ø§ÙƒØ±Ø©",
                                                                                         "memory",
                                                                                         "memory system",
-                                                                                        "نظام ذاكرة",
+                                                                                        "Ù†Ø¸Ø§Ù… Ø°Ø§ÙƒØ±Ø©",
                                                                                         "instructions",
-                                                                                        "تعليمات",
+                                                                                        "ØªØ¹Ù„ÙŠÙ…Ø§Øª",
                                                                                         "plugin",
                                                                                         "opencode-memory",
                                                                                         "persistent",
@@ -40,22 +40,22 @@
                                                                                        {
                                                                                            "date":  "2026-06-17",
                                                                                            "directory":  "C:\\",
-                                                                                           "summary":  "بناء نظام ذاكرة دائم لـ opencode - من plugin لداتا بيز متكاملة",
-                                                                                           "details":  "بعد مناقشة حدود Aider وعدم حفظه للجلسات، المستخدم طلب build نظام ذاكرة دائم. المسار: 1) plugin اسمه opencode-memory بيقرا SQLite بتاعة opencode ويحط past sessions في system提示. 2) طلب تحسين للنظام يبقى متأصل مش plugin. 3) اتعمل instructions file في ~/.config/opencode/instructions/memory.md بيتحمل في كل session. 4) اتعملت داتا بيز organized by project → topic → entries في ~/.local/share/opencode/opencode-memory.json. 5) اتضاف memory_search tool في plugin. 6) اتضاف directory field لكل entry عشان يعرف المسار اللي كانت شغالة فيه.",
+                                                                                           "summary":  "Ø¨Ù†Ø§Ø¡ Ù†Ø¸Ø§Ù… Ø°Ø§ÙƒØ±Ø© Ø¯Ø§Ø¦Ù… Ù„Ù€ opencode - Ù…Ù† plugin Ù„Ø¯Ø§ØªØ§ Ø¨ÙŠØ² Ù…ØªÙƒØ§Ù…Ù„Ø©",
+                                                                                           "details":  "Ø¨Ø¹Ø¯ Ù…Ù†Ø§Ù‚Ø´Ø© Ø­Ø¯ÙˆØ¯ Aider ÙˆØ¹Ø¯Ù… Ø­ÙØ¸Ù‡ Ù„Ù„Ø¬Ù„Ø³Ø§ØªØŒ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø·Ù„Ø¨ build Ù†Ø¸Ø§Ù… Ø°Ø§ÙƒØ±Ø© Ø¯Ø§Ø¦Ù…. Ø§Ù„Ù…Ø³Ø§Ø±: 1) plugin Ø§Ø³Ù…Ù‡ opencode-memory Ø¨ÙŠÙ‚Ø±Ø§ SQLite Ø¨ØªØ§Ø¹Ø© opencode ÙˆÙŠØ­Ø· past sessions ÙÙŠ systemæç¤º. 2) Ø·Ù„Ø¨ ØªØ­Ø³ÙŠÙ† Ù„Ù„Ù†Ø¸Ø§Ù… ÙŠØ¨Ù‚Ù‰ Ù…ØªØ£ØµÙ„ Ù…Ø´ plugin. 3) Ø§ØªØ¹Ù…Ù„ instructions file ÙÙŠ ~/.config/opencode/instructions/memory.md Ø¨ÙŠØªØ­Ù…Ù„ ÙÙŠ ÙƒÙ„ session. 4) Ø§ØªØ¹Ù…Ù„Øª Ø¯Ø§ØªØ§ Ø¨ÙŠØ² organized by project â†’ topic â†’ entries ÙÙŠ ~/.local/share/opencode/opencode-memory.json. 5) Ø§ØªØ¶Ø§Ù memory_search tool ÙÙŠ plugin. 6) Ø§ØªØ¶Ø§Ù directory field Ù„ÙƒÙ„ entry Ø¹Ø´Ø§Ù† ÙŠØ¹Ø±Ù Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ù„ÙŠ ÙƒØ§Ù†Øª Ø´ØºØ§Ù„Ø© ÙÙŠÙ‡.",
                                                                                            "decisions":  [
-                                                                                                             "ذاكرة دائمة في JSON file مش SQLite (أسهل للقراءة/التحرير)",
-                                                                                                             "topic extraction من عنوان الجلسة تلقائي",
-                                                                                                             "directory field لكل entry"
+                                                                                                             "Ø°Ø§ÙƒØ±Ø© Ø¯Ø§Ø¦Ù…Ø© ÙÙŠ JSON file Ù…Ø´ SQLite (Ø£Ø³Ù‡Ù„ Ù„Ù„Ù‚Ø±Ø§Ø¡Ø©/Ø§Ù„ØªØ­Ø±ÙŠØ±)",
+                                                                                                             "topic extraction Ù…Ù† Ø¹Ù†ÙˆØ§Ù† Ø§Ù„Ø¬Ù„Ø³Ø© ØªÙ„Ù‚Ø§Ø¦ÙŠ",
+                                                                                                             "directory field Ù„ÙƒÙ„ entry"
                                                                                                          ],
                                                                                            "session_id":  "ses_12d53c276ffe7ImTUiGJAUhmBC",
-                                                                                           "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_ما-هو-Aider-ونظام-الذاكرة.json"
+                                                                                           "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_Ù…Ø§-Ù‡Ùˆ-Aider-ÙˆÙ†Ø¸Ø§Ù…-Ø§Ù„Ø°Ø§ÙƒØ±Ø©.json"
                                                                                        }
                                                                                    ]
                                                                    },
                                                  "session-viewer":  {
                                                                         "keywords":  [
                                                                                          "sessions",
-                                                                                         "جلسات",
+                                                                                         "Ø¬Ù„Ø³Ø§Øª",
                                                                                          "past sessions",
                                                                                          "list sessions",
                                                                                          "session viewer",
@@ -70,16 +70,16 @@
                                                                                         {
                                                                                             "date":  "2026-06-17",
                                                                                             "directory":  "C:\\",
-                                                                                            "summary":  "إضافة 3 أدوات لعرض الجلسات السابقة في plugin الميموري",
-                                                                                            "details":  "تم تطوير opencode-memory.ts ليضيف 3 أدوات: 1) list_sessions - يعرض آخر الجلسات مع title, directory, date, tokens. 2) get_session - يشوف محتوى جلسة معينة (كل الرسائل مع الـ roles). 3) search_sessions - يدور على جلسة بكلمة مفتاحية في العنوان. بيستخدم sqlite3 CLI على opencode.db مباشرة.",
+                                                                                            "summary":  "Ø¥Ø¶Ø§ÙØ© 3 Ø£Ø¯ÙˆØ§Øª Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø¬Ù„Ø³Ø§Øª Ø§Ù„Ø³Ø§Ø¨Ù‚Ø© ÙÙŠ plugin Ø§Ù„Ù…ÙŠÙ…ÙˆØ±ÙŠ",
+                                                                                            "details":  "ØªÙ… ØªØ·ÙˆÙŠØ± opencode-memory.ts Ù„ÙŠØ¶ÙŠÙ 3 Ø£Ø¯ÙˆØ§Øª: 1) list_sessions - ÙŠØ¹Ø±Ø¶ Ø¢Ø®Ø± Ø§Ù„Ø¬Ù„Ø³Ø§Øª Ù…Ø¹ title, directory, date, tokens. 2) get_session - ÙŠØ´ÙˆÙ Ù…Ø­ØªÙˆÙ‰ Ø¬Ù„Ø³Ø© Ù…Ø¹ÙŠÙ†Ø© (ÙƒÙ„ Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ Ù…Ø¹ Ø§Ù„Ù€ roles). 3) search_sessions - ÙŠØ¯ÙˆØ± Ø¹Ù„Ù‰ Ø¬Ù„Ø³Ø© Ø¨ÙƒÙ„Ù…Ø© Ù…ÙØªØ§Ø­ÙŠØ© ÙÙŠ Ø§Ù„Ø¹Ù†ÙˆØ§Ù†. Ø¨ÙŠØ³ØªØ®Ø¯Ù… sqlite3 CLI Ø¹Ù„Ù‰ opencode.db Ù…Ø¨Ø§Ø´Ø±Ø©.",
                                                                                             "session_id":  "ses_12d3a1514ffeGbxtvQCZbTvhFm",
                                                                                             "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
                                                                                         },
                                                                                         {
                                                                                             "date":  "2026-06-17",
                                                                                             "directory":  "C:\\",
-                                                                                            "summary":  "إعادة تصميم web UI - sidebar للجلسات من SQLite + chat view",
-                                                                                            "details":  "تم إعادة تصميم index.html بالكامل: 1) sidebar (320px) يعرض كل الجلسات من SQLite (119 session) مع title, date, message count, tokens. 2) search box لفلترة الجلسات. 3) chat view يعرض المحادثة عند النقر على جلسة - رسائل المستخدم يمين و AI يسار. 4) export.ps1 - script PowerShell يصدر sessions-data.json من opencode.db (batch queries عشان السرعة). 5) start.ps1 - script يشغل http-server ويفتح المتصفح.",
+                                                                                            "summary":  "Ø¥Ø¹Ø§Ø¯Ø© ØªØµÙ…ÙŠÙ… web UI - sidebar Ù„Ù„Ø¬Ù„Ø³Ø§Øª Ù…Ù† SQLite + chat view",
+                                                                                            "details":  "ØªÙ… Ø¥Ø¹Ø§Ø¯Ø© ØªØµÙ…ÙŠÙ… index.html Ø¨Ø§Ù„ÙƒØ§Ù…Ù„: 1) sidebar (320px) ÙŠØ¹Ø±Ø¶ ÙƒÙ„ Ø§Ù„Ø¬Ù„Ø³Ø§Øª Ù…Ù† SQLite (119 session) Ù…Ø¹ title, date, message count, tokens. 2) search box Ù„ÙÙ„ØªØ±Ø© Ø§Ù„Ø¬Ù„Ø³Ø§Øª. 3) chat view ÙŠØ¹Ø±Ø¶ Ø§Ù„Ù…Ø­Ø§Ø¯Ø«Ø© Ø¹Ù†Ø¯ Ø§Ù„Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø¬Ù„Ø³Ø© - Ø±Ø³Ø§Ø¦Ù„ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… ÙŠÙ…ÙŠÙ† Ùˆ AI ÙŠØ³Ø§Ø±. 4) export.ps1 - script PowerShell ÙŠØµØ¯Ø± sessions-data.json Ù…Ù† opencode.db (batch queries Ø¹Ø´Ø§Ù† Ø§Ù„Ø³Ø±Ø¹Ø©). 5) start.ps1 - script ÙŠØ´ØºÙ„ http-server ÙˆÙŠÙØªØ­ Ø§Ù„Ù…ØªØµÙØ­.",
                                                                                             "session_id":  "ses_12d3a1514ffeGbxtvQCZbTvhFm",
                                                                                             "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
                                                                                         }
@@ -98,15 +98,15 @@
                                                                                               {
                                                                                                   "date":  "2026-06-17",
                                                                                                   "directory":  "C:\\",
-                                                                                                  "summary":  "سأل عن Aider - أداة AI برمجة زوجية عبر CLI",
-                                                                                                  "details":  "Aider هي أداة AI برمجة زوجية تشتغل من terminal. بتستخدم LLM. بتشتغل مع ChatGPT, Claude, وغيرهم. بتاخد سياق الكود وتعمل تغييرات مباشرة. اتكلمنا عن مميزاتها (CLI-first, multi-model, git-native, repo map, open source) وعن حدودها (context window, output tokens, repo map size). وعن إنها مش بتحفظ الجلسات.",
+                                                                                                  "summary":  "Ø³Ø£Ù„ Ø¹Ù† Aider - Ø£Ø¯Ø§Ø© AI Ø¨Ø±Ù…Ø¬Ø© Ø²ÙˆØ¬ÙŠØ© Ø¹Ø¨Ø± CLI",
+                                                                                                  "details":  "Aider Ù‡ÙŠ Ø£Ø¯Ø§Ø© AI Ø¨Ø±Ù…Ø¬Ø© Ø²ÙˆØ¬ÙŠØ© ØªØ´ØªØºÙ„ Ù…Ù† terminal. Ø¨ØªØ³ØªØ®Ø¯Ù… LLM. Ø¨ØªØ´ØªØºÙ„ Ù…Ø¹ ChatGPT, Claude, ÙˆØºÙŠØ±Ù‡Ù…. Ø¨ØªØ§Ø®Ø¯ Ø³ÙŠØ§Ù‚ Ø§Ù„ÙƒÙˆØ¯ ÙˆØªØ¹Ù…Ù„ ØªØºÙŠÙŠØ±Ø§Øª Ù…Ø¨Ø§Ø´Ø±Ø©. Ø§ØªÙƒÙ„Ù…Ù†Ø§ Ø¹Ù† Ù…Ù…ÙŠØ²Ø§ØªÙ‡Ø§ (CLI-first, multi-model, git-native, repo map, open source) ÙˆØ¹Ù† Ø­Ø¯ÙˆØ¯Ù‡Ø§ (context window, output tokens, repo map size). ÙˆØ¹Ù† Ø¥Ù†Ù‡Ø§ Ù…Ø´ Ø¨ØªØ­ÙØ¸ Ø§Ù„Ø¬Ù„Ø³Ø§Øª.",
                                                                                                   "session_id":  "ses_12d53c276ffe7ImTUiGJAUhmBC"
                                                                                               },
                                                                                               {
                                                                                                   "date":  "2026-06-17",
                                                                                                   "directory":  "C:\\",
-                                                                                                  "summary":  "استكشاف هيكل opencode بالكامل - Rust binary مع SQLite database",
-                                                                                                  "details":  "opencode عبارة عن Rust binary (~153MB) مثبت في AppData/Roaming/npm. عنده SQLite database في .local/share/opencode/opencode.db بجداول session, message, part. عنده plugin API و SDK client. بيستخدم event bus architecture. الملفات بتتخزن في storage/session_diff. وعنده memory feature في opencode-memory/memory.md.",
+                                                                                                  "summary":  "Ø§Ø³ØªÙƒØ´Ø§Ù Ù‡ÙŠÙƒÙ„ opencode Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ - Rust binary Ù…Ø¹ SQLite database",
+                                                                                                  "details":  "opencode Ø¹Ø¨Ø§Ø±Ø© Ø¹Ù† Rust binary (~153MB) Ù…Ø«Ø¨Øª ÙÙŠ AppData/Roaming/npm. Ø¹Ù†Ø¯Ù‡ SQLite database ÙÙŠ .local/share/opencode/opencode.db Ø¨Ø¬Ø¯Ø§ÙˆÙ„ session, message, part. Ø¹Ù†Ø¯Ù‡ plugin API Ùˆ SDK client. Ø¨ÙŠØ³ØªØ®Ø¯Ù… event bus architecture. Ø§Ù„Ù…Ù„ÙØ§Øª Ø¨ØªØªØ®Ø²Ù† ÙÙŠ storage/session_diff. ÙˆØ¹Ù†Ø¯Ù‡ memory feature ÙÙŠ opencode-memory/memory.md.",
                                                                                                   "session_id":  "ses_12d4afab9ffe2o2MyTraE1z2mT"
                                                                                               }
                                                                                           ]
@@ -125,8 +125,8 @@
                                                                                     {
                                                                                         "date":  "2026-06-04",
                                                                                         "directory":  "C:\\",
-                                                                                        "summary":  "سأل عن تعريف sample variance - تباين العينة",
-                                                                                        "details":  "Sample variance = s² = Σ(xi - x̄)² / (n-1). مقسوم على n-1 مش n عشان unbiased estimator.",
+                                                                                        "summary":  "Ø³Ø£Ù„ Ø¹Ù† ØªØ¹Ø±ÙŠÙ sample variance - ØªØ¨Ø§ÙŠÙ† Ø§Ù„Ø¹ÙŠÙ†Ø©",
+                                                                                        "details":  "Sample variance = sÂ² = Î£(xi - xÌ„)Â² / (n-1). Ù…Ù‚Ø³ÙˆÙ… Ø¹Ù„Ù‰ n-1 Ù…Ø´ n Ø¹Ø´Ø§Ù† unbiased estimator.",
                                                                                         "session_id":  "ses_16e3fe3cbffeZLTuzZXpD2EtFy"
                                                                                     },
                                                                                     {
@@ -151,39 +151,39 @@
                                                                                        "sms card",
                                                                                        "laptop",
                                                                                        "hardware",
-                                                                                       "دخل ثابت",
+                                                                                       "Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª",
                                                                                        "passive income"
                                                                                    ],
                                                                       "entries":  [
                                                                                       {
                                                                                           "date":  "2026-06-16",
                                                                                           "directory":  "C:\\",
-                                                                                          "summary":  "سأل عن storage controller - جهاز تحكم بالتخزين في الكمبيوتر",
-                                                                                          "details":  "Storage controller هو جهاز أو software بيدير التخزين في الكمبيوتر (SSD, HDD). بيتحكم في قراءة وكتابة البيانات. أنواع: SATA Controller, NVMe Controller, RAID Controller.",
+                                                                                          "summary":  "Ø³Ø£Ù„ Ø¹Ù† storage controller - Ø¬Ù‡Ø§Ø² ØªØ­ÙƒÙ… Ø¨Ø§Ù„ØªØ®Ø²ÙŠÙ† ÙÙŠ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ±",
+                                                                                          "details":  "Storage controller Ù‡Ùˆ Ø¬Ù‡Ø§Ø² Ø£Ùˆ software Ø¨ÙŠØ¯ÙŠØ± Ø§Ù„ØªØ®Ø²ÙŠÙ† ÙÙŠ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± (SSD, HDD). Ø¨ÙŠØªØ­ÙƒÙ… ÙÙŠ Ù‚Ø±Ø§Ø¡Ø© ÙˆÙƒØªØ§Ø¨Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª. Ø£Ù†ÙˆØ§Ø¹: SATA Controller, NVMe Controller, RAID Controller.",
                                                                                           "session_id":  "ses_132d621f6ffeaXZl7aYUlI2crj"
                                                                                       },
                                                                                       {
                                                                                           "date":  "2026-06-16",
                                                                                           "directory":  "C:\\",
-                                                                                          "summary":  "سأل عن تشغيل SMS card في اللابتوب - بطاقة اتصالات في بوردة اللابتوب",
-                                                                                          "details":  "SMS card (WWAN card) في اللابتوب عشان يدخل شريحة اتصال. محتاج antenna, drivers من الشركة, و SIM card. غالباً في فتحة مخصصة جنب WiFi card.",
+                                                                                          "summary":  "Ø³Ø£Ù„ Ø¹Ù† ØªØ´ØºÙŠÙ„ SMS card ÙÙŠ Ø§Ù„Ù„Ø§Ø¨ØªÙˆØ¨ - Ø¨Ø·Ø§Ù‚Ø© Ø§ØªØµØ§Ù„Ø§Øª ÙÙŠ Ø¨ÙˆØ±Ø¯Ø© Ø§Ù„Ù„Ø§Ø¨ØªÙˆØ¨",
+                                                                                          "details":  "SMS card (WWAN card) ÙÙŠ Ø§Ù„Ù„Ø§Ø¨ØªÙˆØ¨ Ø¹Ø´Ø§Ù† ÙŠØ¯Ø®Ù„ Ø´Ø±ÙŠØ­Ø© Ø§ØªØµØ§Ù„. Ù…Ø­ØªØ§Ø¬ antenna, drivers Ù…Ù† Ø§Ù„Ø´Ø±ÙƒØ©, Ùˆ SIM card. ØºØ§Ù„Ø¨Ø§Ù‹ ÙÙŠ ÙØªØ­Ø© Ù…Ø®ØµØµØ© Ø¬Ù†Ø¨ WiFi card.",
                                                                                           "session_id":  "ses_133acce4dffePMAxQ7fhVbMoi7"
                                                                                       },
                                                                                       {
                                                                                           "date":  "2026-06-16",
                                                                                           "directory":  "C:\\",
-                                                                                          "summary":  "سأل عن فكرة دخل ثابت - اقترحت مشاريع لدخل ثابت",
-                                                                                          "details":  "اقترحت أفكار لدخل ثابت: freelancing, dropshipping, content creation, SaaS, affiliate marketing.",
+                                                                                          "summary":  "Ø³Ø£Ù„ Ø¹Ù† ÙÙƒØ±Ø© Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª - Ø§Ù‚ØªØ±Ø­Øª Ù…Ø´Ø§Ø±ÙŠØ¹ Ù„Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª",
+                                                                                          "details":  "Ø§Ù‚ØªØ±Ø­Øª Ø£ÙÙƒØ§Ø± Ù„Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª: freelancing, dropshipping, content creation, SaaS, affiliate marketing.",
                                                                                           "session_id":  "ses_13271b147ffeB6cVJ5J4XgSwRM"
                                                                                       }
                                                                                   ]
                                                                   },
                                                  "web-dev":  {
                                                                  "keywords":  [
-                                                                                  "موقع تواصل اجتماعي",
+                                                                                  "Ù…ÙˆÙ‚Ø¹ ØªÙˆØ§ØµÙ„ Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ",
                                                                                   "social media",
-                                                                                  "عربي",
-                                                                                  "خطوط عريضة",
+                                                                                  "Ø¹Ø±Ø¨ÙŠ",
+                                                                                  "Ø®Ø·ÙˆØ· Ø¹Ø±ÙŠØ¶Ø©",
                                                                                   "JS printing",
                                                                                   "javascript"
                                                                               ],
@@ -191,15 +191,15 @@
                                                                                  {
                                                                                      "date":  "2026-05-28",
                                                                                      "directory":  "C:\\",
-                                                                                     "summary":  "خطوط عريضة لموقع تواصل اجتماعي عربي",
-                                                                                     "details":  "اتكلمنا عن موقع تواصل اجتماعي عربي: features أساسية (profile, posts, comments, likes, messaging, notifications), tech stack (React/Vue, Node/Django, PostgreSQL), monetization (ads, premium subscriptions).",
+                                                                                     "summary":  "Ø®Ø·ÙˆØ· Ø¹Ø±ÙŠØ¶Ø© Ù„Ù…ÙˆÙ‚Ø¹ ØªÙˆØ§ØµÙ„ Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ Ø¹Ø±Ø¨ÙŠ",
+                                                                                     "details":  "Ø§ØªÙƒÙ„Ù…Ù†Ø§ Ø¹Ù† Ù…ÙˆÙ‚Ø¹ ØªÙˆØ§ØµÙ„ Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ Ø¹Ø±Ø¨ÙŠ: features Ø£Ø³Ø§Ø³ÙŠØ© (profile, posts, comments, likes, messaging, notifications), tech stack (React/Vue, Node/Django, PostgreSQL), monetization (ads, premium subscriptions).",
                                                                                      "session_id":  "ses_17fb4558fffeWCooHOSZu1QvqZ"
                                                                                  },
                                                                                  {
                                                                                      "date":  "2026-05-24",
                                                                                      "directory":  "C:\\",
                                                                                      "summary":  "Understanding JS Printing Techniques",
-                                                                                     "details":  "شرح الفرق بين console.log, document.write, innerHTML, alert, وطرق الطباعة المختلفة في JavaScript.",
+                                                                                     "details":  "Ø´Ø±Ø­ Ø§Ù„ÙØ±Ù‚ Ø¨ÙŠÙ† console.log, document.write, innerHTML, alert, ÙˆØ·Ø±Ù‚ Ø§Ù„Ø·Ø¨Ø§Ø¹Ø© Ø§Ù„Ù…Ø®ØªÙ„ÙØ© ÙÙŠ JavaScript.",
                                                                                      "session_id":  "ses_19a36a1c5ffe3qRhchRA1mGVVa"
                                                                                  }
                                                                              ]
@@ -224,36 +224,36 @@
                                                                                                       {
                                                                                                           "date":  "2026-06-15",
                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore project gaps - تفقد الميزات الناقصة في aura-book",
-                                                                                                          "details":  "فحص الميزات الموجودة والناقصة: cart (frontend only, no backend model), Product model, contact form API, admin panel for orders, user order history, search functionality.",
+                                                                                                          "summary":  "Explore project gaps - ØªÙÙ‚Ø¯ Ø§Ù„Ù…ÙŠØ²Ø§Øª Ø§Ù„Ù†Ø§Ù‚ØµØ© ÙÙŠ aura-book",
+                                                                                                          "details":  "ÙØ­Øµ Ø§Ù„Ù…ÙŠØ²Ø§Øª Ø§Ù„Ù…ÙˆØ¬ÙˆØ¯Ø© ÙˆØ§Ù„Ù†Ø§Ù‚ØµØ©: cart (frontend only, no backend model), Product model, contact form API, admin panel for orders, user order history, search functionality.",
                                                                                                           "session_id":  "ses_12f00f41cffeDedJEWmieNvpAX"
                                                                                                       },
                                                                                                       {
                                                                                                           "date":  "2026-05-28",
                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore backend structure - فحص Django backend بالكامل",
-                                                                                                          "details":  "قراءة كل models.py, views.py, serializers.py, urls.py, admin.py في P:\\aura-book\\backend. فهم URL routing و database models.",
+                                                                                                          "summary":  "Explore backend structure - ÙØ­Øµ Django backend Ø¨Ø§Ù„ÙƒØ§Ù…Ù„",
+                                                                                                          "details":  "Ù‚Ø±Ø§Ø¡Ø© ÙƒÙ„ models.py, views.py, serializers.py, urls.py, admin.py ÙÙŠ P:\\aura-book\\backend. ÙÙ‡Ù… URL routing Ùˆ database models.",
                                                                                                           "session_id":  "ses_1900cad8cffe4j4dPzwK231uoM"
                                                                                                       },
                                                                                                       {
                                                                                                           "date":  "2026-05-28",
                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore frontend structure - فحص Vue frontend بالكامل",
-                                                                                                          "details":  "قراءة كل Vue component files, Pinia stores, router, main.js, vite.config.js في P:\\aura-book\\frontend.",
+                                                                                                          "summary":  "Explore frontend structure - ÙØ­Øµ Vue frontend Ø¨Ø§Ù„ÙƒØ§Ù…Ù„",
+                                                                                                          "details":  "Ù‚Ø±Ø§Ø¡Ø© ÙƒÙ„ Vue component files, Pinia stores, router, main.js, vite.config.js ÙÙŠ P:\\aura-book\\frontend.",
                                                                                                           "session_id":  "ses_1900cabe1ffedMuFKYkbQBAB02"
                                                                                                       },
                                                                                                       {
                                                                                                           "date":  "2026-05-28",
                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore AI agent code - فحص كود AI agent في aura-book",
-                                                                                                          "details":  "قراءة agent views, urls, models, serializers في backend. وفهم agent_app و agent_back codes.",
+                                                                                                          "summary":  "Explore AI agent code - ÙØ­Øµ ÙƒÙˆØ¯ AI agent ÙÙŠ aura-book",
+                                                                                                          "details":  "Ù‚Ø±Ø§Ø¡Ø© agent views, urls, models, serializers ÙÙŠ backend. ÙˆÙÙ‡Ù… agent_app Ùˆ agent_back codes.",
                                                                                                           "session_id":  "ses_190de3f7bffe4io7c10Dya3FO7"
                                                                                                       },
                                                                                                       {
                                                                                                           "date":  "2026-05-28",
                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore product structure - منتجات aura-book",
-                                                                                                          "details":  "هيكل المنتجات في aura-book.",
+                                                                                                          "summary":  "Explore product structure - Ù…Ù†ØªØ¬Ø§Øª aura-book",
+                                                                                                          "details":  "Ù‡ÙŠÙƒÙ„ Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙÙŠ aura-book.",
                                                                                                           "session_id":  "ses_190e3a190ffe4ff3zSdO2mn2jz"
                                                                                                       }
                                                                                                   ]
@@ -264,44 +264,44 @@
                                                                                                   "login",
                                                                                                   "auth",
                                                                                                   "authentication",
-                                                                                                  "تسجيل الدخول"
+                                                                                                  "ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„"
                                                                                               ],
                                                                                  "entries":  [
                                                                                                  {
                                                                                                      "date":  "2026-05-28",
                                                                                                      "directory":  "P:\\aura-book",
-                                                                                                     "summary":  "إزالة Facebook من تسجيل الدخول في aura-book",
-                                                                                                     "details":  "طلب إزالة Facebook login option من واجهة تسجيل الدخول في مشروع aura-book.",
+                                                                                                     "summary":  "Ø¥Ø²Ø§Ù„Ø© Facebook Ù…Ù† ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ ÙÙŠ aura-book",
+                                                                                                     "details":  "Ø·Ù„Ø¨ Ø¥Ø²Ø§Ù„Ø© Facebook login option Ù…Ù† ÙˆØ§Ø¬Ù‡Ø© ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ ÙÙŠ Ù…Ø´Ø±ÙˆØ¹ aura-book.",
                                                                                                      "session_id":  "ses_19199fc9cffeXXihu2SuVDo9e9",
                                                                                                      "decisions":  [
-                                                                                                                       "إزالة Facebook من خيارات تسجيل الدخول"
+                                                                                                                       "Ø¥Ø²Ø§Ù„Ø© Facebook Ù…Ù† Ø®ÙŠØ§Ø±Ø§Øª ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„"
                                                                                                                    ]
                                                                                                  },
                                                                                                  {
                                                                                                      "date":  "2026-05-28",
                                                                                                      "directory":  "P:\\aura-book",
-                                                                                                     "summary":  "Find Facebook login code - البحث عن كود Facebook login",
-                                                                                                     "details":  "البحث في codebase عن Facebook login implementation.",
+                                                                                                     "summary":  "Find Facebook login code - Ø§Ù„Ø¨Ø­Ø« Ø¹Ù† ÙƒÙˆØ¯ Facebook login",
+                                                                                                     "details":  "Ø§Ù„Ø¨Ø­Ø« ÙÙŠ codebase Ø¹Ù† Facebook login implementation.",
                                                                                                      "session_id":  "ses_19199d37affefEcSGiPACL3GQw"
                                                                                                  }
                                                                                              ]
                                                                              },
                                                           "logo-branding":  {
                                                                                 "keywords":  [
-                                                                                                 "شعار",
+                                                                                                 "Ø´Ø¹Ø§Ø±",
                                                                                                  "logo",
                                                                                                  "aura",
-                                                                                                 "أخضر",
-                                                                                                 "ذهبي",
-                                                                                                 "تصميم",
+                                                                                                 "Ø£Ø®Ø¶Ø±",
+                                                                                                 "Ø°Ù‡Ø¨ÙŠ",
+                                                                                                 "ØªØµÙ…ÙŠÙ…",
                                                                                                  "design"
                                                                                              ],
                                                                                 "entries":  [
                                                                                                 {
                                                                                                     "date":  "2026-05-28",
                                                                                                     "directory":  "P:\\aura-book",
-                                                                                                    "summary":  "شعار your aura أخضر وكتاب ذهبي - تصميم شعار للمشروع",
-                                                                                                    "details":  "طلب تصميم شعار لمشروع your aura باللون الأخضر مع كتاب ذهبي.",
+                                                                                                    "summary":  "Ø´Ø¹Ø§Ø± your aura Ø£Ø®Ø¶Ø± ÙˆÙƒØªØ§Ø¨ Ø°Ù‡Ø¨ÙŠ - ØªØµÙ…ÙŠÙ… Ø´Ø¹Ø§Ø± Ù„Ù„Ù…Ø´Ø±ÙˆØ¹",
+                                                                                                    "details":  "Ø·Ù„Ø¨ ØªØµÙ…ÙŠÙ… Ø´Ø¹Ø§Ø± Ù„Ù…Ø´Ø±ÙˆØ¹ your aura Ø¨Ø§Ù„Ù„ÙˆÙ† Ø§Ù„Ø£Ø®Ø¶Ø± Ù…Ø¹ ÙƒØªØ§Ø¨ Ø°Ù‡Ø¨ÙŠ.",
                                                                                                     "session_id":  "ses_191012060ffeR0fF7jPQySvLkI"
                                                                                                 }
                                                                                             ]
@@ -310,15 +310,15 @@
                                                                               "keywords":  [
                                                                                                "vite",
                                                                                                "allow url",
-                                                                                               "إعداد",
+                                                                                               "Ø¥Ø¹Ø¯Ø§Ø¯",
                                                                                                "configuration"
                                                                                            ],
                                                                               "entries":  [
                                                                                               {
                                                                                                   "date":  "2026-05-28",
                                                                                                   "directory":  "P:\\aura-book",
-                                                                                                  "summary":  "كيفية إعداد allow url في Vite - تكوين Vite للسماح URLs إضافية",
-                                                                                                  "details":  "سأل عن إعداد allow url في Vite configuration. تكوين server.allowedHosts أو server.cors في vite.config.js.",
+                                                                                                  "summary":  "ÙƒÙŠÙÙŠØ© Ø¥Ø¹Ø¯Ø§Ø¯ allow url ÙÙŠ Vite - ØªÙƒÙˆÙŠÙ† Vite Ù„Ù„Ø³Ù…Ø§Ø­ URLs Ø¥Ø¶Ø§ÙÙŠØ©",
+                                                                                                  "details":  "Ø³Ø£Ù„ Ø¹Ù† Ø¥Ø¹Ø¯Ø§Ø¯ allow url ÙÙŠ Vite configuration. ØªÙƒÙˆÙŠÙ† server.allowedHosts Ø£Ùˆ server.cors ÙÙŠ vite.config.js.",
                                                                                                   "session_id":  "ses_19013bd84ffeeIgwBC1Mw0Tt2T"
                                                                                               }
                                                                                           ]
@@ -327,15 +327,15 @@
                                                                                 "keywords":  [
                                                                                                  "ngrok",
                                                                                                  "test",
-                                                                                                 "اختبار",
+                                                                                                 "Ø§Ø®ØªØ¨Ø§Ø±",
                                                                                                  "aura-book"
                                                                                              ],
                                                                                 "entries":  [
                                                                                                 {
                                                                                                     "date":  "2026-05-28",
                                                                                                     "directory":  "P:\\aura-book",
-                                                                                                    "summary":  "اختبار مشروع aura-book على ngrok",
-                                                                                                    "details":  "اختبار مشروع P:aura-book على ngrok للوصول الخارجي.",
+                                                                                                    "summary":  "Ø§Ø®ØªØ¨Ø§Ø± Ù…Ø´Ø±ÙˆØ¹ aura-book Ø¹Ù„Ù‰ ngrok",
+                                                                                                    "details":  "Ø§Ø®ØªØ¨Ø§Ø± Ù…Ø´Ø±ÙˆØ¹ P:aura-book Ø¹Ù„Ù‰ ngrok Ù„Ù„ÙˆØµÙˆÙ„ Ø§Ù„Ø®Ø§Ø±Ø¬ÙŠ.",
                                                                                                     "session_id":  "ses_1ad681390ffety3bxbGI7bqjOC"
                                                                                                 }
                                                                                             ]
@@ -359,8 +359,8 @@
                                                                                         {
                                                                                             "date":  "2026-05-28",
                                                                                             "directory":  "P:\\langc",
-                                                                                            "summary":  "استكشاف كامل لمشروع لغة البرمجة Lang في P:langc",
-                                                                                            "details":  "فحص شامل: lexer, parser, interpreter, C compiler, JS compiler, HTML bundler. كل widgets و APIs بتاعتها. نظام الـ IDE features (obfuscation, sharing, live preview). Web framework features. Theme system. Shape system. الهدف كان عمل توثيق HTML شامل.",
+                                                                                            "summary":  "Ø§Ø³ØªÙƒØ´Ø§Ù ÙƒØ§Ù…Ù„ Ù„Ù…Ø´Ø±ÙˆØ¹ Ù„ØºØ© Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Lang ÙÙŠ P:langc",
+                                                                                            "details":  "ÙØ­Øµ Ø´Ø§Ù…Ù„: lexer, parser, interpreter, C compiler, JS compiler, HTML bundler. ÙƒÙ„ widgets Ùˆ APIs Ø¨ØªØ§Ø¹ØªÙ‡Ø§. Ù†Ø¸Ø§Ù… Ø§Ù„Ù€ IDE features (obfuscation, sharing, live preview). Web framework features. Theme system. Shape system. Ø§Ù„Ù‡Ø¯Ù ÙƒØ§Ù† Ø¹Ù…Ù„ ØªÙˆØ«ÙŠÙ‚ HTML Ø´Ø§Ù…Ù„.",
                                                                                             "session_id":  "ses_1863d4898ffeLZXilzAyBP5sMg"
                                                                                         }
                                                                                     ]
@@ -375,7 +375,7 @@
                                                                                             "project",
                                                                                             "explore",
                                                                                             "P:",
-                                                                                            "مشاريع",
+                                                                                            "Ù…Ø´Ø§Ø±ÙŠØ¹",
                                                                                             "ai-agent-oop",
                                                                                             "portfolio",
                                                                                             "sedap-talkha",
@@ -386,19 +386,36 @@
                                                                                            {
                                                                                                "date":  "2026-05-25",
                                                                                                "directory":  "P:\\",
-                                                                                               "summary":  "استكشاف كل المشاريع في P: لعمل CV",
-                                                                                               "details":  "فحص 10 مشاريع في P:\\. شمل: ai-agent-oop, AI_Meeting_Summerizing, aura-book, django_projects, flask_projects, frontend_projects, portfolio, sedap-talkha, sketchup-web, mini-llm-env. كل مشروع بلغة وإطار عمل مختلف.",
+                                                                                               "summary":  "Ø§Ø³ØªÙƒØ´Ø§Ù ÙƒÙ„ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ P: Ù„Ø¹Ù…Ù„ CV",
+                                                                                               "details":  "ÙØ­Øµ 10 Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ P:\\. Ø´Ù…Ù„: ai-agent-oop, AI_Meeting_Summerizing, aura-book, django_projects, flask_projects, frontend_projects, portfolio, sedap-talkha, sketchup-web, mini-llm-env. ÙƒÙ„ Ù…Ø´Ø±ÙˆØ¹ Ø¨Ù„ØºØ© ÙˆØ¥Ø·Ø§Ø± Ø¹Ù…Ù„ Ù…Ø®ØªÙ„Ù.",
                                                                                                "session_id":  "ses_15bca63d4ffej9Uet9WtnrPVin"
                                                                                            },
                                                                                            {
                                                                                                "date":  "2026-05-25",
                                                                                                "directory":  "P:\\",
-                                                                                               "summary":  "سأل عن عمل CV",
-                                                                                               "details":  "سأل إذا كان ممكن أعمل CV. تم استكشاف المشاريع في P:.",
+                                                                                               "summary":  "Ø³Ø£Ù„ Ø¹Ù† Ø¹Ù…Ù„ CV",
+                                                                                               "details":  "Ø³Ø£Ù„ Ø¥Ø°Ø§ ÙƒØ§Ù† Ù…Ù…ÙƒÙ† Ø£Ø¹Ù…Ù„ CV. ØªÙ… Ø§Ø³ØªÙƒØ´Ø§Ù Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ P:.",
                                                                                                "session_id":  "ses_15bcccd31ffeQ7PtKa2tPzWmxo"
                                                                                            }
                                                                                        ]
-                                                                       }
+                                                                       },
+                                                 "p-drive-navigation":  {
+                                                                            "entries":  [
+                                                                                            {
+                                                                                                "date":  "2026-07-03",
+                                                                                                "directory":  "P:\\",
+                                                                                                "summary":  "عرض قائمة مجلدات P: drive",
+                                                                                                "session_id":  "current",
+                                                                                                "details":  "عرض 21 مجلد في P: drive شمل: AI_Meeting_Summerizing, ai-agent-oop, aura-book, cv-android, cv-project, django_projects, flask_projects, frontend_projects, lang, langc, learning, mini-llm-env, misc, portfolio, sedap-talkha, sketchup-web, النصر للعرب"
+                                                                                            }
+                                                                                        ],
+                                                                            "keywords":  [
+                                                                                             "P:",
+                                                                                             "navigation",
+                                                                                             "قائمة",
+                                                                                             "مجلدات"
+                                                                                         ]
+                                                                        }
                                              }
                               },
                      "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web":  {
@@ -407,23 +424,23 @@
                                                                                                  "navigation":  {
                                                                                                                     "keywords":  [
                                                                                                                                      "mohassil-web",
-                                                                                                                                     "الانتقال",
-                                                                                                                                     "الذهاب",
+                                                                                                                                     "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„",
+                                                                                                                                     "Ø§Ù„Ø°Ù‡Ø§Ø¨",
                                                                                                                                      "folder navigation"
                                                                                                                                  ],
                                                                                                                     "entries":  [
                                                                                                                                     {
                                                                                                                                         "date":  "2026-06-15",
                                                                                                                                         "directory":  "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
-                                                                                                                                        "summary":  "الانتقال إلى مجلد mohassil-web",
-                                                                                                                                        "details":  "طلب الانتقال إلى C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
+                                                                                                                                        "summary":  "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ Ù…Ø¬Ù„Ø¯ mohassil-web",
+                                                                                                                                        "details":  "Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
                                                                                                                                         "session_id":  "ses_137a04685ffehp0UaLJj2OmBeh"
                                                                                                                                     },
                                                                                                                                     {
                                                                                                                                         "date":  "2026-06-14",
                                                                                                                                         "directory":  "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
-                                                                                                                                        "summary":  "الذهاب إلى mohassil-web",
-                                                                                                                                        "details":  "طلب الذهاب إلى مجلد mohassil-web",
+                                                                                                                                        "summary":  "Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ mohassil-web",
+                                                                                                                                        "details":  "Ø·Ù„Ø¨ Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ Ù…Ø¬Ù„Ø¯ mohassil-web",
                                                                                                                                         "session_id":  "ses_13dab15d1ffe6nXMRGhjhba25I"
                                                                                                                                     }
                                                                                                                                 ]
@@ -437,8 +454,8 @@
                                                                                                              "keywords":  [
                                                                                                                               "settings",
                                                                                                                               "register",
-                                                                                                                              "تسجيل",
-                                                                                                                              "إعدادات",
+                                                                                                                              "ØªØ³Ø¬ÙŠÙ„",
+                                                                                                                              "Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª",
                                                                                                                               "forgot password",
                                                                                                                               "change password",
                                                                                                                               "email",
@@ -451,13 +468,13 @@
                                                                                                                              {
                                                                                                                                  "date":  "2026-06-18",
                                                                                                                                  "directory":  "C:\\Users\\Mohammed Elmouge\\aura-book",
-                                                                                                                                 "summary":  "اختبار التسجيل + إنشاء Settings page + Forgot Password + تعديل إعدادات الإيميل",
-                                                                                                                                 "details":  "1) اختبار التسجيل: كل endpoints شغالة (send-verification, verify-email, login). 2) إنشاء Settings.vue صفحة إعدادات كاملة: Profile (username, email), GROQ API Key (بيتخزن مشفر), Change Password (backend + frontend), Sign Out. 3) إنشاء ForgotPassword.vue: step 1 (email), step 2 (code + new password) مع backend endpoints (forgot-password, reset-password) وإيميل template reset_password.html. 4) إعدادات الإيميل: رجوع لـ Gmail SMTP مع fallback للـ console في DEBUG mode لو فشل الإرسال.",
+                                                                                                                                 "summary":  "Ø§Ø®ØªØ¨Ø§Ø± Ø§Ù„ØªØ³Ø¬ÙŠÙ„ + Ø¥Ù†Ø´Ø§Ø¡ Settings page + Forgot Password + ØªØ¹Ø¯ÙŠÙ„ Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ø¥ÙŠÙ…ÙŠÙ„",
+                                                                                                                                 "details":  "1) Ø§Ø®ØªØ¨Ø§Ø± Ø§Ù„ØªØ³Ø¬ÙŠÙ„: ÙƒÙ„ endpoints Ø´ØºØ§Ù„Ø© (send-verification, verify-email, login). 2) Ø¥Ù†Ø´Ø§Ø¡ Settings.vue ØµÙØ­Ø© Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª ÙƒØ§Ù…Ù„Ø©: Profile (username, email), GROQ API Key (Ø¨ÙŠØªØ®Ø²Ù† Ù…Ø´ÙØ±), Change Password (backend + frontend), Sign Out. 3) Ø¥Ù†Ø´Ø§Ø¡ ForgotPassword.vue: step 1 (email), step 2 (code + new password) Ù…Ø¹ backend endpoints (forgot-password, reset-password) ÙˆØ¥ÙŠÙ…ÙŠÙ„ template reset_password.html. 4) Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ø¥ÙŠÙ…ÙŠÙ„: Ø±Ø¬ÙˆØ¹ Ù„Ù€ Gmail SMTP Ù…Ø¹ fallback Ù„Ù„Ù€ console ÙÙŠ DEBUG mode Ù„Ùˆ ÙØ´Ù„ Ø§Ù„Ø¥Ø±Ø³Ø§Ù„.",
                                                                                                                                  "decisions":  [
-                                                                                                                                                   "Settings page فيها 4 أقسام (Profile, API Key, Change Password, Sign Out)",
-                                                                                                                                                   "Forgot Password يعيد استخدام EmailVerification model",
-                                                                                                                                                   "ChangePasswordView بيتطلب old_password + new_password",
-                                                                                                                                                   "Gmail SMTP هو الأساسي مع fallback للـ console في DEBUG"
+                                                                                                                                                   "Settings page ÙÙŠÙ‡Ø§ 4 Ø£Ù‚Ø³Ø§Ù… (Profile, API Key, Change Password, Sign Out)",
+                                                                                                                                                   "Forgot Password ÙŠØ¹ÙŠØ¯ Ø§Ø³ØªØ®Ø¯Ø§Ù… EmailVerification model",
+                                                                                                                                                   "ChangePasswordView Ø¨ÙŠØªØ·Ù„Ø¨ old_password + new_password",
+                                                                                                                                                   "Gmail SMTP Ù‡Ùˆ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ Ù…Ø¹ fallback Ù„Ù„Ù€ console ÙÙŠ DEBUG"
                                                                                                                                                ],
                                                                                                                                  "session_id":  "ses_2026-06-18-aura-book",
                                                                                                                                  "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-18_aura-book-settings-auth.json"
@@ -467,28 +484,58 @@
                                                                                    "initial-setup":  {
                                                                                                          "keywords":  [
                                                                                                                           "aura-book",
-                                                                                                                          "الذهاب",
-                                                                                                                          "الانتقال",
+                                                                                                                          "Ø§Ù„Ø°Ù‡Ø§Ø¨",
+                                                                                                                          "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„",
                                                                                                                           "project setup"
                                                                                                                       ],
                                                                                                          "entries":  [
                                                                                                                          {
                                                                                                                              "date":  "2026-05-28",
                                                                                                                              "directory":  "C:\\Users\\Mohammed Elmouge\\aura-book",
-                                                                                                                             "summary":  "الذهاب إلى aura-book - التنقل لمشروع aura-book",
-                                                                                                                             "details":  "طلبات متعددة للذهاب إلى مشروع aura-book في C:\\Users\\Mohammed Elmouge\\aura-book",
+                                                                                                                             "summary":  "Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ aura-book - Ø§Ù„ØªÙ†Ù‚Ù„ Ù„Ù…Ø´Ø±ÙˆØ¹ aura-book",
+                                                                                                                             "details":  "Ø·Ù„Ø¨Ø§Øª Ù…ØªØ¹Ø¯Ø¯Ø© Ù„Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ Ù…Ø´Ø±ÙˆØ¹ aura-book ÙÙŠ C:\\Users\\Mohammed Elmouge\\aura-book",
                                                                                                                              "session_id":  "ses_19279016effeyzyvfc35XbkLC3"
                                                                                                                          },
                                                                                                                          {
                                                                                                                              "date":  "2026-05-28",
                                                                                                                              "directory":  "P:\\aura-book4",
-                                                                                                                             "summary":  "الانتقال إلى P:aura-book4",
-                                                                                                                             "details":  "طلب الانتقال إلى مسار مختلف للمشروع",
+                                                                                                                             "summary":  "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ P:aura-book4",
+                                                                                                                             "details":  "Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø± Ù…Ø®ØªÙ„Ù Ù„Ù„Ù…Ø´Ø±ÙˆØ¹",
                                                                                                                              "session_id":  "ses_1920bcfd8ffeoKgKEbZ0Jid01K"
                                                                                                                          }
                                                                                                                      ]
                                                                                                      }
                                                                                }
-                                                                }
+                                                                },
+                     "P:\\AI_Meeting_Summerizing":  {
+                                                        "topics":  {
+                                                                       "security-fixes":  {
+                                                                                              "entries":  [
+                                                                                                              {
+                                                                                                                  "decisions":  [
+                                                                                                                                    "استخدام TokenAuthentication بدل Session للـ API",
+                                                                                                                                    "Async processing مع background thread + polling (بدون Celery)",
+                                                                                                                                    "owner FK على Meeting لعزل بيانات كل مستخدم"
+                                                                                                                                ],
+                                                                                                                  "details":  "1) Security: SECRET_KEY من env, DEBUG/ALLOWED_HOSTS/CORS قابلة للتكوين. 2) Authentication: Token-based auth + register/login/logout APIs. 3) Async processing: Whisper يشتغل في background thread مع polling من frontend. 4) File validation: امتداد وحجم الملف. 5) Error handling: logging, status=failed, try-catch. 6) Removed duplicate frontend/ directory. تم إضافة admin panel و django.contrib.messages و rest_framework.authtoken. إنشاء login.html جديد. تحديث app.js للتعامل مع auth tokens و polling.",
+                                                                                                                  "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                  "session_id":  "current",
+                                                                                                                  "date":  "2026-07-03",
+                                                                                                                  "summary":  "إصلاح 6 مشاكل أمان وأداء في AI Meeting Summarizer"
+                                                                                                              }
+                                                                                                          ],
+                                                                                              "keywords":  [
+                                                                                                               "security",
+                                                                                                               "auth",
+                                                                                                               "async",
+                                                                                                               "validation",
+                                                                                                               "تحسينات",
+                                                                                                               "أمان",
+                                                                                                               "مصادقة"
+                                                                                                           ]
+                                                                                          }
+                                                                   },
+                                                        "name":  "AI_Meeting_Summerizing"
+                                                    }
                  }
 }

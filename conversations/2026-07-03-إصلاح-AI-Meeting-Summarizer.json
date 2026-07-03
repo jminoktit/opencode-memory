@@ -1,0 +1,38 @@
+﻿{
+    "date":  "2026-07-03",
+    "title":  "إصلاح مشاكل AI Meeting Summarizer",
+    "messages":  [
+                     {
+                         "content":  "روح ل P:",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "ذهبت إلى P: drive وعرضت المجلدات",
+                         "role":  "assistant"
+                     },
+                     {
+                         "content":  "روح المجلد التاني",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "ذهبت إلى AI_Meeting_Summerizing",
+                         "role":  "assistant"
+                     },
+                     {
+                         "content":  "فهمني المشروع ده بيعمل ايه",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "شرحت المشروع بالكامل مع التفاصيل",
+                         "role":  "assistant"
+                     },
+                     {
+                         "content":  "صلح الملاحظات",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "أصلحت 6 مشاكل: 1) الأمان 2) المصادقة 3) async processing 4) validation 5) error handling 6) duplicate cleanup",
+                         "role":  "assistant"
+                     }
+                 ]
+}
