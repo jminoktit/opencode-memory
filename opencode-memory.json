@@ -552,13 +552,38 @@
                                                                                                                        "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_ai-meeting-summarizer-exploration.json"
                                                                                                                    }
                                                                                                               ],
+                                                                                               "keywords":  [
+                                                                                                                "AI_Meeting_Summerizing",
+                                                                                                                "ملخص اجتماعات",
+                                                                                                                "Django",
+                                                                                                                "Vue",
+                                                                                                                "OpenAI",
+                                                                                                                "استكشاف مشروع"
+                                                                                                            ]
+                                                                                              },
+                                                                       "meeting-analysis-fix":  {
+                                                                                                  "entries":  [
+                                                                                                                  {
+                                                                                                                      "date":  "2026-07-04",
+                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                      "summary":  "إصلاح تحليل الاجتماعات - جعل التحليل يعمل تلقائياً",
+                                                                                                                      "details":  "إصلاح المشاكل: 1) backend requirements.txt - إضافة faster_whisper و sumy. 2) Upload.vue - حقل الملف الصحيح. 3) MeetingDetail.vue - استخدام /process/ endpoint و عرض summary/transcript كنص. 4) Meetings.vue - حقول صحيحة و paginated response. 5) main.js - axios interceptors للمصادقة. 6) إضافة login route. 7) التحليل التلقائي بعد الرفع.",
+                                                                                                                      "session_id":  "current",
+                                                                                                                      "decisions":  [
+                                                                                                                                        "التحليل التلقائي بعد رفع الملف",
+                                                                                                                                        "استخدام faster_whisper للتحويل محلياً",
+                                                                                                                                        "استخدام sumy للتلخيص بدلاً من OpenAI",
+                                                                                                                                        "axios interceptors لإرسال token المصادقة"
+                                                                                                                                    ],
+                                                                                                                      "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_meeting-analysis-fix.json"
+                                                                                                                  }
+                                                                                                              ],
                                                                                                   "keywords":  [
                                                                                                                    "AI_Meeting_Summerizing",
-                                                                                                                   "ملخص اجتماعات",
-                                                                                                                   "Django",
-                                                                                                                   "Vue",
-                                                                                                                   "OpenAI",
-                                                                                                                   "استكشاف مشروع"
+                                                                                                                   "تحليل اجتماعات",
+                                                                                                                   "إصلاح",
+                                                                                                                   "faster_whisper",
+                                                                                                                   "sumy"
                                                                                                                ]
                                                                                               }
                                                                    },
