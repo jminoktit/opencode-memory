@@ -1,0 +1,24 @@
+{
+  "session_id": "current",
+  "date": "2026-07-04",
+  "directory": "P:\\AI_Meeting_Summerizing",
+  "title": "استكشاف مشروع AI Meeting Summarizer",
+  "summary": "المستخدم طلب فهم مشروع AI Meeting Summarizer. تم استكشاف الهيكل العام للمشروع: Django backend + Vue 3 frontend. المشروع يلخص الاجتماعات باستخدام الذكاء الاصطناعي (OpenAI). يتضمن رفع ملفات الصوت/الفيديو، التلخيص التلقائي، البحث في الاجتماعات السابقة، وتصدير الملخص.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "افهم المشروع"
+    },
+    {
+      "role": "assistant",
+      "content": "تم استكشاف مشروع AI Meeting Summarizer. المشروع عبارة عن Django + Vue 3 SPA لتلخيص الاجتماعات باستخدام الذكاء الاصطناعي. Backend: Django + DRF + OpenAI + pydub + yt-dlp. Frontend: Vue 3 + Pinia + Axios. النماذج: Meeting (owner, title, file, transcript, summary, status). الميزات: رفع ملفات الصوت/الفيديو، تلخيص تلقائي باستخدام AI، عرض ملخص الاجتماع، البحث في الاجتماعات السابقة، تصدير الملخص. authentication مع Token-based auth. Async processing مع background thread."
+    }
+  ],
+  "decisions": [
+    "Django backend + Vue 3 frontend",
+    "OpenAI API للتلخيص",
+    "Token-based auth للـ API",
+    "Async processing بدون Celery"
+  ],
+  "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_ai-meeting-summarizer-exploration.json"
+}
