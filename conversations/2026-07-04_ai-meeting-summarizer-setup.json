@@ -1,0 +1,14 @@
+{
+  "session_id": "ses_0d2f7a872ffeEw8O",
+  "date": "2026-07-04",
+  "directory": "P:\\AI_Meeting_Summerizing",
+  "title": "إنشاء مشروع AI Meeting Summarizer من scratch",
+  "summary": "إنشاء مشروع مكتمل في P:\\AI_Meeting_Summerizing يشبه هيكلaura-book",
+  "details": "1) التنقل إلى P:\\ ثم P:\\AI_Meeting_Summerizing. 2) إنشاء هيكل المشروع: backend (Django + DRF) و frontend (Vue 3 + Pinia). 3) نماذج قاعدة البيانات: Meeting, Summary, Transcript. 4) API endpoints للاجتماعات مع summarize و transcribe. 5) صفحات Frontend: Home, Meetings, MeetingDetail, Upload. 6) ملفات الإعداد: .gitignore, README.md, run.ps1.",
+  "decisions": [
+    "إعادة استخدام هيكل aura-book للمشروع الجديد",
+    "استخدام Django + Vue 3 مثل aura-book",
+    "إضافة OpenAI API للتلخيص"
+  ],
+  "github_url": ""
+}

@@ -536,7 +536,32 @@
                                                                                                            ]
                                                                                           }
                                                                    },
-                                                        "name":  "AI_Meeting_Summerizing"
-                                                    }
-                 }
+                                                     "name":  "AI_Meeting_Summerizing",
+                                                       "topics":  {
+                                                                      "project-setup":  {
+                                                                                             "entries":  [
+                                                                                                             {
+                                                                                                                 "decisions":  [
+                                                                                                                                   "إنشاء المشروع من scratch زي aura-book",
+                                                                                                                                   "هيكل Django backend + Vue 3 frontend",
+                                                                                                                                   "نموذج Meeting, Summary, Transcript"
+                                                                                                                               ],
+                                                                                                                 "details":  "1) إنشاء المشروع في P:\\AI_Meeting_Summerizing. 2) Backend: Django + DRF + CORS + OpenAI + pydub. 3) Frontend: Vue 3 + Pinia + Vue Router + Axios. 4) نماذج: Meeting (audio/video), Summary (content, key_points, action_items, participants), Transcript. 5) API endpoints: /api/meetings/ مع summarize, transcribe, download_summary. 6) صفحات Frontend: Home, Meetings, MeetingDetail, Upload. 7) run.ps1 script للتشغيل.",
+                                                                                                                 "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                 "session_id":  "ses_0d2f7a872ffeEw8O",
+                                                                                                                 "date":  "2026-07-04",
+                                                                                                                 "summary":  "إنشاء مشروع AI Meeting Summarizer من scratch"
+                                                                                                             }
+                                                                                                         ],
+                                                                                             "keywords":  [
+                                                                                                              "AI_Meeting_Summerizing",
+                                                                                                              "إنشاء مشروع",
+                                                                                                              "Django",
+                                                                                                              "Vue",
+                                                                                                              "setup"
+                                                                                                          ]
+                                                                                         }
+                                                                  }
+                                                     }
+                  }
 }
