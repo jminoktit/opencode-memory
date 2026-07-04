@@ -547,9 +547,10 @@
                                                                                                                                         "Django backend + Vue 3 frontend",
                                                                                                                                         "OpenAI API للتلخيص",
                                                                                                                                         "Token-based auth للـ API",
-                                                                                                                                        "Async processing بدون Celery"
-                                                                                                                                    ]
-                                                                                                                  }
+                                                                                                                                         "Async processing بدون Celery"
+                                                                                                                                     ],
+                                                                                                                       "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_ai-meeting-summarizer-exploration.json"
+                                                                                                                   }
                                                                                                               ],
                                                                                                   "keywords":  [
                                                                                                                    "AI_Meeting_Summerizing",
