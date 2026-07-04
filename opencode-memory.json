@@ -578,12 +578,38 @@
                                                                                                                       "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_meeting-analysis-fix.json"
                                                                                                                   }
                                                                                                               ],
-                                                                                                  "keywords":  [
+                                                                                                   "keywords":  [
                                                                                                                    "AI_Meeting_Summerizing",
                                                                                                                    "تحليل اجتماعات",
                                                                                                                    "إصلاح",
                                                                                                                    "faster_whisper",
                                                                                                                    "sumy"
+                                                                                                               ]
+                                                                                              },
+                                                                       "recording-feature":  {
+                                                                                                  "entries":  [
+                                                                                                                  {
+                                                                                                                      "date":  "2026-07-04",
+                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                      "summary":  "إضافة ميزة التسجيل المباشر وتحسين الرفع لبرامج خارجية",
+                                                                                                                      "details":  "إضافة: 1) صفحة Recording.vue للتسجيل الصوتي المباشر مع MediaRecorder API و audio visualizer. 2) زر 'تسجيل مباشر' في Navbar. 3) تحسين Upload.vue مع tabs (ملف/رابط) و drag-and-drop. 4) دعم امتدادات كثيرة (MP3, WAV, MP4, WebM, MKV, AVI). 5) عرض البرامج المدعومة (Zoom, Teams, Meet, Webex). 6) route /record جديد.",
+                                                                                                                      "session_id":  "current",
+                                                                                                                      "decisions":  [
+                                                                                                                                        "MediaRecorder API للتسجيل المباشر",
+                                                                                                                                        "audio visualizer للصوت",
+                                                                                                                                        "tabs منفصلة للملف و الرابط",
+                                                                                                                                        "دعم ملفات Zoom/Teams/Meet"
+                                                                                                                                    ],
+                                                                                                                      "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_recording-feature.json"
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                  "keywords":  [
+                                                                                                                   "AI_Meeting_Summerizing",
+                                                                                                                   "تسجيل مباشر",
+                                                                                                                   "MediaRecorder",
+                                                                                                                   "Zoom",
+                                                                                                                   "Teams",
+                                                                                                                   "Meet"
                                                                                                                ]
                                                                                               }
                                                                    },
