@@ -534,7 +534,32 @@
                                                                                                                "أمان",
                                                                                                                "مصادقة"
                                                                                                            ]
-                                                                                          }
+                                                                                          },
+                                                                       "project-exploration":  {
+                                                                                                  "entries":  [
+                                                                                                                  {
+                                                                                                                      "date":  "2026-07-04",
+                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                      "summary":  "استكشاف مشروع AI Meeting Summarizer - ملخص اجتماعات بالذكاء الاصطناعي",
+                                                                                                                      "details": "مشروع Django + Vue 3 SPA لتلخيص الاجتماعات باستخدام الذكاء الاصطناعي. Backend: Django + DRF + OpenAI + pydub + yt-dlp. Frontend: Vue 3 + Pinia + Axios. النماذج: Meeting (owner, title, file, transcript, summary, status). الميزات: رفع ملفات الصوت/الفيديو، تلخيص تلقائي باستخدام AI، عرض ملخص الاجتماع، البحث في الاجتماعات السابقة، تصدير الملخص. authentication مع Token-based auth. Async processing مع background thread.",
+                                                                                                                      "session_id":  "current",
+                                                                                                                      "decisions":  [
+                                                                                                                                        "Django backend + Vue 3 frontend",
+                                                                                                                                        "OpenAI API للتلخيص",
+                                                                                                                                        "Token-based auth للـ API",
+                                                                                                                                        "Async processing بدون Celery"
+                                                                                                                                    ]
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                  "keywords":  [
+                                                                                                                   "AI_Meeting_Summerizing",
+                                                                                                                   "ملخص اجتماعات",
+                                                                                                                   "Django",
+                                                                                                                   "Vue",
+                                                                                                                   "OpenAI",
+                                                                                                                   "استكشاف مشروع"
+                                                                                                               ]
+                                                                                              }
                                                                    },
                                                      "name":  "AI_Meeting_Summerizing",
                                                        "topics":  {
