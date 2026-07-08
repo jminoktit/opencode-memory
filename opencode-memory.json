@@ -355,25 +355,27 @@
                                                                                                  "profiles",
                                                                                                  "community",
                                                                                                  "user profile",
-                                                                                                 "bio"
+                                                                                                 "bio",
+                                                                                                 "search"
                                                                                              ],
                                                                                 "entries":  [
                                                                                                 {
                                                                                                     "date":  "2026-07-08",
                                                                                                     "directory":  "P:\\aura-book\\backend",
-                                                                                                    "summary":  "بناء payments app + instructor profiles + user profile page",
-                                                                                                    "details":  "1) payments app مستقل: CoursePurchase model بـ 5% commission, Paymob integration, refund system. 2) Instructor profiles endpoint: GET /api/courses/instructors/. 3) Public profile endpoint: GET /api/auth/profile/<user_id>/ يعرض بروفايل المستخدم مع كورساته ومنتجاته. 4) Bio field جديد على Profile model. 5) UserSerializer يعرض first_name, last_name, bio. 6) UserProfile.vue: صفحة بروفايل كاملة مع header + stats + courses + products. 7) Home.vue: قسم Meet Our Instructors مع روابط للبروفايلات.",
+                                                                                                    "summary":  "بناء payments app + instructor profiles + user profile + search",
+                                                                                                    "details":  "1) payments app مستقل: CoursePurchase model بـ 5% commission, Paymob integration, refund system. 2) Instructor profiles endpoint: GET /api/courses/instructors/ مع search support. 3) Public profile endpoint: GET /api/auth/profile/<user_id>/. 4) Bio field على Profile model. 5) UserProfile.vue: صفحة بروفايل كاملة. 6) Instructors.vue: صفحة بحث عن المدرّبين مع عرض الكورسات والمنتجات. 7) Navbar: رابط Instructors.",
                                                                                                     "decisions":  [
-                                                                                                                     " payments app مستقل مش مدمج مع shop",
-                                                                                                                     "عمولة 5% تتحسب تلقائي",
-                                                                                                                     "Refund مسموح لو < 25% مكتمل",
-                                                                                                                     " فيديو تمهيدي على الكورس",
-                                                                                                                     "Instructor profiles في الصفحة الرئيسية",
-                                                                                                                     "صفحة بروفايل مستخدم كاملة"
+                                                                                                                     " payments app مستقل",
+                                                                                                                     "عمولة 5% تلقائية",
+                                                                                                                     "Refund لو < 25% مكتمل",
+                                                                                                                     " فيديو تمهيدي",
+                                                                                                                     "صفحة بحث عن المدرّبين"
                                                                                                                  ],
-                                                                                                    "code":  "payments/app, shop/models.py (bio), shop/views.py (public_profile), frontend/UserProfile.vue, frontend/Home.vue",
+                                                                                                    "code":  "payments/app, courses/views.py, shop/views.py, frontend/Instructors.vue, frontend/UserProfile.vue, frontend/Home.vue",
                                                                                                     "session_id":  "current_session"
                                                                                                 }
+                                                                                            ]
+                                                                            }
                                                                                             ]
                                                                             }
                                                       }
