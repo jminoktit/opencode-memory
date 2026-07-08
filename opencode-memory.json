@@ -85,6 +85,30 @@
                                                                                         }
                                                                                     ]
                                                                     },
+                                                 "local-ai-training":  {
+                                                                       "keywords":  [
+                                                                                        "local AI",
+                                                                                        "training",
+                                                                                        "ollama",
+                                                                                        "fine-tune",
+                                                                                        "QLoRA",
+                                                                                        "unsloth",
+                                                                                        "GPU",
+                                                                                        "VRAM",
+                                                                                        "NVIDIA Quadro P2000",
+                                                                                        "تدريب موديل",
+                                                                                        "موديل محلي"
+                                                                                    ],
+                                                                       "entries":  [
+                                                                                       {
+                                                                                           "date":  "2026-07-08",
+                                                                                           "directory":  "C:\\",
+                                                                                           "summary": "سؤال عن تدريب موديل AI محلي على الجهاز",
+                                                                                           "details": "جهازه: NVIDIA Quadro P2000 (4GB VRAM), 32GB RAM, Intel i7-8850H. يقدر يعمل: 1) ollama لتشغيل موديلات جاهزة (phi3:mini, mistral:7b). 2) Fine-tuning بموديلات صغيرة (1B-3B) باستخدام unsloth أو transformers+peft+bitsandbytes مع 4-bit quantization. 3) التدريب من الصفر مش ممكن على 4GB VRAM.",
+                                                                                           "session_id":  "current"
+                                                                                       }
+                                                                                   ]
+                                                                   },
                                                  "opencode-exploration":  {
                                                                               "keywords":  [
                                                                                                "opencode",

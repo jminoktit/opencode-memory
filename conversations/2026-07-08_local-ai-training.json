@@ -1,0 +1,17 @@
+{
+  "title": "سؤال عن تدريب موديل AI محلي على الجهاز",
+  "date": "2026-07-08",
+  "session_id": "current",
+  "directory": "C:\\",
+  "model": "opencode/mimo-v2.5-free",
+  "messages": [
+    {
+      "role": "user",
+      "content": "هل ممكن ادرب موديل ai محلي علي جهازي هنا"
+    },
+    {
+      "role": "assistant",
+      "content": "أكيد ممكن! جهازك عليه مواصفات كويسة:\n\n| المكون | المواصفات |\n|--------|-----------|\n| **GPU** | NVIDIA Quadro P2000 (4GB VRAM) |\n| **RAM** | 32GB |\n| **CPU** | Intel i7-8850H (6 cores / 12 threads) |\n\n## اللي تقدر تعمله:\n\n### 1. تشغيل موديلات جاهزة (Inference)\n- **ollama** - أسهل طريقة لتشغيل موديلات زي Llama, Mistral, Phi\n- موديلات صغيرة (1B-7B parameters) هتشتغل تمام على الـ 4GB VRAM\n\n### 2. Fine-tuning (تدريب موديل جاهز على بياناتك)\n- موديلات صغيرة (1B-3B) تقدر تعملها fine-tune بـ **QLoRA** باستخدام:\n  - `unsloth` - أسرع وأخف\n  - `transformers` + `peft` + `bitsandbytes`\n- هتحتاج تستخدم **4-bit quantization** عشان الـ VRAM المحدود\n\n### 3. تدريب من الصفر (Full Training)\n- **مش ممكن** على 4GB VRAM - موديلات LLM كبيرة بتحتاج 24GB+ على الأقل\n\n## اقتراحات عملية:\n\n```\n# أسرع طريقة تبدأ بيها - ollama\nwinget install ollama\nollama run phi3:mini        # 3.8B - شغال على جهازك\nollama run mistral:7b       # 7B - ممكن يمشي\n```\n\n```\n# للـ fine-tuning - unsloth (أسرع وأخف)\npip install unsloth\n```"
+    }
+  ]
+}
