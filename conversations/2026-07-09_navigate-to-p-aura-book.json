@@ -1,0 +1,15 @@
+{
+  "title": "Navigate to P:\\aura-book",
+  "date": "2026-07-09",
+  "model": "mimo-v2-free",
+  "messages": [
+    {
+      "role": "user",
+      "content": "روح ل P:aura-book"
+    },
+    {
+      "role": "assistant",
+      "content": "انتقلت لـ P:\\aura-book وحدّثت الملفات."
+    }
+  ]
+}
