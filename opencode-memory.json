@@ -339,6 +339,35 @@
                                                                                                     "session_id":  "ses_1ad681390ffety3bxbGI7bqjOC"
                                                                                                 }
                                                                                             ]
+                                                                            },
+                                                       "payments-system":  {
+                                                                                "keywords":  [
+                                                                                                 "payments",
+                                                                                                 "CoursePurchase",
+                                                                                                 "commission",
+                                                                                                 "5%",
+                                                                                                 "Paymob",
+                                                                                                 "refund",
+                                                                                                 "instructor earnings",
+                                                                                                 "Ø¯ÙØ¹",
+                                                                                                 "Ø¹Ù…ÙˆÙ„Ø©"
+                                                                                             ],
+                                                                                "entries":  [
+                                                                                                {
+                                                                                                    "date":  "2026-07-08",
+                                                                                                    "directory":  "P:\\aura-book\\backend",
+                                                                                                    "summary":  "بناء payments app مستقل لنظام الدفع والعمولات على الكورسات",
+                                                                                                    "details":  "إنشاء payments app جديد يتعامل مع: 1) شراء الكورسات المدفوعة عبر Paymob 2) عمولة 5% تلقائية 3) Refund system (مسموح لو < 25% مكتمل) 4) Instructor earnings dashboard 5) Admin purchases view. نموذج CoursePurchase بields: user, course, amount, platform_fee, instructor_earnings, paymob_order_id, status, refund fields.",
+                                                                                                    "decisions":  [
+                                                                                                                     " payments app مستقل مش مدمج مع shop",
+                                                                                                                     "عمولة 5% تتحسب تلقائي وتتحفظ في CoursePurchase",
+                                                                                                                     "Refund مسموح لو المستخدم عمل < 25% من الدروس",
+                                                                                                                     " فيديو تمهيدي (intro_video_url) على الكورس"
+                                                                                                                 ],
+                                                                                                    "code":  "payments/models.py, payments/views.py, payments/services.py, payments/urls.py, payments/serializers.py, payments/admin.py",
+                                                                                                    "session_id":  "current_session"
+                                                                                                }
+                                                                                            ]
                                                                             }
                                                       }
                                        },
