@@ -255,13 +255,28 @@
                                                                                                                "Navbar hidden on login/register pages",
                                                                                                                "Eager imports for now (lazy loading later)"
                                                                                                            ],
-                                                                                              "session_id":  "current",
-                                                                                              "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-09_aura-book-react-conversion.json"
-                                                                                          },
-                                                                                          {
-                                                                                              "date":  "2026-07-09",
-                                                                                              "directory":  "P:\\aura-book",
-                                                                                              "summary":  "Converted Navbar.vue and ProductCard.vue to React JSX components",
+"session_id":  "current",
+                                                                                               "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-09_aura-book-react-conversion.json"
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-07-09",
+                                                                                               "directory":  "C:\\Users\\Mohammed Elmouge\\aura-book",
+                                                                                               "summary":  "Created Agent.jsx - 6-tab AI Agent page converted from Vue (897 lines)",
+                                                                                               "details":  "Created src/views/Agent.jsx with 6 fully functional tabs: 1) Image Gen - POST /ollama/image-gen/ with prompt input + image display. 2) AI Chat - sidebar with conversations (pin/rename/delete), agent selector (general/coder/researcher), message history, markdown rendering via marked, PDF export. 3) PDF Tools - file upload with title, summary/structured data display with key_points, topics, technologies badges. 4) Reminders - CRUD with title/deadline/notes, toggle complete, inline edit. 5) Prayer Times - city input, prayer times grid display. 6) Study Materials - CRUD with title/content/notes/file upload, markdown rendering. All CSS in inline <style> tag matching original Vue design. Mobile responsive with sidebar slide-in.",
+                                                                                               "decisions":  [
+                                                                                                                "Inline <style> tag for all CSS (matching existing JSX pattern)",
+                                                                                                                "marked library for markdown rendering",
+                                                                                                                "useAuthStore hook from Pinia-compatible store",
+                                                                                                                "All API endpoints from /ollama/ prefix",
+                                                                                                                "FormData for file uploads (PDF + Study Materials)"
+                                                                                                            ],
+                                                                                               "code":  "src/views/Agent.jsx (897 lines)",
+                                                                                               "session_id":  "current"
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-07-09",
+                                                                                               "directory":  "P:\\aura-book",
+                                                                                               "summary":  "Converted Navbar.vue and ProductCard.vue to React JSX components",
                                                                                               "details":  "Created 2 React component files: 1) src/components/Navbar.jsx - Dark sidebar with logo, nav items (Home, Products, Courses, Instructors, AI Agent), auth-gated links (Inbox, Support, Settings), desktop collapsible (220px->64px), mobile hamburger+slide-in+overlay, user avatar/username at bottom, Login/Register links when logged out. Uses Link/useLocation from react-router-dom, useAuthStore, useState for isCollapsed/isMobileOpen, useEffect for body class toggling. Inline CSS with nav- prefix. 2) src/components/ProductCard.jsx - Product card with image (aspect-ratio:1), title (2-line clamp), price in EGP format, stock indicator, Add to Cart button. If not logged in redirects to /login. Uses useCartStore.add and useAuthStore. Inline CSS with pc- prefix.",
                                                                                               "decisions":  [
                                                                                                                "Inline <style> tags with unique class prefixes (nav-, pc-) instead of CSS modules",
