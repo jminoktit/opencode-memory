@@ -1,768 +1,120 @@
 ﻿{
-    "projects":  {
-                     "C:\\":  {
-                                  "name":  "General (C:\\)",
-                                  "topics":  {
-                                                 "session-naming":  {
-                                                                        "keywords":  [
-                                                                                         "session",
-                                                                                         "title",
-                                                                                         "memory",
-                                                                                         "directory",
-                                                                                         "Ù…Ø³Ø§Ø±",
-                                                                                         "Ø¬Ù„Ø³Ø©",
-                                                                                         "Ø­ÙØ¸"
-                                                                                     ],
-                                                                        "entries":  [
-                                                                                        {
-                                                                                            "date":  "2026-06-17",
-                                                                                            "directory":  "C:\\",
-                                                                                            "summary":  "Ø·Ù„Ø¨ ØªØ­Ø³ÙŠÙ† Ø­ÙØ¸ Ø§Ù„Ø°Ø§ÙƒØ±Ø© Ø¨Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ù…Ø³Ø§Ø± (directory) Ù„ÙƒÙ„ Ø¬Ù„Ø³Ø©",
-                                                                                            "details":  "Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø·Ù„Ø¨ Ø¥Ù† ÙƒÙ„ entry ÙÙŠ Ø§Ù„Ø°Ø§ÙƒØ±Ø© ÙŠØ¶Ù… Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ù„ÙŠ ÙƒØ§Ù†Øª Ø´ØºØ§Ù„Ø© ÙÙŠÙ‡ (directory). Ø¨Ø¯Ù„ Ù…Ø§ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø¨Ø³ØŒ Ù†Ø¹Ø±Ù Ø¥Ø­Ù†Ø§ ÙƒÙ†Ø§ ÙÙŠÙ† Ø¨Ø§Ù„Ø¶Ø¨Ø·. ØªÙ… Ø¥Ø¶Ø§ÙØ© Ø­Ù‚Ù„ directory Ù„ÙƒÙ„ entry.",
-                                                                                            "session_id":  "ses_12d4afab9ffe2o2MyTraE1z2mT"
-                                                                                        }
-                                                                                    ]
-                                                                    },
-                                                 "memory-system":  {
-                                                                       "keywords":  [
-                                                                                        "Ø°Ø§ÙƒØ±Ø©",
-                                                                                        "memory",
-                                                                                        "memory system",
-                                                                                        "Ù†Ø¸Ø§Ù… Ø°Ø§ÙƒØ±Ø©",
-                                                                                        "instructions",
-                                                                                        "ØªØ¹Ù„ÙŠÙ…Ø§Øª",
-                                                                                        "plugin",
-                                                                                        "opencode-memory",
-                                                                                        "persistent",
-                                                                                        "SQLite"
-                                                                                    ],
-                                                                       "entries":  [
-                                                                                       {
-                                                                                           "date":  "2026-06-17",
-                                                                                           "directory":  "C:\\",
-                                                                                           "summary":  "Ø¨Ù†Ø§Ø¡ Ù†Ø¸Ø§Ù… Ø°Ø§ÙƒØ±Ø© Ø¯Ø§Ø¦Ù… Ù„Ù€ opencode - Ù…Ù† plugin Ù„Ø¯Ø§ØªØ§ Ø¨ÙŠØ² Ù…ØªÙƒØ§Ù…Ù„Ø©",
-                                                                                           "details":  "Ø¨Ø¹Ø¯ Ù…Ù†Ø§Ù‚Ø´Ø© Ø­Ø¯ÙˆØ¯ Aider ÙˆØ¹Ø¯Ù… Ø­ÙØ¸Ù‡ Ù„Ù„Ø¬Ù„Ø³Ø§ØªØŒ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø·Ù„Ø¨ build Ù†Ø¸Ø§Ù… Ø°Ø§ÙƒØ±Ø© Ø¯Ø§Ø¦Ù…. Ø§Ù„Ù…Ø³Ø§Ø±: 1) plugin Ø§Ø³Ù…Ù‡ opencode-memory Ø¨ÙŠÙ‚Ø±Ø§ SQLite Ø¨ØªØ§Ø¹Ø© opencode ÙˆÙŠØ­Ø· past sessions ÙÙŠ systemæç¤º. 2) Ø·Ù„Ø¨ ØªØ­Ø³ÙŠÙ† Ù„Ù„Ù†Ø¸Ø§Ù… ÙŠØ¨Ù‚Ù‰ Ù…ØªØ£ØµÙ„ Ù…Ø´ plugin. 3) Ø§ØªØ¹Ù…Ù„ instructions file ÙÙŠ ~/.config/opencode/instructions/memory.md Ø¨ÙŠØªØ­Ù…Ù„ ÙÙŠ ÙƒÙ„ session. 4) Ø§ØªØ¹Ù…Ù„Øª Ø¯Ø§ØªØ§ Ø¨ÙŠØ² organized by project â†’ topic â†’ entries ÙÙŠ ~/.local/share/opencode/opencode-memory.json. 5) Ø§ØªØ¶Ø§Ù memory_search tool ÙÙŠ plugin. 6) Ø§ØªØ¶Ø§Ù directory field Ù„ÙƒÙ„ entry Ø¹Ø´Ø§Ù† ÙŠØ¹Ø±Ù Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ù„ÙŠ ÙƒØ§Ù†Øª Ø´ØºØ§Ù„Ø© ÙÙŠÙ‡.",
-                                                                                           "decisions":  [
-                                                                                                             "Ø°Ø§ÙƒØ±Ø© Ø¯Ø§Ø¦Ù…Ø© ÙÙŠ JSON file Ù…Ø´ SQLite (Ø£Ø³Ù‡Ù„ Ù„Ù„Ù‚Ø±Ø§Ø¡Ø©/Ø§Ù„ØªØ­Ø±ÙŠØ±)",
-                                                                                                             "topic extraction Ù…Ù† Ø¹Ù†ÙˆØ§Ù† Ø§Ù„Ø¬Ù„Ø³Ø© ØªÙ„Ù‚Ø§Ø¦ÙŠ",
-                                                                                                             "directory field Ù„ÙƒÙ„ entry"
-                                                                                                         ],
-                                                                                           "session_id":  "ses_12d53c276ffe7ImTUiGJAUhmBC",
-                                                                                           "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_Ù…Ø§-Ù‡Ùˆ-Aider-ÙˆÙ†Ø¸Ø§Ù…-Ø§Ù„Ø°Ø§ÙƒØ±Ø©.json"
-                                                                                       }
-                                                                                   ]
-                                                                   },
-                                                 "session-viewer":  {
-                                                                        "keywords":  [
-                                                                                         "sessions",
-                                                                                         "Ø¬Ù„Ø³Ø§Øª",
-                                                                                         "past sessions",
-                                                                                         "list sessions",
-                                                                                         "session viewer",
-                                                                                         "opencode-memory.ts",
-                                                                                         "plugin",
-                                                                                         "SQLite",
-                                                                                         "sidebar",
-                                                                                         "web UI",
-                                                                                         "index.html"
-                                                                                     ],
-                                                                        "entries":  [
-                                                                                        {
-                                                                                            "date":  "2026-06-17",
-                                                                                            "directory":  "C:\\",
-                                                                                            "summary":  "Ø¥Ø¶Ø§ÙØ© 3 Ø£Ø¯ÙˆØ§Øª Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø¬Ù„Ø³Ø§Øª Ø§Ù„Ø³Ø§Ø¨Ù‚Ø© ÙÙŠ plugin Ø§Ù„Ù…ÙŠÙ…ÙˆØ±ÙŠ",
-                                                                                            "details":  "ØªÙ… ØªØ·ÙˆÙŠØ± opencode-memory.ts Ù„ÙŠØ¶ÙŠÙ 3 Ø£Ø¯ÙˆØ§Øª: 1) list_sessions - ÙŠØ¹Ø±Ø¶ Ø¢Ø®Ø± Ø§Ù„Ø¬Ù„Ø³Ø§Øª Ù…Ø¹ title, directory, date, tokens. 2) get_session - ÙŠØ´ÙˆÙ Ù…Ø­ØªÙˆÙ‰ Ø¬Ù„Ø³Ø© Ù…Ø¹ÙŠÙ†Ø© (ÙƒÙ„ Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ Ù…Ø¹ Ø§Ù„Ù€ roles). 3) search_sessions - ÙŠØ¯ÙˆØ± Ø¹Ù„Ù‰ Ø¬Ù„Ø³Ø© Ø¨ÙƒÙ„Ù…Ø© Ù…ÙØªØ§Ø­ÙŠØ© ÙÙŠ Ø§Ù„Ø¹Ù†ÙˆØ§Ù†. Ø¨ÙŠØ³ØªØ®Ø¯Ù… sqlite3 CLI Ø¹Ù„Ù‰ opencode.db Ù…Ø¨Ø§Ø´Ø±Ø©.",
-                                                                                            "session_id":  "ses_12d3a1514ffeGbxtvQCZbTvhFm",
-                                                                                            "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
-                                                                                        },
-                                                                                        {
-                                                                                            "date":  "2026-06-17",
-                                                                                            "directory":  "C:\\",
-                                                                                            "summary":  "Ø¥Ø¹Ø§Ø¯Ø© ØªØµÙ…ÙŠÙ… web UI - sidebar Ù„Ù„Ø¬Ù„Ø³Ø§Øª Ù…Ù† SQLite + chat view",
-                                                                                            "details":  "ØªÙ… Ø¥Ø¹Ø§Ø¯Ø© ØªØµÙ…ÙŠÙ… index.html Ø¨Ø§Ù„ÙƒØ§Ù…Ù„: 1) sidebar (320px) ÙŠØ¹Ø±Ø¶ ÙƒÙ„ Ø§Ù„Ø¬Ù„Ø³Ø§Øª Ù…Ù† SQLite (119 session) Ù…Ø¹ title, date, message count, tokens. 2) search box Ù„ÙÙ„ØªØ±Ø© Ø§Ù„Ø¬Ù„Ø³Ø§Øª. 3) chat view ÙŠØ¹Ø±Ø¶ Ø§Ù„Ù…Ø­Ø§Ø¯Ø«Ø© Ø¹Ù†Ø¯ Ø§Ù„Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø¬Ù„Ø³Ø© - Ø±Ø³Ø§Ø¦Ù„ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… ÙŠÙ…ÙŠÙ† Ùˆ AI ÙŠØ³Ø§Ø±. 4) export.ps1 - script PowerShell ÙŠØµØ¯Ø± sessions-data.json Ù…Ù† opencode.db (batch queries Ø¹Ø´Ø§Ù† Ø§Ù„Ø³Ø±Ø¹Ø©). 5) start.ps1 - script ÙŠØ´ØºÙ„ http-server ÙˆÙŠÙØªØ­ Ø§Ù„Ù…ØªØµÙØ­.",
-                                                                                            "session_id":  "ses_12d3a1514ffeGbxtvQCZbTvhFm",
-                                                                                            "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_session-viewer.json"
-                                                                                        }
-                                                                                    ]
-                                                                    },
-                                                 "local-ai-training":  {
-                                                                       "keywords":  [
-                                                                                        "local AI",
-                                                                                        "training",
-                                                                                        "ollama",
-                                                                                        "fine-tune",
-                                                                                        "QLoRA",
-                                                                                        "unsloth",
-                                                                                        "GPU",
-                                                                                        "VRAM",
-                                                                                        "NVIDIA Quadro P2000",
-                                                                                        "تدريب موديل",
-                                                                                        "موديل محلي"
-                                                                                    ],
-                                                                       "entries":  [
-                                                                                       {
-                                                                                           "date":  "2026-07-08",
-                                                                                           "directory":  "C:\\",
-                                                                                           "summary": "سؤال عن تدريب موديل AI محلي على الجهاز",
-                                                                                           "details": "جهازه: NVIDIA Quadro P2000 (4GB VRAM), 32GB RAM, Intel i7-8850H. يقدر يعمل: 1) ollama لتشغيل موديلات جاهزة (phi3:mini, mistral:7b). 2) Fine-tuning بموديلات صغيرة (1B-3B) باستخدام unsloth أو transformers+peft+bitsandbytes مع 4-bit quantization. 3) التدريب من الصفر مش ممكن على 4GB VRAM.",
-                                                                                           "session_id":  "current"
-                                                                                       }
-                                                                                   ]
-                                                                   },
-                                                 "opencode-exploration":  {
-                                                                              "keywords":  [
-                                                                                               "opencode",
-                                                                                               "aider",
-                                                                                               "ai",
-                                                                                               "cli",
-                                                                                               "tool",
-                                                                                               "pair programming"
-                                                                                           ],
-                                                                              "entries":  [
-                                                                                              {
-                                                                                                  "date":  "2026-06-17",
-                                                                                                  "directory":  "C:\\",
-                                                                                                  "summary":  "Ø³Ø£Ù„ Ø¹Ù† Aider - Ø£Ø¯Ø§Ø© AI Ø¨Ø±Ù…Ø¬Ø© Ø²ÙˆØ¬ÙŠØ© Ø¹Ø¨Ø± CLI",
-                                                                                                  "details":  "Aider Ù‡ÙŠ Ø£Ø¯Ø§Ø© AI Ø¨Ø±Ù…Ø¬Ø© Ø²ÙˆØ¬ÙŠØ© ØªØ´ØªØºÙ„ Ù…Ù† terminal. Ø¨ØªØ³ØªØ®Ø¯Ù… LLM. Ø¨ØªØ´ØªØºÙ„ Ù…Ø¹ ChatGPT, Claude, ÙˆØºÙŠØ±Ù‡Ù…. Ø¨ØªØ§Ø®Ø¯ Ø³ÙŠØ§Ù‚ Ø§Ù„ÙƒÙˆØ¯ ÙˆØªØ¹Ù…Ù„ ØªØºÙŠÙŠØ±Ø§Øª Ù…Ø¨Ø§Ø´Ø±Ø©. Ø§ØªÙƒÙ„Ù…Ù†Ø§ Ø¹Ù† Ù…Ù…ÙŠØ²Ø§ØªÙ‡Ø§ (CLI-first, multi-model, git-native, repo map, open source) ÙˆØ¹Ù† Ø­Ø¯ÙˆØ¯Ù‡Ø§ (context window, output tokens, repo map size). ÙˆØ¹Ù† Ø¥Ù†Ù‡Ø§ Ù…Ø´ Ø¨ØªØ­ÙØ¸ Ø§Ù„Ø¬Ù„Ø³Ø§Øª.",
-                                                                                                  "session_id":  "ses_12d53c276ffe7ImTUiGJAUhmBC"
-                                                                                              },
-                                                                                              {
-                                                                                                  "date":  "2026-06-17",
-                                                                                                  "directory":  "C:\\",
-                                                                                                  "summary":  "Ø§Ø³ØªÙƒØ´Ø§Ù Ù‡ÙŠÙƒÙ„ opencode Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ - Rust binary Ù…Ø¹ SQLite database",
-                                                                                                  "details":  "opencode Ø¹Ø¨Ø§Ø±Ø© Ø¹Ù† Rust binary (~153MB) Ù…Ø«Ø¨Øª ÙÙŠ AppData/Roaming/npm. Ø¹Ù†Ø¯Ù‡ SQLite database ÙÙŠ .local/share/opencode/opencode.db Ø¨Ø¬Ø¯Ø§ÙˆÙ„ session, message, part. Ø¹Ù†Ø¯Ù‡ plugin API Ùˆ SDK client. Ø¨ÙŠØ³ØªØ®Ø¯Ù… event bus architecture. Ø§Ù„Ù…Ù„ÙØ§Øª Ø¨ØªØªØ®Ø²Ù† ÙÙŠ storage/session_diff. ÙˆØ¹Ù†Ø¯Ù‡ memory feature ÙÙŠ opencode-memory/memory.md.",
-                                                                                                  "session_id":  "ses_12d4afab9ffe2o2MyTraE1z2mT"
-                                                                                              }
-                                                                                          ]
-                                                                          },
-                                                 "stats-math":  {
-                                                                    "keywords":  [
-                                                                                     "statistics",
-                                                                                     "math",
-                                                                                     "sample variance",
-                                                                                     "binomial",
-                                                                                     "distribution",
-                                                                                     "classes",
-                                                                                     "data"
-                                                                                 ],
-                                                                    "entries":  [
-                                                                                    {
-                                                                                        "date":  "2026-06-04",
-                                                                                        "directory":  "C:\\",
-                                                                                        "summary":  "Ø³Ø£Ù„ Ø¹Ù† ØªØ¹Ø±ÙŠÙ sample variance - ØªØ¨Ø§ÙŠÙ† Ø§Ù„Ø¹ÙŠÙ†Ø©",
-                                                                                        "details":  "Sample variance = sÂ² = Î£(xi - xÌ„)Â² / (n-1). Ù…Ù‚Ø³ÙˆÙ… Ø¹Ù„Ù‰ n-1 Ù…Ø´ n Ø¹Ø´Ø§Ù† unbiased estimator.",
-                                                                                        "session_id":  "ses_16e3fe3cbffeZLTuzZXpD2EtFy"
-                                                                                    },
-                                                                                    {
-                                                                                        "date":  "2026-06-03",
-                                                                                        "directory":  "C:\\",
-                                                                                        "summary":  "Mean of binomial distribution = n*p",
-                                                                                        "details":  "Mean of binomial = n*p, where n = number of trials, p = probability of success. Variance = n*p*q.",
-                                                                                        "session_id":  "ses_1720e4a4effe1AkbAEFNBaD0ZU"
-                                                                                    },
-                                                                                    {
-                                                                                        "date":  "2026-06-02",
-                                                                                        "directory":  "C:\\",
-                                                                                        "summary":  "More classes as data size increases",
-                                                                                        "details":  "Prefer more classes as dataset grows for better granularity.",
-                                                                                        "session_id":  "ses_1677af27affekgZxnEMLO9t3fA"
-                                                                                    }
-                                                                                ]
-                                                                },
-                                                 "general-tech":  {
-                                                                      "keywords":  [
-                                                                                       "storage controller",
-                                                                                       "sms card",
-                                                                                       "laptop",
-                                                                                       "hardware",
-                                                                                       "Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª",
-                                                                                       "passive income"
-                                                                                   ],
-                                                                      "entries":  [
-                                                                                      {
-                                                                                          "date":  "2026-06-16",
-                                                                                          "directory":  "C:\\",
-                                                                                          "summary":  "Ø³Ø£Ù„ Ø¹Ù† storage controller - Ø¬Ù‡Ø§Ø² ØªØ­ÙƒÙ… Ø¨Ø§Ù„ØªØ®Ø²ÙŠÙ† ÙÙŠ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ±",
-                                                                                          "details":  "Storage controller Ù‡Ùˆ Ø¬Ù‡Ø§Ø² Ø£Ùˆ software Ø¨ÙŠØ¯ÙŠØ± Ø§Ù„ØªØ®Ø²ÙŠÙ† ÙÙŠ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± (SSD, HDD). Ø¨ÙŠØªØ­ÙƒÙ… ÙÙŠ Ù‚Ø±Ø§Ø¡Ø© ÙˆÙƒØªØ§Ø¨Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª. Ø£Ù†ÙˆØ§Ø¹: SATA Controller, NVMe Controller, RAID Controller.",
-                                                                                          "session_id":  "ses_132d621f6ffeaXZl7aYUlI2crj"
-                                                                                      },
-                                                                                      {
-                                                                                          "date":  "2026-06-16",
-                                                                                          "directory":  "C:\\",
-                                                                                          "summary":  "Ø³Ø£Ù„ Ø¹Ù† ØªØ´ØºÙŠÙ„ SMS card ÙÙŠ Ø§Ù„Ù„Ø§Ø¨ØªÙˆØ¨ - Ø¨Ø·Ø§Ù‚Ø© Ø§ØªØµØ§Ù„Ø§Øª ÙÙŠ Ø¨ÙˆØ±Ø¯Ø© Ø§Ù„Ù„Ø§Ø¨ØªÙˆØ¨",
-                                                                                          "details":  "SMS card (WWAN card) ÙÙŠ Ø§Ù„Ù„Ø§Ø¨ØªÙˆØ¨ Ø¹Ø´Ø§Ù† ÙŠØ¯Ø®Ù„ Ø´Ø±ÙŠØ­Ø© Ø§ØªØµØ§Ù„. Ù…Ø­ØªØ§Ø¬ antenna, drivers Ù…Ù† Ø§Ù„Ø´Ø±ÙƒØ©, Ùˆ SIM card. ØºØ§Ù„Ø¨Ø§Ù‹ ÙÙŠ ÙØªØ­Ø© Ù…Ø®ØµØµØ© Ø¬Ù†Ø¨ WiFi card.",
-                                                                                          "session_id":  "ses_133acce4dffePMAxQ7fhVbMoi7"
-                                                                                      },
-                                                                                      {
-                                                                                          "date":  "2026-06-16",
-                                                                                          "directory":  "C:\\",
-                                                                                          "summary":  "Ø³Ø£Ù„ Ø¹Ù† ÙÙƒØ±Ø© Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª - Ø§Ù‚ØªØ±Ø­Øª Ù…Ø´Ø§Ø±ÙŠØ¹ Ù„Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª",
-                                                                                          "details":  "Ø§Ù‚ØªØ±Ø­Øª Ø£ÙÙƒØ§Ø± Ù„Ø¯Ø®Ù„ Ø«Ø§Ø¨Øª: freelancing, dropshipping, content creation, SaaS, affiliate marketing.",
-                                                                                          "session_id":  "ses_13271b147ffeB6cVJ5J4XgSwRM"
-                                                                                      }
-                                                                                  ]
-                                                                  },
-                                                 "web-dev":  {
-                                                                 "keywords":  [
-                                                                                  "Ù…ÙˆÙ‚Ø¹ ØªÙˆØ§ØµÙ„ Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ",
-                                                                                  "social media",
-                                                                                  "Ø¹Ø±Ø¨ÙŠ",
-                                                                                  "Ø®Ø·ÙˆØ· Ø¹Ø±ÙŠØ¶Ø©",
-                                                                                  "JS printing",
-                                                                                  "javascript"
-                                                                              ],
-                                                                 "entries":  [
-                                                                                 {
-                                                                                     "date":  "2026-05-28",
-                                                                                     "directory":  "C:\\",
-                                                                                     "summary":  "Ø®Ø·ÙˆØ· Ø¹Ø±ÙŠØ¶Ø© Ù„Ù…ÙˆÙ‚Ø¹ ØªÙˆØ§ØµÙ„ Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ Ø¹Ø±Ø¨ÙŠ",
-                                                                                     "details":  "Ø§ØªÙƒÙ„Ù…Ù†Ø§ Ø¹Ù† Ù…ÙˆÙ‚Ø¹ ØªÙˆØ§ØµÙ„ Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ Ø¹Ø±Ø¨ÙŠ: features Ø£Ø³Ø§Ø³ÙŠØ© (profile, posts, comments, likes, messaging, notifications), tech stack (React/Vue, Node/Django, PostgreSQL), monetization (ads, premium subscriptions).",
-                                                                                     "session_id":  "ses_17fb4558fffeWCooHOSZu1QvqZ"
-                                                                                 },
-                                                                                 {
-                                                                                     "date":  "2026-05-24",
-                                                                                     "directory":  "C:\\",
-                                                                                     "summary":  "Understanding JS Printing Techniques",
-                                                                                     "details":  "Ø´Ø±Ø­ Ø§Ù„ÙØ±Ù‚ Ø¨ÙŠÙ† console.log, document.write, innerHTML, alert, ÙˆØ·Ø±Ù‚ Ø§Ù„Ø·Ø¨Ø§Ø¹Ø© Ø§Ù„Ù…Ø®ØªÙ„ÙØ© ÙÙŠ JavaScript.",
-                                                                                     "session_id":  "ses_19a36a1c5ffe3qRhchRA1mGVVa"
-                                                                                 }
-                                                                             ]
-                                                             }
-                                             }
-                              },
-                     "P:\\aura-book":  {
-                                           "name":  "aura-book",
-                                            "topics":  {
-"react-conversion":  {
-                                                                          "keywords":  [
-                                                                                           "react",
-                                                                                           "zustand",
-                                                                                           "frontend",
-                                                                                           "pinia",
-                                                                                           "conversion",
-                                                                                           "stores",
-                                                                                           "router"
-                                                                                       ],
-                                                                          "entries":  [
-                                                                                          {
-                                                                                              "date":  "2026-07-09",
-                                                                                              "directory":  "P:\\aura-book",
-                                                                                              "summary":  "Convert Vue/Pinia frontend to React/Zustand - created store and App.jsx",
-                                                                                              "details":  "Created 3 files for React conversion: 1) src/store/index.js - 3 Zustand stores (useAuthStore, useProductStore, useCartStore) converted from Pinia. auth store has user/token/isLoggedIn + login/register/fetchUser/logout. product store has items/loaded + fetchAll/fetchOne/invalidate. cart store has items/total/loaded/count + fetch/add/remove/update/checkout/processPayment. Cart add updates product stock locally via useProductStore.getState(). 2) src/App.jsx - React Router with all 22 routes (/, /home, /courses, /products, /cart, /checkout, /orders, /agent, /login, /register, /settings, /support, /inbox, /sell, /profile/:id, /instructors, etc). Navbar hidden on auth pages. fetchUser called on mount if token exists. 3) src/api/index.js - already existed with correct axios setup + 401 refresh token flow + request queue.",
-                                                                                              "decisions":  [
-                                                                                                               "Zustand over Pinia for React state management",
-                                                                                                               "HashRouter for consistency with Vue setup",
-                                                                                                               "Navbar hidden on login/register pages",
-                                                                                                               "Eager imports for now (lazy loading later)"
-                                                                                                           ],
-"session_id":  "current",
-                                                                                               "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-09_aura-book-react-conversion.json"
-                                                                                           },
-                                                                                           {
-                                                                                               "date":  "2026-07-09",
-                                                                                               "directory":  "C:\\Users\\Mohammed Elmouge\\aura-book",
-                                                                                               "summary":  "Created Agent.jsx - 6-tab AI Agent page converted from Vue (897 lines)",
-                                                                                               "details":  "Created src/views/Agent.jsx with 6 fully functional tabs: 1) Image Gen - POST /ollama/image-gen/ with prompt input + image display. 2) AI Chat - sidebar with conversations (pin/rename/delete), agent selector (general/coder/researcher), message history, markdown rendering via marked, PDF export. 3) PDF Tools - file upload with title, summary/structured data display with key_points, topics, technologies badges. 4) Reminders - CRUD with title/deadline/notes, toggle complete, inline edit. 5) Prayer Times - city input, prayer times grid display. 6) Study Materials - CRUD with title/content/notes/file upload, markdown rendering. All CSS in inline <style> tag matching original Vue design. Mobile responsive with sidebar slide-in.",
-                                                                                               "decisions":  [
-                                                                                                                "Inline <style> tag for all CSS (matching existing JSX pattern)",
-                                                                                                                "marked library for markdown rendering",
-                                                                                                                "useAuthStore hook from Pinia-compatible store",
-                                                                                                                "All API endpoints from /ollama/ prefix",
-                                                                                                                "FormData for file uploads (PDF + Study Materials)"
-                                                                                                            ],
-                                                                                               "code":  "src/views/Agent.jsx (897 lines)",
-                                                                                               "session_id":  "current"
-                                                                                           },
-                                                                                           {
-                                                                                               "date":  "2026-07-09",
-                                                                                               "directory":  "P:\\aura-book",
-                                                                                               "summary":  "Converted Navbar.vue and ProductCard.vue to React JSX components",
-                                                                                              "details":  "Created 2 React component files: 1) src/components/Navbar.jsx - Dark sidebar with logo, nav items (Home, Products, Courses, Instructors, AI Agent), auth-gated links (Inbox, Support, Settings), desktop collapsible (220px->64px), mobile hamburger+slide-in+overlay, user avatar/username at bottom, Login/Register links when logged out. Uses Link/useLocation from react-router-dom, useAuthStore, useState for isCollapsed/isMobileOpen, useEffect for body class toggling. Inline CSS with nav- prefix. 2) src/components/ProductCard.jsx - Product card with image (aspect-ratio:1), title (2-line clamp), price in EGP format, stock indicator, Add to Cart button. If not logged in redirects to /login. Uses useCartStore.add and useAuthStore. Inline CSS with pc- prefix.",
-                                                                                              "decisions":  [
-                                                                                                               "Inline <style> tags with unique class prefixes (nav-, pc-) instead of CSS modules",
-                                                                                                               "SVG icons inline instead of icon library",
-                                                                                                               "ProductCard button in separate pc-body div to avoid nested Link issue"
-                                                                                                           ],
-                                                                                              "session_id":  "current"
-                                                                                          }
-                                                                                      ]
-                                                                      },
-                                                           "project-exploration":  {
-                                                                                      "keywords":  [
-                                                                                                       "aura-book",
-                                                                                                       "explore",
-                                                                                                       "project",
-                                                                                                       "structure",
-                                                                                                       "codebase",
-                                                                                                       "backend",
-                                                                                                       "frontend",
-                                                                                                       "agent"
-                                                                                                   ],
-                       "entries":  [
-                                                                                                       {
-                                                                                                           "date":  "2026-07-09",
-                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                           "summary":  "Navigate to P:\\aura-book",
-                                                                                                           "details":  "Switched working directory to P:\\aura-book for current session.",
-                                                                                                           "session_id":  "current_session"
-                                                                                                       },
-                                                                                                       {
-                                                                                                           "date":  "2026-06-15",
-                                                                                                           "directory":  "P:\\aura-book",
-                                                                                                           "summary":  "Explore project gaps - ØªÙÙ‚Ø¯ Ø§Ù„Ù…ÙŠØ²Ø§Øª Ø§Ù„Ù†Ø§Ù‚ØµØ© ÙÙŠ aura-book",
-                                                                                                           "details":  "ÙØ­Øµ Ø§Ù„Ù…ÙŠØ²Ø§Øª Ø§Ù„Ù…ÙˆØ¬ÙˆØ¯Ø© ÙˆØ§Ù„Ù†Ø§Ù‚ØµØ©: cart (frontend only, no backend model), Product model, contact form API, admin panel for orders, user order history, search functionality.",
-                                                                                                           "session_id":  "ses_12f00f41cffeDedJEWmieNvpAX"
-                                                                                                       },
-                                                                                                      {
-                                                                                                          "date":  "2026-05-28",
-                                                                                                          "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore backend structure - ÙØ­Øµ Django backend Ø¨Ø§Ù„ÙƒØ§Ù…Ù„",
-                                                                                                          "details":  "Ù‚Ø±Ø§Ø¡Ø© ÙƒÙ„ models.py, views.py, serializers.py, urls.py, admin.py ÙÙŠ P:\\aura-book\\backend. ÙÙ‡Ù… URL routing Ùˆ database models.",
-                                                                                                          "session_id":  "ses_1900cad8cffe4j4dPzwK231uoM"
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "date":  "2026-05-28",
-                                                                                                          "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore frontend structure - ÙØ­Øµ Vue frontend Ø¨Ø§Ù„ÙƒØ§Ù…Ù„",
-                                                                                                          "details":  "Ù‚Ø±Ø§Ø¡Ø© ÙƒÙ„ Vue component files, Pinia stores, router, main.js, vite.config.js ÙÙŠ P:\\aura-book\\frontend.",
-                                                                                                          "session_id":  "ses_1900cabe1ffedMuFKYkbQBAB02"
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "date":  "2026-05-28",
-                                                                                                          "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore AI agent code - ÙØ­Øµ ÙƒÙˆØ¯ AI agent ÙÙŠ aura-book",
-                                                                                                          "details":  "Ù‚Ø±Ø§Ø¡Ø© agent views, urls, models, serializers ÙÙŠ backend. ÙˆÙÙ‡Ù… agent_app Ùˆ agent_back codes.",
-                                                                                                          "session_id":  "ses_190de3f7bffe4io7c10Dya3FO7"
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "date":  "2026-05-28",
-                                                                                                          "directory":  "P:\\aura-book",
-                                                                                                          "summary":  "Explore product structure - Ù…Ù†ØªØ¬Ø§Øª aura-book",
-                                                                                                          "details":  "Ù‡ÙŠÙƒÙ„ Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙÙŠ aura-book.",
-                                                                                                          "session_id":  "ses_190e3a190ffe4ff3zSdO2mn2jz"
-                                                                                                      }
-                                                                                                  ]
-                                                                                  },
-                                                          "facebook-login":  {
-                                                                                 "keywords":  [
-                                                                                                  "facebook",
-                                                                                                  "login",
-                                                                                                  "auth",
-                                                                                                  "authentication",
-                                                                                                  "ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„"
-                                                                                              ],
-                                                                                 "entries":  [
-                                                                                                 {
-                                                                                                     "date":  "2026-05-28",
-                                                                                                     "directory":  "P:\\aura-book",
-                                                                                                     "summary":  "Ø¥Ø²Ø§Ù„Ø© Facebook Ù…Ù† ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ ÙÙŠ aura-book",
-                                                                                                     "details":  "Ø·Ù„Ø¨ Ø¥Ø²Ø§Ù„Ø© Facebook login option Ù…Ù† ÙˆØ§Ø¬Ù‡Ø© ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ ÙÙŠ Ù…Ø´Ø±ÙˆØ¹ aura-book.",
-                                                                                                     "session_id":  "ses_19199fc9cffeXXihu2SuVDo9e9",
-                                                                                                     "decisions":  [
-                                                                                                                       "Ø¥Ø²Ø§Ù„Ø© Facebook Ù…Ù† Ø®ÙŠØ§Ø±Ø§Øª ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„"
-                                                                                                                   ]
-                                                                                                 },
-                                                                                                 {
-                                                                                                     "date":  "2026-05-28",
-                                                                                                     "directory":  "P:\\aura-book",
-                                                                                                     "summary":  "Find Facebook login code - Ø§Ù„Ø¨Ø­Ø« Ø¹Ù† ÙƒÙˆØ¯ Facebook login",
-                                                                                                     "details":  "Ø§Ù„Ø¨Ø­Ø« ÙÙŠ codebase Ø¹Ù† Facebook login implementation.",
-                                                                                                     "session_id":  "ses_19199d37affefEcSGiPACL3GQw"
-                                                                                                 }
-                                                                                             ]
-                                                                             },
-                                                          "logo-branding":  {
-                                                                                "keywords":  [
-                                                                                                 "Ø´Ø¹Ø§Ø±",
-                                                                                                 "logo",
-                                                                                                 "aura",
-                                                                                                 "Ø£Ø®Ø¶Ø±",
-                                                                                                 "Ø°Ù‡Ø¨ÙŠ",
-                                                                                                 "ØªØµÙ…ÙŠÙ…",
-                                                                                                 "design"
-                                                                                             ],
-                                                                                "entries":  [
-                                                                                                {
-                                                                                                    "date":  "2026-05-28",
-                                                                                                    "directory":  "P:\\aura-book",
-                                                                                                    "summary":  "Ø´Ø¹Ø§Ø± your aura Ø£Ø®Ø¶Ø± ÙˆÙƒØªØ§Ø¨ Ø°Ù‡Ø¨ÙŠ - ØªØµÙ…ÙŠÙ… Ø´Ø¹Ø§Ø± Ù„Ù„Ù…Ø´Ø±ÙˆØ¹",
-                                                                                                    "details":  "Ø·Ù„Ø¨ ØªØµÙ…ÙŠÙ… Ø´Ø¹Ø§Ø± Ù„Ù…Ø´Ø±ÙˆØ¹ your aura Ø¨Ø§Ù„Ù„ÙˆÙ† Ø§Ù„Ø£Ø®Ø¶Ø± Ù…Ø¹ ÙƒØªØ§Ø¨ Ø°Ù‡Ø¨ÙŠ.",
-                                                                                                    "session_id":  "ses_191012060ffeR0fF7jPQySvLkI"
-                                                                                                }
-                                                                                            ]
-                                                                            },
-                                                          "vite-config":  {
-                                                                              "keywords":  [
-                                                                                               "vite",
-                                                                                               "allow url",
-                                                                                               "Ø¥Ø¹Ø¯Ø§Ø¯",
-                                                                                               "configuration"
-                                                                                           ],
-                                                                              "entries":  [
-                                                                                              {
-                                                                                                  "date":  "2026-05-28",
-                                                                                                  "directory":  "P:\\aura-book",
-                                                                                                  "summary":  "ÙƒÙŠÙÙŠØ© Ø¥Ø¹Ø¯Ø§Ø¯ allow url ÙÙŠ Vite - ØªÙƒÙˆÙŠÙ† Vite Ù„Ù„Ø³Ù…Ø§Ø­ URLs Ø¥Ø¶Ø§ÙÙŠØ©",
-                                                                                                  "details":  "Ø³Ø£Ù„ Ø¹Ù† Ø¥Ø¹Ø¯Ø§Ø¯ allow url ÙÙŠ Vite configuration. ØªÙƒÙˆÙŠÙ† server.allowedHosts Ø£Ùˆ server.cors ÙÙŠ vite.config.js.",
-                                                                                                  "session_id":  "ses_19013bd84ffeeIgwBC1Mw0Tt2T"
-                                                                                              }
-                                                                                          ]
-                                                                          },
-                                                          "ngrok-testing":  {
-                                                                                "keywords":  [
-                                                                                                 "ngrok",
-                                                                                                 "test",
-                                                                                                 "Ø§Ø®ØªØ¨Ø§Ø±",
-                                                                                                 "aura-book"
-                                                                                             ],
-                                                                                "entries":  [
-                                                                                                {
-                                                                                                    "date":  "2026-05-28",
-                                                                                                    "directory":  "P:\\aura-book",
-                                                                                                    "summary":  "Ø§Ø®ØªØ¨Ø§Ø± Ù…Ø´Ø±ÙˆØ¹ aura-book Ø¹Ù„Ù‰ ngrok",
-                                                                                                    "details":  "Ø§Ø®ØªØ¨Ø§Ø± Ù…Ø´Ø±ÙˆØ¹ P:aura-book Ø¹Ù„Ù‰ ngrok Ù„Ù„ÙˆØµÙˆÙ„ Ø§Ù„Ø®Ø§Ø±Ø¬ÙŠ.",
-                                                                                                    "session_id":  "ses_1ad681390ffety3bxbGI7bqjOC"
-                                                                                                }
-                                                                                            ]
-                                                                            },
-                                                       "payments-system":  {
-                                                                                "keywords":  [
-                                                                                                 "payments",
-                                                                                                 "CoursePurchase",
-                                                                                                 "commission",
-                                                                                                 "5%",
-                                                                                                 "Paymob",
-                                                                                                 "refund",
-                                                                                                 "instructor earnings",
-                                                                                                 "Ø¯ÙØ¹",
-                                                                                                 "Ø¹Ù…ÙˆÙ„Ø©",
-                                                                                                 "instructors",
-                                                                                                 "profiles",
-                                                                                                 "community",
-                                                                                                 "user profile",
-                                                                                                 "bio",
-                                                                                                 "search"
-                                                                                             ],
-                                                                                "entries":  [
-                                                                                                {
-                                                                                                    "date":  "2026-07-08",
-                                                                                                    "directory":  "P:\\aura-book\\backend",
-                                                                                                    "summary":  "بناء payments app + instructor profiles + user profile + search",
-                                                                                                    "details":  "1) payments app مستقل: CoursePurchase model بـ 5% commission, Paymob integration, refund system. 2) Instructor profiles endpoint: GET /api/courses/instructors/ مع search support. 3) Public profile endpoint: GET /api/auth/profile/<user_id>/. 4) Bio field على Profile model. 5) UserProfile.vue: صفحة بروفايل كاملة. 6) Instructors.vue: صفحة بحث عن المدرّبين مع عرض الكورسات والمنتجات. 7) Navbar: رابط Instructors.",
-                                                                                                    "decisions":  [
-                                                                                                                     " payments app مستقل",
-                                                                                                                     "عمولة 5% تلقائية",
-                                                                                                                     "Refund لو < 25% مكتمل",
-                                                                                                                     " فيديو تمهيدي",
-                                                                                                                     "صفحة بحث عن المدرّبين"
-                                                                                                                 ],
-                                                                                                    "code":  "payments/app, courses/views.py, shop/views.py, frontend/Instructors.vue, frontend/UserProfile.vue, frontend/Home.vue",
-                                                                                                    "session_id":  "current_session"
-                                                                                                }
-                                                                                            ]
-                                                                            }
-                                                                                            ]
-                                                                            }
-                                                      }
-                                       },
-                     "P:\\langc":  {
-                                       "name":  "langc",
-                                       "topics":  {
-                                                      "lang-docs":  {
-                                                                        "keywords":  [
-                                                                                         "lang",
-                                                                                         "programming",
-                                                                                         "language",
-                                                                                         "compiler",
-                                                                                         "interpreter",
-                                                                                         "documentation",
-                                                                                         "widget"
-                                                                                     ],
-                                                                        "entries":  [
-                                                                                        {
-                                                                                            "date":  "2026-05-28",
-                                                                                            "directory":  "P:\\langc",
-                                                                                            "summary":  "Ø§Ø³ØªÙƒØ´Ø§Ù ÙƒØ§Ù…Ù„ Ù„Ù…Ø´Ø±ÙˆØ¹ Ù„ØºØ© Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Lang ÙÙŠ P:langc",
-                                                                                            "details":  "ÙØ­Øµ Ø´Ø§Ù…Ù„: lexer, parser, interpreter, C compiler, JS compiler, HTML bundler. ÙƒÙ„ widgets Ùˆ APIs Ø¨ØªØ§Ø¹ØªÙ‡Ø§. Ù†Ø¸Ø§Ù… Ø§Ù„Ù€ IDE features (obfuscation, sharing, live preview). Web framework features. Theme system. Shape system. Ø§Ù„Ù‡Ø¯Ù ÙƒØ§Ù† Ø¹Ù…Ù„ ØªÙˆØ«ÙŠÙ‚ HTML Ø´Ø§Ù…Ù„.",
-                                                                                            "session_id":  "ses_1863d4898ffeLZXilzAyBP5sMg"
-                                                                                        }
-                                                                                    ]
-                                                                    }
-                                                  }
-                                   },
-                     "P:\\":  {
-                                  "name":  "P Drive Projects",
-                                  "topics":  {
-                                                 "projects-overview":  {
-                                                                           "keywords":  [
-                                                                                            "project",
-                                                                                            "explore",
-                                                                                            "P:",
-                                                                                            "Ù…Ø´Ø§Ø±ÙŠØ¹",
-                                                                                            "ai-agent-oop",
-                                                                                            "portfolio",
-                                                                                            "sedap-talkha",
-                                                                                            "mini-llm",
-                                                                                            "sketchup-web"
-                                                                                        ],
-                                                                           "entries":  [
-                                                                                           {
-                                                                                               "date":  "2026-05-25",
-                                                                                               "directory":  "P:\\",
-                                                                                               "summary":  "Ø§Ø³ØªÙƒØ´Ø§Ù ÙƒÙ„ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ P: Ù„Ø¹Ù…Ù„ CV",
-                                                                                               "details":  "ÙØ­Øµ 10 Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ P:\\. Ø´Ù…Ù„: ai-agent-oop, AI_Meeting_Summerizing, aura-book, django_projects, flask_projects, frontend_projects, portfolio, sedap-talkha, sketchup-web, mini-llm-env. ÙƒÙ„ Ù…Ø´Ø±ÙˆØ¹ Ø¨Ù„ØºØ© ÙˆØ¥Ø·Ø§Ø± Ø¹Ù…Ù„ Ù…Ø®ØªÙ„Ù.",
-                                                                                               "session_id":  "ses_15bca63d4ffej9Uet9WtnrPVin"
-                                                                                           },
-                                                                                           {
-                                                                                               "date":  "2026-05-25",
-                                                                                               "directory":  "P:\\",
-                                                                                               "summary":  "Ø³Ø£Ù„ Ø¹Ù† Ø¹Ù…Ù„ CV",
-                                                                                               "details":  "Ø³Ø£Ù„ Ø¥Ø°Ø§ ÙƒØ§Ù† Ù…Ù…ÙƒÙ† Ø£Ø¹Ù…Ù„ CV. ØªÙ… Ø§Ø³ØªÙƒØ´Ø§Ù Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ P:.",
-                                                                                               "session_id":  "ses_15bcccd31ffeQ7PtKa2tPzWmxo"
-                                                                                           }
-                                                                                       ]
-                                                                       },
-                                                 "p-drive-navigation":  {
-                                                                            "entries":  [
-                                                                                            {
-                                                                                                "date":  "2026-07-03",
-                                                                                                "directory":  "P:\\",
-                                                                                                "summary":  "عرض قائمة مجلدات P: drive",
-                                                                                                "session_id":  "current",
-                                                                                                "details":  "عرض 21 مجلد في P: drive شمل: AI_Meeting_Summerizing, ai-agent-oop, aura-book, cv-android, cv-project, django_projects, flask_projects, frontend_projects, lang, langc, learning, mini-llm-env, misc, portfolio, sedap-talkha, sketchup-web, النصر للعرب"
-                                                                                            }
-                                                                                        ],
-                                                                            "keywords":  [
-                                                                                             "P:",
-                                                                                             "navigation",
-                                                                                             "قائمة",
-                                                                                             "مجلدات"
-                                                                                         ]
-                                                                        }
-                                             }
-                              },
-                     "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web":  {
-                                                                                  "name":  "mohassil-web",
-                                                                                  "topics":  {
-                                                                                                 "navigation":  {
-                                                                                                                    "keywords":  [
-                                                                                                                                     "mohassil-web",
-                                                                                                                                     "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„",
-                                                                                                                                     "Ø§Ù„Ø°Ù‡Ø§Ø¨",
-                                                                                                                                     "folder navigation"
-                                                                                                                                 ],
-                                                                                                                    "entries":  [
-                                                                                                                                    {
-                                                                                                                                        "date":  "2026-06-15",
-                                                                                                                                        "directory":  "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
-                                                                                                                                        "summary":  "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ Ù…Ø¬Ù„Ø¯ mohassil-web",
-                                                                                                                                        "details":  "Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
-                                                                                                                                        "session_id":  "ses_137a04685ffehp0UaLJj2OmBeh"
-                                                                                                                                    },
-                                                                                                                                    {
-                                                                                                                                        "date":  "2026-06-14",
-                                                                                                                                        "directory":  "C:\\Users\\Mohammed Elmouge\\Documents\\mohassil-web",
-                                                                                                                                        "summary":  "Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ mohassil-web",
-                                                                                                                                        "details":  "Ø·Ù„Ø¨ Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ Ù…Ø¬Ù„Ø¯ mohassil-web",
-                                                                                                                                        "session_id":  "ses_13dab15d1ffe6nXMRGhjhba25I"
-                                                                                                                                    }
-                                                                                                                                ]
-                                                                                                                }
-                                                                                             }
-                                                                              },
-                     "C:\\Users\\Mohammed Elmouge\\aura-book":  {
-                                                                    "name":  "aura-book (local)",
-                                                                    "topics":  {
-                                                                                   "settings-and-auth":  {
-                                                                                                             "keywords":  [
-                                                                                                                              "settings",
-                                                                                                                              "register",
-                                                                                                                              "ØªØ³Ø¬ÙŠÙ„",
-                                                                                                                              "Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª",
-                                                                                                                              "forgot password",
-                                                                                                                              "change password",
-                                                                                                                              "email",
-                                                                                                                              "Gmail",
-                                                                                                                              "SendGrid",
-                                                                                                                              "profile",
-                                                                                                                              "password reset"
-                                                                                                                          ],
-                                                                                                             "entries":  [
-                                                                                                                             {
-                                                                                                                                 "date":  "2026-06-18",
-                                                                                                                                 "directory":  "C:\\Users\\Mohammed Elmouge\\aura-book",
-                                                                                                                                 "summary":  "Ø§Ø®ØªØ¨Ø§Ø± Ø§Ù„ØªØ³Ø¬ÙŠÙ„ + Ø¥Ù†Ø´Ø§Ø¡ Settings page + Forgot Password + ØªØ¹Ø¯ÙŠÙ„ Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ø¥ÙŠÙ…ÙŠÙ„",
-                                                                                                                                 "details":  "1) Ø§Ø®ØªØ¨Ø§Ø± Ø§Ù„ØªØ³Ø¬ÙŠÙ„: ÙƒÙ„ endpoints Ø´ØºØ§Ù„Ø© (send-verification, verify-email, login). 2) Ø¥Ù†Ø´Ø§Ø¡ Settings.vue ØµÙØ­Ø© Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª ÙƒØ§Ù…Ù„Ø©: Profile (username, email), GROQ API Key (Ø¨ÙŠØªØ®Ø²Ù† Ù…Ø´ÙØ±), Change Password (backend + frontend), Sign Out. 3) Ø¥Ù†Ø´Ø§Ø¡ ForgotPassword.vue: step 1 (email), step 2 (code + new password) Ù…Ø¹ backend endpoints (forgot-password, reset-password) ÙˆØ¥ÙŠÙ…ÙŠÙ„ template reset_password.html. 4) Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ø¥ÙŠÙ…ÙŠÙ„: Ø±Ø¬ÙˆØ¹ Ù„Ù€ Gmail SMTP Ù…Ø¹ fallback Ù„Ù„Ù€ console ÙÙŠ DEBUG mode Ù„Ùˆ ÙØ´Ù„ Ø§Ù„Ø¥Ø±Ø³Ø§Ù„.",
-                                                                                                                                 "decisions":  [
-                                                                                                                                                   "Settings page ÙÙŠÙ‡Ø§ 4 Ø£Ù‚Ø³Ø§Ù… (Profile, API Key, Change Password, Sign Out)",
-                                                                                                                                                   "Forgot Password ÙŠØ¹ÙŠØ¯ Ø§Ø³ØªØ®Ø¯Ø§Ù… EmailVerification model",
-                                                                                                                                                   "ChangePasswordView Ø¨ÙŠØªØ·Ù„Ø¨ old_password + new_password",
-                                                                                                                                                   "Gmail SMTP Ù‡Ùˆ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ Ù…Ø¹ fallback Ù„Ù„Ù€ console ÙÙŠ DEBUG"
-                                                                                                                                               ],
-                                                                                                                                 "session_id":  "ses_2026-06-18-aura-book",
-                                                                                                                                 "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-18_aura-book-settings-auth.json"
-                                                                                                                             }
-                                                                                                                         ]
-                                                                                                         },
-                                                                                   "initial-setup":  {
-                                                                                                         "keywords":  [
-                                                                                                                          "aura-book",
-                                                                                                                          "Ø§Ù„Ø°Ù‡Ø§Ø¨",
-                                                                                                                          "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„",
-                                                                                                                          "project setup"
-                                                                                                                      ],
-                                                                                                         "entries":  [
-                                                                                                                         {
-                                                                                                                             "date":  "2026-05-28",
-                                                                                                                             "directory":  "C:\\Users\\Mohammed Elmouge\\aura-book",
-                                                                                                                             "summary":  "Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ aura-book - Ø§Ù„ØªÙ†Ù‚Ù„ Ù„Ù…Ø´Ø±ÙˆØ¹ aura-book",
-                                                                                                                             "details":  "Ø·Ù„Ø¨Ø§Øª Ù…ØªØ¹Ø¯Ø¯Ø© Ù„Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ Ù…Ø´Ø±ÙˆØ¹ aura-book ÙÙŠ C:\\Users\\Mohammed Elmouge\\aura-book",
-                                                                                                                             "session_id":  "ses_19279016effeyzyvfc35XbkLC3"
-                                                                                                                         },
-                                                                                                                         {
-                                                                                                                             "date":  "2026-05-28",
-                                                                                                                             "directory":  "P:\\aura-book4",
-                                                                                                                             "summary":  "Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ P:aura-book4",
-                                                                                                                             "details":  "Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø± Ù…Ø®ØªÙ„Ù Ù„Ù„Ù…Ø´Ø±ÙˆØ¹",
-                                                                                                                             "session_id":  "ses_1920bcfd8ffeoKgKEbZ0Jid01K"
-                                                                                                                         }
-                                                                                                                     ]
-                                                                                                     }
-                                                                               }
-                                                                },
-                     "P:\\AI_Meeting_Summerizing":  {
-                                                        "topics":  {
-                                                                       "security-fixes":  {
-                                                                                              "entries":  [
-                                                                                                              {
-                                                                                                                  "decisions":  [
-                                                                                                                                    "استخدام TokenAuthentication بدل Session للـ API",
-                                                                                                                                    "Async processing مع background thread + polling (بدون Celery)",
-                                                                                                                                    "owner FK على Meeting لعزل بيانات كل مستخدم"
-                                                                                                                                ],
-                                                                                                                  "details":  "1) Security: SECRET_KEY من env, DEBUG/ALLOWED_HOSTS/CORS قابلة للتكوين. 2) Authentication: Token-based auth + register/login/logout APIs. 3) Async processing: Whisper يشتغل في background thread مع polling من frontend. 4) File validation: امتداد وحجم الملف. 5) Error handling: logging, status=failed, try-catch. 6) Removed duplicate frontend/ directory. تم إضافة admin panel و django.contrib.messages و rest_framework.authtoken. إنشاء login.html جديد. تحديث app.js للتعامل مع auth tokens و polling.",
-                                                                                                                  "directory":  "P:\\AI_Meeting_Summerizing",
-                                                                                                                  "session_id":  "current",
-                                                                                                                  "date":  "2026-07-03",
-                                                                                                                  "summary":  "إصلاح 6 مشاكل أمان وأداء في AI Meeting Summarizer",
-                                                                                                                  "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-03-%D8%A5%D8%B5%D9%84%D8%A7%D8%AD-AI-Meeting-Summarizer.json"
-                                                                                                              }
-                                                                                                          ],
-                                                                                              "keywords":  [
-                                                                                                               "security",
-                                                                                                               "auth",
-                                                                                                               "async",
-                                                                                                               "validation",
-                                                                                                               "تحسينات",
-                                                                                                               "أمان",
-                                                                                                               "مصادقة"
-                                                                                                           ]
-                                                                                          },
-                                                                       "project-exploration":  {
-                                                                                                  "entries":  [
-                                                                                                                  {
-                                                                                                                      "date":  "2026-07-04",
-                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
-                                                                                                                      "summary":  "استكشاف مشروع AI Meeting Summarizer - ملخص اجتماعات بالذكاء الاصطناعي",
-                                                                                                                      "details": "مشروع Django + Vue 3 SPA لتلخيص الاجتماعات باستخدام الذكاء الاصطناعي. Backend: Django + DRF + OpenAI + pydub + yt-dlp. Frontend: Vue 3 + Pinia + Axios. النماذج: Meeting (owner, title, file, transcript, summary, status). الميزات: رفع ملفات الصوت/الفيديو، تلخيص تلقائي باستخدام AI، عرض ملخص الاجتماع، البحث في الاجتماعات السابقة، تصدير الملخص. authentication مع Token-based auth. Async processing مع background thread.",
-                                                                                                                      "session_id":  "current",
-                                                                                                                      "decisions":  [
-                                                                                                                                        "Django backend + Vue 3 frontend",
-                                                                                                                                        "OpenAI API للتلخيص",
-                                                                                                                                        "Token-based auth للـ API",
-                                                                                                                                         "Async processing بدون Celery"
-                                                                                                                                     ],
-                                                                                                                       "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_ai-meeting-summarizer-exploration.json"
-                                                                                                                   }
-                                                                                                              ],
-                                                                                               "keywords":  [
-                                                                                                                "AI_Meeting_Summerizing",
-                                                                                                                "ملخص اجتماعات",
-                                                                                                                "Django",
-                                                                                                                "Vue",
-                                                                                                                "OpenAI",
-                                                                                                                "استكشاف مشروع"
-                                                                                                            ]
-                                                                                              },
-                                                                       "meeting-analysis-fix":  {
-                                                                                                  "entries":  [
-                                                                                                                  {
-                                                                                                                      "date":  "2026-07-04",
-                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
-                                                                                                                      "summary":  "إصلاح تحليل الاجتماعات - جعل التحليل يعمل تلقائياً",
-                                                                                                                      "details":  "إصلاح المشاكل: 1) backend requirements.txt - إضافة faster_whisper و sumy. 2) Upload.vue - حقل الملف الصحيح. 3) MeetingDetail.vue - استخدام /process/ endpoint و عرض summary/transcript كنص. 4) Meetings.vue - حقول صحيحة و paginated response. 5) main.js - axios interceptors للمصادقة. 6) إضافة login route. 7) التحليل التلقائي بعد الرفع.",
-                                                                                                                      "session_id":  "current",
-                                                                                                                      "decisions":  [
-                                                                                                                                        "التحليل التلقائي بعد رفع الملف",
-                                                                                                                                        "استخدام faster_whisper للتحويل محلياً",
-                                                                                                                                        "استخدام sumy للتلخيص بدلاً من OpenAI",
-                                                                                                                                        "axios interceptors لإرسال token المصادقة"
-                                                                                                                                    ],
-                                                                                                                      "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_meeting-analysis-fix.json"
-                                                                                                                  }
-                                                                                                              ],
-                                                                                                   "keywords":  [
-                                                                                                                   "AI_Meeting_Summerizing",
-                                                                                                                   "تحليل اجتماعات",
-                                                                                                                   "إصلاح",
-                                                                                                                   "faster_whisper",
-                                                                                                                   "sumy"
-                                                                                                               ]
-                                                                                              },
-                                                                       "recording-feature":  {
-                                                                                                  "entries":  [
-                                                                                                                  {
-                                                                                                                      "date":  "2026-07-04",
-                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
-                                                                                                                      "summary":  "إضافة ميزة التسجيل المباشر وتحسين الرفع لبرامج خارجية",
-                                                                                                                      "details":  "إضافة: 1) صفحة Recording.vue للتسجيل الصوتي المباشر مع MediaRecorder API و audio visualizer. 2) زر 'تسجيل مباشر' في Navbar. 3) تحسين Upload.vue مع tabs (ملف/رابط) و drag-and-drop. 4) دعم امتدادات كثيرة (MP3, WAV, MP4, WebM, MKV, AVI). 5) عرض البرامج المدعومة (Zoom, Teams, Meet, Webex). 6) route /record جديد.",
-                                                                                                                      "session_id":  "current",
-                                                                                                                      "decisions":  [
-                                                                                                                                        "MediaRecorder API للتسجيل المباشر",
-                                                                                                                                        "audio visualizer للصوت",
-                                                                                                                                        "tabs منفصلة للملف و الرابط",
-                                                                                                                                        "دعم ملفات Zoom/Teams/Meet"
-                                                                                                                                    ],
-                                                                                                                      "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_recording-feature.json"
-                                                                                                                  }
-                                                                                                              ],
-                                                                                                  "keywords":  [
-                                                                                                                   "AI_Meeting_Summerizing",
-                                                                                                                   "تسجيل مباشر",
-                                                                                                                   "MediaRecorder",
-                                                                                                                   "Zoom",
-                                                                                                                   "Teams",
-                                                                                                                   "Meet"
-                                                                                                               ]
-                                                                                              }
-                                                                   },
-                                                     "name":  "AI_Meeting_Summerizing",
-                                                       "topics":  {
-                                                                      "project-setup":  {
-                                                                                             "entries":  [
-                                                                                                             {
-                                                                                                                 "decisions":  [
-                                                                                                                                   "إنشاء المشروع من scratch زي aura-book",
-                                                                                                                                   "هيكل Django backend + Vue 3 frontend",
-                                                                                                                                   "نموذج Meeting, Summary, Transcript"
-                                                                                                                               ],
-                                                                                                                 "details":  "1) إنشاء المشروع في P:\\AI_Meeting_Summerizing. 2) Backend: Django + DRF + CORS + OpenAI + pydub. 3) Frontend: Vue 3 + Pinia + Vue Router + Axios. 4) نماذج: Meeting (audio/video), Summary (content, key_points, action_items, participants), Transcript. 5) API endpoints: /api/meetings/ مع summarize, transcribe, download_summary. 6) صفحات Frontend: Home, Meetings, MeetingDetail, Upload. 7) run.ps1 script للتشغيل.",
-                                                                                                                 "directory":  "P:\\AI_Meeting_Summerizing",
-                                                                                                                 "session_id":  "ses_0d2f7a872ffeEw8O",
-                                                                                                                 "date":  "2026-07-04",
-                                                                                                                 "summary":  "إنشاء مشروع AI Meeting Summarizer من scratch",
-                                                                                                                 "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-07-04_ai-meeting-summarizer-setup.json"
-                                                                                                             }
-                                                                                                         ],
-                                                                                             "keywords":  [
-                                                                                                              "AI_Meeting_Summerizing",
-                                                                                                              "إنشاء مشروع",
-                                                                                                              "Django",
-                                                                                                              "Vue",
-                                                                                                              "setup"
-                                                                                                          ]
-                                                                                         }
-                                                                  }
-                                                     }
-                  }
+  "projects": {
+    "P:\\frontend_framework": {
+      "name": "Ignite Framework",
+      "topics": {
+        "ignite-framework-build": {
+          "keywords": [
+            "ignite",
+            "framework",
+            "signals",
+            "reactivity",
+            "solid",
+            "svelte",
+            "jsx",
+            "frontend framework",
+            "fine-grained reactivity",
+            "virtual DOM free"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-11",
+              "directory": "P:\\frontend_framework",
+              "summary": "Built Ignite - a signals-based frontend framework with fine-grained reactivity",
+              "details": "Created a complete signals-based frontend framework called Ignite (🔥) at P:\\frontend_framework. Features: 1) Core reactivity: createSignal, createEffect, createMemo, createResource, batch. 2) DOM runtime: createElement, setAttribute, insert, remove. 3) JSX runtime with TypeScript types. 4) Component system: onMount, onCleanup, createContext, Portal, Suspense, ErrorBoundary, ForEach, Show, Switch/Match. 5) Store: createStore, createPersistentStore, createStoreSlice, produce (Immer-like). 6) Router: createRouter, Routes, Link, NavLink. 7) Build: tsup with ESM output + .d.ts declarations. Total JS: 25.67 KB, DTS: 6.29 KB.",
+              "code": "src/core/signal.ts - Signal system, src/dom/reconciler.ts - DOM ops, src/jsx-runtime.ts - JSX types, src/store/index.ts - Store, src/router/index.ts - Router, src/components/index.ts - Lifecycle",
+              "decisions": [
+                "Signals-based (Solid/Svelte paradigm) over Virtual DOM (React)",
+                "Single Signal function with .set()/.peek() methods instead of [getter, setter] tuple",
+                "Type 'effect'|'memo' discriminant instead of instanceof for TypeScript compatibility",
+                "ESM-only output (no CommonJS)",
+                "tsup for bundling with DTS generation"
+              ],
+              "session_id": "current"
+            }
+          ]
+        }
+      }
+    },
+    "C:\\": {
+      "name": "General (C:\\)",
+      "topics": {
+        "session-naming": {
+          "keywords": [
+            "session",
+            "title",
+            "memory",
+            "directory",
+            "مسار",
+            "جلسة",
+            "حفظ"
+          ],
+          "entries": [
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "طلب تحسين حفظ الذكرة بإضافة المسار (directory) لكل جلسة",
+              "details": "المستخدم طلب إن كل entry في الذكرة يضم المسار اللي كانت شاغلة فيه (directory). بعد ما المшуغ بـ basename، نعرف إنه كنا فين بالضبط.",
+              "session_id": "ses_12d4afab9ffe2o2MyTraE1z2mT"
+            }
+          ]
+        },
+        "memory-system": {
+          "keywords": [
+            "ذاكرة",
+            "memory",
+            "memory system",
+            "نظام ذاكرة",
+            "instructions",
+            "تعليمات",
+            "plugin",
+            "opencode-memory",
+            "persistent",
+            "SQLite"
+          ],
+          "entries": [
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "بناء نظام ذاكرة دائمة لـ opencode - من plugin للداتا بتاكتمل",
+              "details": "بعد ما اقتحمت حدود Aider وعُدّلت للجلسات، المستخدم طلب build نظام ذاكرة دائمي. المسار: 1) plugin اسمه opencode-memory بياخد بيانات متراكمة من opencode وبيحفظ past sessions في system prompt. 2) طلب تحفيظ للنظام يبقاء متآصل مع plugin. 3) اتعلّم instructions file في ~/.config/opencode/instructions/memory.md بيتحمّل في كل session. 4) اتعلّم بيانات بـ organized by project → topic → entries في ~/.local/share/opencode/opencode-memory.json. 5) اتعلّم memory_search tool في plugin. 6) اتعلّم directory field لكل entry عشان يعرف المسار اللي كانت شغالة فيه.",
+              "decisions": [
+                "ذاكرة دائمة في JSON file مش SQLite (أسهل للقراءة/التحرير)",
+                "topic extraction من عنوان الجلسة تلقائياً",
+                "directory field لكل entry"
+              ],
+              "session_id": "ses_12d53c276ffe7ImTUiGJAUhmBC",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-06-17_ما-هو-Aider-ونظام-الذاكرة.json"
+            }
+          ]
+        },
+        "opencode-exploration": {
+          "keywords": [
+            "opencode",
+            "aider",
+            "ai",
+            "cli",
+            "tool",
+            "pair programming"
+          ],
+          "entries": [
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "سؤال عن Aider - أداة AI برمجية زوجية عبر CLI",
+              "details": "Aider هي أداة AI برمجية زوجية بتشتغل من terminal. بتستخدم LLM. بتتشتغل مع ChatGPT, Claude, وغيرهم. بتأخد سياسة الكود وتعمل تغييرات متواصلة. اتكلمنا عن مميزاتها (CLI-first, multi-model, git-native, repo map, open source) وعن حدودها (context window, output tokens, repo map size). وعن إنها مش بتتحفظ للجلسات.",
+              "session_id": "ses_12d53c276ffe7ImTUiGJAUhmBC"
+            },
+            {
+              "date": "2026-06-17",
+              "directory": "C:\\",
+              "summary": "استكشاف هيكل opencode بالكامل - Rust binary مع SQLite database",
+              "details": "opencode عبارة عن Rust binary (~153MB) متثبت في AppData/Roaming/npm. عنده SQLite database في .local/share/opencode/opencode.db بجداول session, message, part. عنده plugin API و SDK client. بتستخدم event bus architecture. الملفات بتتتخفى في storage/session_diff. وعنده memory feature في opencode-memory/memory.md.",
+              "session_id": "ses_12d4afab9ffe2o2MyTraE1z2mT"
+            }
+          ]
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,55 @@
+{
+  "title": "بناء Ignite Framework - إطار عمل للواجهات الأمامية",
+  "date": "2026-07-11",
+  "directory": "P:\\frontend_framework",
+  "summary": "تم بناء إطار عمل كامل للواجهات الأمامية يسمى Ignite بناءً على الإشارات (Signals) للتفاعل الدقيق بدون DOM افتراضي",
+  "details": {
+    "overview": "بناء إطار عمل frontend متكامل اسمه Ignite (🔥) في المسار P:\\frontend_framework. الإطار مبني على الإشارات (Signals) للتفاعل الدقيق (fine-grained reactivity) بدون DOM افتراضي، مستوحى من Solid.js و Svelte.",
+    "modules": {
+      "core_reactivity": {
+        "files": ["src/core/signal.ts", "src/core/resource.ts", "src/core/owner.ts", "src/core/types.ts"],
+        "features": ["createSignal", "createEffect", "createMemo", "createDeferred", "createResource", "batch"]
+      },
+      "dom_runtime": {
+        "files": ["src/dom/reconciler.ts"],
+        "features": ["createElement", "setAttribute", "insert", "remove", "template", "createDynamicText", "createDynamicChildren"]
+      },
+      "jsx_runtime": {
+        "files": ["src/jsx-runtime.ts"],
+        "features": ["jsx function", "Fragment", "Full JSX type definitions for HTML and SVG"]
+      },
+      "components": {
+        "files": ["src/components/index.ts"],
+        "features": ["onMount", "onCleanup", "createContext", "createRef", "forwardRef", "Portal", "Suspense", "ErrorBoundary", "ForEach", "Show", "Switch/Match", "Dynamic"]
+      },
+      "store": {
+        "files": ["src/store/index.ts"],
+        "features": ["createStore", "createPersistentStore", "createStoreSlice", "produce (Immer-like)"]
+      },
+      "router": {
+        "files": ["src/router/index.ts"],
+        "features": ["createRouter", "Routes", "Link", "NavLink", "useRouteParams", "useRouter"]
+      },
+      "compiler": {
+        "files": ["src/compiler/index.ts"],
+        "features": ["transformJSX", "parseJSX"]
+      }
+    },
+    "build_output": {
+      "total_js": "25.67 KB",
+      "total_dts": "6.29 KB",
+      "jsx_runtime": "7.89 KB",
+      "format": "ESM",
+      "tool": "tsup"
+    },
+    "design_decisions": [
+      "Signals-based (Solid/Svelte paradigm) over Virtual DOM (React)",
+      "Single Signal function with .set()/.peek() methods instead of [getter, setter] tuple",
+      "Type 'effect'|'memo' discriminant instead of instanceof for TypeScript compatibility",
+      "ESM-only output (no CommonJS)",
+      "tsup for bundling with DTS generation"
+    ]
+  },
+  "session_id": "current",
+  "github_url": ""
+}
