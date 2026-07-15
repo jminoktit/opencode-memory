@@ -115,6 +115,267 @@
           ]
         }
       }
+    },
+    "P:\\aura-book": {
+      "name": "aura-book",
+      "topics": {
+        "currency-egp-migration": {
+          "keywords": [
+            "currency",
+            "EGP",
+            "dollar sign",
+            "$",
+            "alert",
+            "toast",
+            "notification"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-16",
+              "directory": "C:\\Users\\Mohammed Elmouge\\aura-book",
+              "summary": "استبدال علامة الدولار $ بـ EGP في كل ملفات العرض + استبدال alert() بـ toast notifications",
+              "details": "1) استبدال كل استخدامات $ للعملة في 7 ملفات Vue: Products.vue, ProductDetail.vue, Cart.vue, Checkout.vue, Orders.vue, AdminDashboard.vue, AdminProductForm.vue. 2) إنشاء composable للإشعارات useToast.js. 3) إضافة toast container في App.vue مع Teleport. 4) استبدال alert() في AdminDashboard و AgentChat بـ toast notifications.",
+              "code": "composables/useToast.js - toast composable | App.vue - toast container with Teleport | Pattern: {{ price }} EGP | 'Pay EGP ' + total",
+              "decisions": [
+                "Suffix EGP (مثل 100 EGP) بدل prefix (EGP 100)",
+                "Toast composable بسيط بدل مكتبة خارجية",
+                "Toast position: top-right",
+                "Alert types: success, error, warning, info"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "full-progress-report": {
+          "keywords": [
+            "aura-book",
+            "progress report",
+            "features",
+            "100+ features",
+            "backend",
+            "frontend",
+            "django",
+            "react",
+            "full stack",
+            "تقرير شامل",
+            "تقدم المشروع",
+            "ميزات"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "تقرير شامل عن كامل ميزات مشروع Aura Book - أكثر من 100 ميزة مطبقة في الباك إند والفرونت إند",
+              "details": "مشروع Aura Book هو منصة تعليمية + تجارة إلكترونية متكاملة. Backend: Django REST Framework بـ apps: agent_app, shop, courses, payments, agent, agent_back, features. Frontend: React 18, Zustand, React Router (HashRouter), Vite. ML Training على Google Colab (منفصل). تم اختبار 126/126 اختبارات باك إند و 28/28 اختبارات فرونت إند - جميعها ناجحة.",
+              "code": "Backend: Django + DRF | Frontend: React 18 + Zustand + Vite | Router: HashRouter | State: Zustand | AI: Groq Llama 3.3 + Ollama (qwen2:0.5b)",
+              "decisions": [
+                "WhatsApp-style chat UI (أخضر، ذيول، علامات ✓✓)",
+                "Theme persistence مخزنة في UserProfile model",
+                "Search كـ overlay مع floating button",
+                "AI review endpoints بتستخدم Groq Llama 3.3",
+                "SM-2 algorithm لـ flashcards",
+                "Ollama لـ AI features (qwen2:0.5b model)",
+                "Canvas-based whiteboard مع touch support",
+                "Certificate كـ PNG (Canvas-generated)",
+                "HashRouter لـ React Router"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "features-list-1-15": {
+          "keywords": [
+            "flashcards",
+            "SM-2",
+            "spaced repetition",
+            "discussion forum",
+            "pomodoro",
+            "study timer",
+            "course preview",
+            "shared progress",
+            "wishlist sharing",
+            "product bundles",
+            "gift cards",
+            "price drop alerts",
+            "buy again",
+            "cashback",
+            "virtual coins"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "الميزات 1-15: Flashcards + SM-2, Discussion Forum, Pomodoro Timer, Course Preview, Shared Progress, Wishlist Sharing, Product Bundles, Gift Cards, Price Drop Alerts, Buy Again, Cashback System",
+              "details": "1) Flashcards + SM-2 Spaced Repetition - Flashcard model مع SM-2 algorithm، review/rate cards، AI generate من محتوى الدرس. 2) Discussion Forum per course - posts, replies, upvote/downvote system, pinned/resolved status. 3) Study Timer (Pomodoro) - 25/5/15 min modes، circular progress ring، session history. 4) Course Preview - free preview video URL per course. 5) Shared Progress - toggle public progress، friends see your course completion. 6) Wishlist Sharing - generate share code، view shared wishlist via link. 7) Product Bundles - M2M products مع discount percentage. 8) Gift Cards - buy/redeem gift cards مع code, amount, message. 9) Price Drop Alerts - set target price per product، get notified when price drops. 10) Buy Again - show previously purchased products for reorder. 11) Cashback System - CashbackRule + CashbackReward، claim cashback as virtual coins.",
+              "code": "Flashcard model مع SM-2 fields: ease_factor, interval, repetitions, next_review | DiscussionPost مع upvotes/downvotes | PomodoroTimer مع 25/5/15 modes | CashbackRule مع percentage + max_amount",
+              "decisions": [
+                "SM-2 algorithm لـ flashcards (أفضل من fixed intervals)",
+                "Pomodoro 25/5/15 modes (كلاسيكي + قصير + طويل)",
+                "Gift Cards بـ unique code generation",
+                "Cashback كـ virtual coins مش cash"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "features-list-16-30": {
+          "keywords": [
+            "AI tutor",
+            "AI auto notes",
+            "smart quiz",
+            "career coach",
+            "code review",
+            "daily challenge",
+            "missions",
+            "level system",
+            "virtual wallet",
+            "streak freeze",
+            "comments reactions",
+            "follow system",
+            "activity feed",
+            "export data",
+            "AI study plan"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "الميزات 16-30: AI Tutor, Auto Notes, Smart Quiz, Career Coach, Code Review, Daily Challenge, Missions, Levels, Wallet, Streak Freeze, Reactions, Follow, Activity Feed, Export, Study Plan",
+              "details": "12) AI Tutor - عبر AI chat، explain concepts. 13) AI Auto Notes - AI summary generation endpoint. 14) Smart Quiz - weakness-based question selection. 15) AI Career Coach - career suggestions via AI. 16) Code Review - code analysis endpoint. 17) Daily Challenge - daily quiz/flashcard/coding challenge، points for correct answers. 18) Missions System - accept/track missions، progress bars، completion tracking. 19) Level System - XP-based levels 1-50، auto-title updates، perks JSON. 20) Virtual Coins + Wallet - VirtualWallet مع earn/spend، CoinTransaction history. 21) Streak Freeze - spend coins to freeze streak for a day. 22) Comments Reactions - reactions on product comments. 23) Follow System - follow/unfollow users، follower/following lists. 24) Activity Feed - timeline of followed users' activities. 25) Export Data - JSON export of profile, orders, courses, points history. 26) AI Study Plan - AI-generated personalized study schedule.",
+              "code": "LevelSystem: level 1-50, xp_required = 100 * level^1.5 | VirtualWallet: balance field + CoinTransaction | DailyChallenge: challenge_type (quiz/flashcard/coding) + points",
+              "decisions": [
+                "XP-based levels (1-50) بدل fixed levels",
+                "Streak freeze بالـ virtual coins (مش subscription)",
+                "Daily challenge بـ 3 أنواع: quiz/flashcard/coding",
+                "Export data كـ JSON (مش PDF)"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "features-list-31-45": {
+          "keywords": [
+            "voice notes",
+            "whiteboard",
+            "code playground",
+            "live polls",
+            "student dashboard",
+            "parent dashboard",
+            "affiliate system",
+            "bulk discount",
+            "product reviews photos",
+            "shipping calculator",
+            "abandoned cart",
+            "AI content generator",
+            "AI grading",
+            "AI plagiarism",
+            "smart recommendations"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "الميزات 31-45: Voice Notes, Whiteboard, Code Playground, Live Polls, Student/Parent Dashboard, Affiliate, Bulk Discount, Reviews+Photos, Shipping, Abandoned Cart, AI Content/Grading/Plagiarism, Recommendations",
+              "details": "27) Voice Notes - upload audio notes per lesson مع transcript. 28) Whiteboard - interactive drawing canvas مع color/brush size. 29) Code Playground - multi-language code editor، run code، save snippets. 30) Live Polls - instructor-created polls per lesson، students vote. 31) Student Dashboard - stats overview: study hours, courses completed, quizzes passed. 32) Parent Dashboard - parent requests access، views approved student's dashboard. 33) Affiliate System - generate unique affiliate links per product، track conversions. 34) Bulk Discount - quantity-based discount tiers per product. 35) Product Reviews with Photos - ProductReviewPhoto model for image uploads. 36) Shipping Calculator - ShippingZone + ShippingRate models. 37) Abandoned Cart Recovery - track abandoned carts، admin view. 38) AI Content Generator - generate course outlines, lesson content, quiz questions. 39) AI Grading - auto-grade student answers with score + feedback. 40) AI Plagiarism Check - content similarity checking. 41) Smart Recommendations - product/course recommendations based on popularity + user behavior.",
+              "code": "Whiteboard: canvas-based مع touch events | CodePlayground: multi-language editor + execution | AffiliateLink: unique_code + clicks + conversions | ShippingZone + ShippingRate models",
+              "decisions": [
+                "Voice notes مع AI transcript (مش بس audio storage)",
+                "Canvas-based whiteboard (مش SVG)",
+                "Parent dashboard بـ approval workflow",
+                "AI grading مع auto-feedback"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "features-list-46-52": {
+          "keywords": [
+            "seasonal events",
+            "tournaments",
+            "friend challenges",
+            "virtual avatar",
+            "unlockable content",
+            "mentorship",
+            "success stories",
+            "community challenges",
+            "audit log",
+            "webhooks",
+            "A/B testing"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "الميزات 46-52: Seasonal Events, Tournaments, Friend Challenges, Virtual Avatar, Unlockable Content, Mentorship, Success Stories, Community Challenges, Audit Log, Webhooks, A/B Testing",
+              "details": "42) Seasonal Events - time-limited events مع discounts. 43) Tournaments - quiz competitions مع participants, scores, ranks, prizes. 44) Friend Challenges - direct challenges between friends مع score tracking. 45) Virtual Avatar - customizable avatar مع level-based progression. 46) Unlockable Content - content locked behind level/coin requirements. 47) Mentorship Matching - students request mentors، mentors approve. 48) Success Stories - community stories، admin-approved before display. 49) Community Challenges - collective goals مع participant tracking. 50) Audit Log - admin-only log of all user actions. 51) Webhooks - user-configurable webhook URLs for event notifications. 52) A/B Testing - create tests مع variants، track assignments.",
+              "code": "Tournament مع participants + scores + ranks | VirtualAvatar مع level-based accessories | AuditLog مع admin-only access | Webhook مع event_type + payload",
+              "decisions": [
+                "Tournaments بـ real-time scoring",
+                "Unlockable content بـ level + coin requirements",
+                "Mentorship بـ approval workflow",
+                "Audit log admin-only (مش user-accessible)"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "bug-fixes-tests": {
+          "keywords": [
+            "bug fix",
+            "vote_poll",
+            "IntegrityError",
+            "get_or_create",
+            "tests",
+            "126 tests",
+            "28 tests",
+            "all passing"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "إصلاح vote_poll bug + اختبارات ناجحة: 126/126 باك إند + 28/28 فرونت إند",
+              "details": "إصلاح: vote_poll view كان ناقص defaults في get_or_create شغال NOT NULL IntegrityError. الإصلاح: إضافة defaults={'question': question} في get_or_create call. اختبارات: 126 اختبار باك إند + 28 اختبار فرونت إند - جميعها ناجحة + build ناجح.",
+              "code": "# Before (buggy)\nPollOption.objects.get_or_create(question=question, text=text)\n# After (fixed)\nPollOption.objects.get_or_create(question=question, text=text, defaults={'question': question})",
+              "decisions": [
+                "إصلاح get_or_create bug بدل try/except",
+                "Full test suite перед كل feature addition"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "remaining-work": {
+          "keywords": [
+            "remaining",
+            "todo",
+            "telegram bot",
+            "celery",
+            "redis",
+            "channels",
+            "notifications",
+            "seed data",
+            "docker",
+            "deploy",
+            "oracle cloud",
+            "متبقي"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-15",
+              "directory": "P:\\aura-book",
+              "summary": "المتبقي: Telegram bot, Celery + Redis + Channels, Notifications, Seed Data, Docker + Deploy على Oracle Cloud",
+              "details": "1) إنشاء Telegram bot وتكوين .env. 2) تثبيت Celery + Redis + Channels dependencies. 3) ربطNotifications بالـ Telegram. 4) تعبئة Badge و Achievement data. 5) Docker + deploy setup لـ Oracle Cloud.",
+              "decisions": [
+                "Telegram bot للإشعارات (مش email/SMS)",
+                "Celery + Redis للـ async tasks",
+                "Docker للـ deployment على Oracle Cloud"
+              ],
+              "session_id": "current"
+            }
+          ]
+        }
+      }
     }
   }
 }

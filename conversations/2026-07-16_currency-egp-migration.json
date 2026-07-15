@@ -1,0 +1,27 @@
+{
+  "title": "استبدال علامة الدولار $ بـ EGP + إشعارات Toast",
+  "date": "2026-07-16",
+  "directory": "C:\\Users\\Mohammed Elmouge\\aura-book",
+  "session_id": "current",
+  "summary": "استبدال كل استخدامات $ للعملة بـ EGP في 7 ملفات Vue + إنشاء نظام إشعارات toast بسيط + استبدال alert() بـ toast notifications",
+  "details": "1) Products.vue: ${product.price} → {{ product.price }} EGP\n2) ProductDetail.vue: ${product.price} → {{ product.price }} EGP\n3) Cart.vue: 4 أماكن - item price, item total, subtotal, total\n4) Checkout.vue: 3 أماكن - Pay button, item summary, total\n5) Orders.vue: 2 مكان - item total, order total\n6) AdminDashboard.vue: table price column + alert → toast.error()\n7) AdminProductForm.vue: Price ($) label → Price (EGP)\n8) AgentChat.vue: alert() → toast.error()\n9) composables/useToast.js: toast composable جديد\n10) App.vue: toast container مع Teleport",
+  "files_changed": [
+    "frontend/src/views/Products.vue",
+    "frontend/src/views/ProductDetail.vue",
+    "frontend/src/views/Cart.vue",
+    "frontend/src/views/Checkout.vue",
+    "frontend/src/views/Orders.vue",
+    "frontend/src/views/AdminDashboard.vue",
+    "frontend/src/views/AdminProductForm.vue",
+    "frontend/src/views/AgentChat.vue",
+    "frontend/src/composables/useToast.js",
+    "frontend/src/App.vue"
+  ],
+  "decisions": [
+    "Suffix EGP (100 EGP) بدل prefix (EGP 100)",
+    "Toast composable بسيط بدل مكتبة خارجية",
+    "Toast position: top-right",
+    "Alert types: success, error, warning, info",
+    "Teleport to body لـ toast container"
+  ]
+}
