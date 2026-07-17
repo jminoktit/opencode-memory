@@ -1,0 +1,42 @@
+{
+  "date": "2026-07-16",
+  "title": "مراجعة كود شاملة + إصلاح 15+ bug وأمان",
+  "directory": "P:\\aura-book",
+  "summary": "مراجعة كود شاملة للمشروع وإصلاح 15+ مشكلة أمان وأداء وكود",
+  "details": {
+    "critical_fixes": [
+      "إزالة Secrets من .env + إفراغ EMAIL credentials",
+      "CORS تقييد على localhost بس",
+      "إزالة Duplicate Auth URLs من shop/urls.py",
+      "Password validation مضاف 4 validators",
+      "SECRET_KEY بي fail loudly في production"
+    ],
+    "high_fixes": [
+      "N+1 queries في user_profiles_list + instructor_profiles",
+      "Race condition في checkout (transaction.atomic + F() expressions)",
+      "Race condition في coupon usage (F() expression)",
+      "XSS في Agent Chat (DOMPurify)"
+    ],
+    "medium_fixes": [
+      "Notification field mismatch (body/url → message/link)",
+      "Dead code في track_recently_viewed",
+      "ProductListingRequest auto-approval bug",
+      "README (Vue → React)",
+      "AI training scripts في .gitignore"
+    ],
+    "files_modified": [
+      "backend/.env",
+      "backend/config/settings.py",
+      "backend/config/notifications.py",
+      "backend/shop/urls.py",
+      "backend/shop/views.py",
+      "backend/shop/serializers.py",
+      "backend/courses/views.py",
+      "frontend/src/views/Agent.jsx",
+      "README.md",
+      ".gitignore"
+    ],
+    "npm_packages_added": ["dompurify"],
+    "test_results": "instructor_profiles test fixed and passing, frontend build successful"
+  }
+}

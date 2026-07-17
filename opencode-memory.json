@@ -374,8 +374,120 @@
               "session_id": "current"
             }
           ]
+        },
+        "comprehensive-bug-fixes": {
+          "keywords": [
+            "code review",
+            "security fixes",
+            "XSS",
+            "CSRF",
+            "race condition",
+            "N+1 queries",
+            "transaction",
+            "DOMPurify",
+            "CORS",
+            "password validation",
+            "SECRET_KEY",
+            "bug fix",
+            "إصلاح",
+            "أمان",
+            "مراجعه كود"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-16",
+              "directory": "P:\\aura-book",
+              "summary": "مراجعة كود شاملة + إصلاح 15+ bug وأمان في المشروع",
+              "details": "إصلاحات Critical: 1) مسح Secrets من .env + إفراغ EMAIL credentials. 2) CORS تقييد على localhost بس. 3) إصلاح Duplicate Auth URLs ( shop/urls.py ). 4) Password validation مضاف 4 validators. 5) SECRET_KEY بي fail loudly في production. High: 6) N+1 queries في user_profiles_list + instructor_profiles (Count بدل loop). 7) Race condition في checkout (transaction.atomic + F() expressions). 8) Race condition في coupon usage (F() expression). 9) XSS في Agent Chat (DOMPurify). Medium: 10) Notification field mismatch (body/url → message/link). 11) Dead code في track_recently_viewed. 12) ProductListingRequest auto-approval bug (is_approved=False). 13) README (Vue → React). 14) AI training scripts في .gitignore. Frontend: DOMPurify مثبت.",
+              "code": "CORS_ALLOW_ALL_ORIGINS = False | validate_password(new_password, user=request.user) | Coupon.objects.filter(id=coupon.id).update(used_count=F('used_count') + 1) | DOMPurify.sanitize(marked.parse(m.content)) | transaction.atomic() + F('stock') - item.quantity",
+              "decisions": [
+                "CORS مقيّد على localhost بس (3000, 5173)",
+                "Password validation: Similarity + MinLength(8) + Common + Numeric",
+                "Checkout كله في transaction.atomic() مع F() expressions للـ stock",
+                "DOMPurify لـ XSS protection في Agent Chat",
+                "Notification fields: message و link (مش body و url)"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "push-blocked-secrets": {
+          "keywords": [
+            "push blocked",
+            "groq api key",
+            "db.sqlite3",
+            "secret scanning",
+            "github push protection"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-16",
+              "directory": "P:\\aura-book",
+              "summary": "GitHub push اترفض بسبب Groq API keys في db.sqlite3",
+              "details": "GitHub Secret Scanning لقى Groq API keys في backend/db.sqlite3 في الـ git history. الملف اتشال من tracking بس الـ history القديم فيها. محتاج: 1) Unblock على GitHub URLs أو force push. 2) Rotate الـ Groq API key القديم.",
+              "decisions": [
+                "db.sqlite3 مش هتتتبع تاني (.gitignore)",
+                "محتاج rotate Groq API key"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "second-round-bug-fixes": {
+          "keywords": [
+            "bug fix",
+            "DEBUG ordering",
+            "groq_api_key",
+            "register flow",
+            "memory leak",
+            "race condition",
+            "N+1",
+            "silent failure",
+            "TOCTOU"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-16",
+              "directory": "P:\\aura-book",
+              "summary": "إصلاح 10 bugs إضافية: 4 Critical + 6 Moderate",
+              "details": "Critical: 1) settings.py DEBUG قبل تعريفه (NameError). 2) courses/views.py groq_api_key اتشال من الموديل بس لسه بيتعمله access (3 أماكن). 3) agent/views.py نفس المشكلة. 4) store/index.js register() بيتوقع tokens بس الـ API بيرجع verification flow. Moderate: 5) Toast.jsx useState بدل useEffect (memory leak). 6) checkout N+1 query في email loop. 7) upvote race condition (F() expressions). 8) leaderboard بيعمل DB writes على GET. 9) apply_coupon TOCTOU race على max_uses. 10) generate_flashcards silent failure بيرجع 200 فاضي.",
+              "code": "settings.py: DEBUG before SECRET_KEY | agent/views.py: os.environ.get('GROQ_API_KEY') | store/index.js: needs_verification check | Toast.jsx: useEffect instead of useState | vote_discussion: F('upvotes') + 1 | leaderboard: removed DB update | apply_coupon: used_count__lt=max_uses",
+              "decisions": [
+                "GROQ_API_KEY من environment variables بدل UserProfile model",
+                "register() بيرجع data كده كده والـ caller بيعالج needs_verification",
+                "F() expressions للـ atomic updates في voting و coupons",
+                "leaderboard rank بيتحسب في الـ response مش في الداتابيز",
+                "generate_flashcards بيرجع error message بدل silent empty list"
+              ],
+              "session_id": "current"
+            }
+          ]
+        },
+        "pdf-certificates-and-search": {
+          "keywords": [
+            "PDF certificate",
+            "reportlab",
+            "full-text search",
+            "global search",
+            "search endpoint",
+            "شهادة PDF",
+            "بحث"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-17",
+              "directory": "P:\\aura-book\\backend",
+              "summary": "إنشاء PDF certificates بـ reportlab + global search endpoint",
+              "details": "1) إنشاء courses/pdf_utils.py - دالة generate_certificate_pdf بتستخدم reportlab Canvas لعمل شهادة احترافية. الألوان: خلفية #0f0f23، عناوين زرقاء #3498db، اسم الطالب أخضر #2ecc71، اسم الكورس برتقالي #f39c12. 2) تعديل CertificateView.generate() - لو ?format=pdf بيرجع PDF، غير كده بيرجع JSON عادي. 3) إنشاء courses/search.py - دوال search_courses, search_products, global_search. 4) إضافة global_search_view في courses/views.py - GET /api/courses/search/?q=query. 5) إضافة search URL في courses/urls.py.",
+              "code": "courses/pdf_utils.py: generate_certificate_pdf() | courses/search.py: global_search() | CertificateView: format=pdf param | URL: path('search/', views.global_search_view)",
+              "decisions": [
+                "Reportlab لـ PDF generation (أبسط من WeasyPrint)",
+                "format=pdf query param بدل POST endpoint منفصل",
+                "Search بـ ?q= parameter (GET endpoint)",
+                "CourseListSerializer + ProductListSerializer للـ search results",
+                "Product model بـ title (مش name) - تم التأكد من shop/models.py"
+              ],
+              "session_id": "current"
+            }
+          ]
         }
-      }
-    }
-  }
-}

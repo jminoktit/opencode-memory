@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-16",
+  "title": "إصلاح 10 bugs إضافية: 4 Critical + 6 Moderate",
+  "directory": "P:\\aura-book",
+  "summary": "إصلاح 10 bugs إضافية في المشروع بعد المراجعة الشاملة",
+  "details": {
+    "critical_fixes": [
+      "settings.py: DEBUG قبل تعريفه (NameError) - نقل DEBUG فوق SECRET_KEY",
+      "courses/views.py: groq_api_key اتشال من الموديل بس لسه بيتعمله access (3 أماكن) - استبدال بـ os.environ.get('GROQ_API_KEY')",
+      "agent/views.py: نفس المشكلة - استبدال بـ os.environ.get('GROQ_API_KEY')",
+      "store/index.js: register() بيتوقع tokens بس الـ API بيرجع verification flow - إضافة needs_verification check"
+    ],
+    "moderate_fixes": [
+      "Toast.jsx: useState بدل useEffect (memory leak) - تغيير لـ useEffect",
+      "checkout: N+1 query في email loop - إضافة select_related('product__seller')",
+      "vote_discussion: race condition في upvote counting - استخدام F() expressions",
+      "leaderboard: DB writes على GET request - إزالة الـ DB update",
+      "apply_coupon: TOCTOU race على max_uses - إضافة used_count__lt=max_uses في الـ filter",
+      "generate_flashcards: silent failure بيرجع 200 فاضي - إضافة proper error handling"
+    ],
+    "files_modified": [
+      "backend/config/settings.py",
+      "backend/courses/views.py",
+      "backend/agent/views.py",
+      "backend/shop/views.py",
+      "frontend/src/store/index.js",
+      "frontend/src/components/Toast.jsx",
+      "backend/agent_app/auth_urls.py"
+    ],
+    "test_results": "All imports OK, frontend build successful, settings verified"
+  }
+}
