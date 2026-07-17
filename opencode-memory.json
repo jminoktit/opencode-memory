@@ -490,4 +490,39 @@
               "session_id": "current"
             }
           ]
+        },
+        "email-templates": {
+          "keywords": [
+            "email",
+            "templates",
+            "HTML email",
+            "send_mail",
+            "render_to_string",
+            "base template",
+            "verification",
+            "order confirmation",
+            "password reset",
+            "welcome email"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-17",
+              "directory": "P:\\aura-book\\backend",
+              "summary": "إنشاء نظام HTML email templates احترافي + تحديث send_mail calls",
+              "details": "1) إنشاء 6 templates في backend/templates/emails/: base.html (الأساس بـ dark theme gradient header), verify.html (verification code), welcome.html (مرحبا بالمستخدم), order_confirmation.html (تأكيد الطلب), password_reset.html (إعادة تعيين كلمة المرور), new_sale.html (إشعار البيع للمseller). 2) تحديث agent_app/views.py - _send_code() بقت تستخدم render_to_string('emails/verify.html'). 3) تحديث shop/views.py - order confirmation و seller notification بيستخدموا render_to_string. 4) Dark theme: خلفية #0f0f23, header gradient #3498db→#8e44ad, نصوص #e0e0e0.",
+              "code": "backend/templates/emails/base.html | verify.html | welcome.html | order_confirmation.html | password_reset.html | new_sale.html | render_to_string('emails/verify.html', {'code': code})",
+              "decisions": [
+                "Dark theme email templates (match project theme)",
+                "Template inheritance (base.html + blocks)",
+                "render_to_string() بدل inline HTML f-strings",
+                "New sale template for sellers",
+                "Plain text fallback محفوظة مع كل send_mail call"
+              ],
+              "session_id": "current"
+            }
+          ]
         }
+      }
+    }
+  }
+}

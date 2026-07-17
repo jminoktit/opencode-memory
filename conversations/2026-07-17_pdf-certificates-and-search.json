@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-17",
+  "title": "PDF Certificates + Full-Text Search for aura-book",
+  "directory": "P:\\aura-book\\backend",
+  "model": "mimo-v2.5-free",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Your task: 1) PDF Certificates - Read courses/views.py and find CertificateView. It generates certificates. Check if it generates actual PDFs or just data. If it doesn't generate PDFs, create a PDF generation utility. 2) Full-text search - Create a search endpoint."
+    },
+    {
+      "role": "assistant",
+      "content": "Created 4 files/changes: 1) courses/pdf_utils.py - New PDF generation utility using reportlab with dark theme (A4 landscape, professional certificate design). 2) courses/search.py - Full-text search across courses and products using Django Q objects. 3) Updated CertificateView.generate() to support ?format=pdf query param for PDF download. 4) Added global_search_view + search URL endpoint."
+    }
+  ],
+  "decisions": [
+    "Reportlab for PDF generation (lighter than WeasyPrint)",
+    "format=pdf query param instead of separate POST endpoint",
+    "Search via GET /api/courses/search/?q=query",
+    "Used CourseListSerializer + ProductListSerializer for search results",
+    "Fixed Product model field: title (not name) per shop/models.py"
+  ],
+  "files_created": [
+    "courses/pdf_utils.py",
+    "courses/search.py"
+  ],
+  "files_modified": [
+    "courses/views.py",
+    "courses/urls.py"
+  ]
+}
