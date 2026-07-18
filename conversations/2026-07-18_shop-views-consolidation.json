@@ -1,0 +1,8 @@
+﻿{
+    "date":  "2026-07-18",
+    "title":  "shop/views.py OOP Consolidation: 79→45 classes",
+    "summary":  "Merged 34 related CBV classes into consolidated ViewSets with static action methods. All 94 URL aliases verified. Net reduction: -88 lines.",
+    "commits":  [
+                    "f210eab - Consolidate shop/views.py: 79 classes → 45"
+                ]
+}

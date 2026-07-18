@@ -521,6 +521,34 @@
               "session_id": "current"
             }
           ]
+        },
+        "oop-consolidation": {
+          "keywords": [
+            "OOP",
+            "consolidation",
+            "CBV",
+            "APIView",
+            "ViewSets",
+            "shop views",
+            "refactor",
+            "fusion"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-18",
+              "directory": "P:\\aura-book",
+              "summary": "Consolidated shop/views.py: 79 CBV classes → 45 classes by merging related pairs",
+              "details": "Merged small related classes into consolidated ViewSets with action methods: Cart (4→1: CartViewSet with add/remove/update statics), Comment (2→1), Ticket (2→1 with respond), DM (3→1 with threads/create_thread/messages/send_message), Listing (2→1 with admin_list/admin_update), Leaderboard (2→1 with update), Points (2→1 with redeem), StudyGroup (3→1 with join/leave), GiftCard (static methods buy/redeem), Cashback (2→1 with claim), Wishlist (2→1 with shared), Challenge (3→1 with create/my_challenges/accept), Unlockable (2→1 with unlock), Mission (3→1 with my_missions/accept), AI Content (3→1 with generate/grade/plagiarism), Tournament (2→1 with join), API Key (2→1 with delete_key). All 94 URL compatibility aliases verified. Net reduction: -88 lines. Commit: f210eab.",
+              "code": "CartViewSet.add = static method (was CartAddView.as_view()) | CommentViewSet.create = static method (was CommentCreateView.as_view()) | alias pattern: cart_add = CartViewSet.add",
+              "decisions": [
+                "Static methods for sub-actions instead of separate classes",
+                "Preserved all URL compatibility aliases (no urls.py changes needed)",
+                "94 aliases verified programmatically via hasattr()",
+                "Kept complex standalone views unchanged (Payment, Auth, Profile, etc.)"
+              ],
+              "session_id": "current"
+            }
+          ]
         }
       }
     }
