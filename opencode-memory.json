@@ -549,6 +549,36 @@
               "session_id": "current"
             }
           ]
+        },
+        "google-oauth-fix": {
+          "keywords": [
+            "Google OAuth",
+            "JWT",
+            "ID token",
+            "credential",
+            "verification",
+            "GIS",
+            "Google Identity Services",
+            "تسجيل جوجل",
+            "إصلاح"
+          ],
+          "entries": [
+            {
+              "date": "2026-07-18",
+              "directory": "P:\\aura-book",
+              "summary": "إصلاح Google OAuth: الباك إند كان بيعامل JWT credential كـ access token والـ frontend مش بيتعامل مع verification flow",
+              "details": "المشكلة: 1) google_login_view كان بيستخدم Authorization: Bearer {credential} مع userinfo endpoint بس credential من Google GIS هو JWT ID token مش access token. 2) الـ frontend مش بيتعامل مع needs_verification response. الإصلاح: 1) Backend: decode JWT مباشرة مع PyJWT + fallback لـ tokeninfo endpoint + optional audience validation. 2) Frontend: added googleVerifyStep state + verification code input + auto-submit on 6 digits. 3) Added GOOGLE_CLIENT_ID setting. Commits: ec6770f.",
+              "code": "pyjwt.decode(credential, key, algorithms=['RS256'], audience=client_id) | fallback: requests.get('https://oauth2.googleapis.com/tokeninfo', params={'id_token': credential})",
+              "decisions": [
+                "JWT decode مباشرة (أسرع من tokeninfo API call)",
+                "Fallback لـ tokeninfo endpoint لو JWT decode فشل",
+                "Optional audience validation (GOOGLE_CLIENT_ID setting)",
+                "Auto-submit verification code when 6 digits entered",
+                "Back-to-login button في verification step"
+              ],
+              "session_id": "current"
+            }
+          ]
         }
       }
     }

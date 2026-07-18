@@ -1,0 +1,8 @@
+﻿{
+    "date":  "2026-07-18",
+    "title":  "Fix Google OAuth: JWT ID token handling + frontend verification flow",
+    "summary":  "Fixed backend treating Google credential as access token (it\u0027s a JWT ID token). Added frontend verification step for new Google users.",
+    "commits":  [
+                    "ec6770f - Fix Google OAuth: handle JWT ID token + frontend verification flow"
+                ]
+}
