@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-21",
+  "title": "DeepSeek-Coder Training Notebook Creation",
+  "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy",
+  "model": "mimo-v2.5-free",
+  "directory": "P:\\aura-book",
+  "summary": "User asked for ready-made training code from GitHub. Fetched Unsloth Llama3.1 Alpaca notebook, adapted it for DeepSeek-Coder-6.7B with mixed data (Quran + Code + Conversation). Created complete notebook at backend/training/deepseek_coder_arabic.ipynb.",
+  "decisions": [
+    "Used deepseek-coder-6.7b-instruct-bnb-4bit (4bit quantized)",
+    "LoRA r=16, alpha=16, target: q/k/v/o/gate/up/down projections",
+    "Data mix: 30% Quran (zusmani/the-holy-quran), 40% Code (bigcode/the-stack), 30% Conversation (teknium/OpenHermes-2.5)",
+    "SFTTrainer with batch_size=2, grad_accum=4, lr=2e-4",
+    "Saves LoRA locally + GGUF q4_k_m for Ollama",
+    "torchvision fix needed: pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128"
+  ],
+  "files_created": [
+    "P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb"
+  ],
+  "next_steps": [
+    "Fix torchvision mismatch on Colab",
+    "Run notebook on Colab T4 GPU",
+    "Test inference with Arabic + Quran + code questions",
+    "Push trained model to HuggingFace"
+  ]
+}
