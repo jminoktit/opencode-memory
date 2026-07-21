@@ -9,47 +9,10 @@
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Created complete Colab training notebook for DeepSeek-Coder-6.7B with mixed data (Quran 30% + Code 40% + Conversation 30%). Fixed model name from unsloth/... to deepseek-ai/deepseek-coder-6.7b-instruct.",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Uses deepseek-ai/deepseek-coder-6.7b-instruct with bitsandbytes 4bit, LoRA r=16, SFTTrainer. UNSLOTH DOES NOT HAVE a pre-quantized deepseek-coder-6.7b. Must use original model name.",
-              "code": "model_name = \"deepseek-ai/deepseek-coder-6.7b-instruct\"",
-              "decisions": ["Model: deepseek-ai/deepseek-coder-6.7b-instruct (NOT unsloth/...)", "LoRA r=16, alpha=16", "15k code samples, 10k quran, 15k conversation", "GGUF q4_k_m for Ollama deployment"],
-              "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
-            },
-            {
-              "date": "2026-07-21",
-              "directory": "P:\\aura-book",
-              "summary": "torchvision mismatch error on Colab - torch 2.10+cu128 needs torchvision from same cu128 index.",
-              "details": "Error: RuntimeError: operator torchvision::nms does not exist. Fix: pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128",
-              "code": "!pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128",
-              "decisions": ["Used cu128 index for both torch and torchvision", "Version constraints: unsloth<=2026.7.4, transformers<=5.5.0, trl<=0.24.0"],
-              "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
-            }
-          ]
-        },
-        "ignite-framework": {
-          "keywords": ["ignite", "signals", "solidjs", "framework", "tsup", "esbuild"],
-          "entries": [
-            {
-              "date": "2026-07-21",
-              "directory": "P:\\aura-book\\frontend",
-              "summary": "Installed Ignite framework (jminoktit/ignite-framework), configured Vite plugin with esbuild for .tsx transform, created app shell with router/auth store/login page.",
-              "details": "npm install jminoktit/ignite-framework, npx tsup in node_modules, custom ignitePlugin() in vite.config.js. Created src/ignite/ with App.tsx, main.ts, views/Login.tsx, store/auth.ts, api.ts. Dev server on port 5174. Patched ignite-framework package.json exports for router/store/components subpaths.",
-              "code": "npm install jminoktit/ignite-framework",
-              "decisions": ["Ignite files as .tsx, React stays as .jsx", "Dev server on 5174 (5173 occupied by React)", "createPersistentStore for auth with localStorage"],
-              "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
-            }
-          ]
-        },
-        "backend-fixes": {
-          "keywords": ["courses", "views", "auth", "google", "oauth", "verify"],
-          "entries": [
-            {
-              "date": "2026-07-21",
-              "directory": "P:\\aura-book\\backend",
-              "summary": "Fixed 19 view classes in courses/views.py (added post/get/put/delete dispatch methods + action attributes), fixed auth logger import, fixed verify_view for Google OAuth flow, seeded 3 courses.",
-              "details": "courses/views.py: 19 classes needed action='' attribute and HTTP method delegation. agent_app/views.py: added import logging + logger. verify_view: _VerifySerializer username/password now required=False, is_google_flow check. seed_courses.py created with 3 courses (Python, Django, JS).",
-              "code": "action = ''  # Required for DRF as_view(action=...)",
-              "decisions": ["Every view class needs action='' for as_view(action=...)", "verify_view checks is_google_flow to skip username/password", "3 courses seeded: Python (free), Django (EGP 299), JS (free)"],
+              "summary": "Created complete Colab training notebook for DeepSeek-Coder-6.7B with mixed data (Quran 30% + Code 40% + Conversation 30%). Fixed model name and Quran dataset name.",
+              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct (NOT unsloth/...). Quran dataset: ReySajju742/Quran (62K rows, NOT zusmani/the-holy-quran which doesn't exist). Code: bigcode/the-stack. Conversation: teknium/OpenHermes-2.5.",
+              "code": "model_name = \"deepseek-ai/deepseek-coder-6.7b-instruct\"\nquran = load_dataset(\"ReySajju742/Quran\", split=\"train\")",
+              "decisions": ["Model: deepseek-ai/deepseek-coder-6.7b-instruct", "Quran: ReySajju742/Quran (62K rows, Arabic+English)", "LoRA r=16, alpha=16", "GGUF q4_k_m for Ollama deployment"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
             }
           ]
