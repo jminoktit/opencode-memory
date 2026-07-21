@@ -9,10 +9,10 @@
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Fixed training notebook: replaced tiny MBPP (374 examples) with CodeSearchNet Python (2M snippets, streaming). Fixed conversation loading to use Dataset.from_list() instead of broken load_dataset('json', data=...).",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct. Quran: ReySajju742/Quran (62K rows). Code: code_search_net/python (streaming, 15K sampled). Conversation: teknium/OpenHermes-2.5 (streaming, 15K sampled). Use Dataset.from_list() for in-memory data instead of load_dataset('json', data=...).",
-              "code": "code_ds = load_dataset(\"code_search_net\", \"python\", split=\"train\", streaming=True)\nconvo_ds = Dataset.from_list(convo_samples)",
-              "decisions": ["MBPP too small (374 examples) - use CodeSearchNet Python instead", "load_dataset('json', data=...) broken in newer datasets - use Dataset.from_list()", "Stream big datasets, sample 15K each, convert to Dataset.from_list()"],
+              "summary": "Fixed schema mismatch: OpenHermes has extra 'weight' field in conversations. Added normalize_conversations() to strip extra fields. Also fixed missing format_quran() call.",
+              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. All 3 datasets now produce same schema: List({'from': Value('string'), 'value': Value('string')}). normalize_conversations() strips weight/role/etc fields. format_quran() was defined but not called - fixed.",
+              "code": "def normalize_conversations(example):\n    msgs = example.get(\"conversations\", [])\n    normalized = [{\"from\": m.get(\"from\", m.get(\"role\", \"\")), \"value\": m.get(\"value\", m.get(\"content\", \"\"))} for m in msgs]\n    return {\"conversations\": normalized}",
+              "decisions": ["All datasets must have same schema: {\"from\": str, \"value\": str}", "normalize_conversations() strips extra fields like 'weight'", "format_quran() must be called before normalize_conversations()"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
             }
           ]
