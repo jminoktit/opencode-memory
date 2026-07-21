@@ -9,10 +9,10 @@
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Fixed training notebook: correct model name, correct Quran field names, replaced gated bigcode/the-stack with open MBPP dataset.",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct. Quran: ReySajju742/Quran (columns: surah_name, verse, translation). Code: google-research-datasets/mbpp (Python problems, open). Conversation: teknium/OpenHermes-2.5 (open). All three datasets are open, no auth needed.",
-              "code": "model_name = \"deepseek-ai/deepseek-coder-6.7b-instruct\"\nquran = load_dataset(\"ReySajju742/Quran\", split=\"train\")  # verse, translation, surah_name\ncode_ds = load_dataset(\"google-research-datasets/mbpp\", split=\"train\")  # question, code\nconvo_ds = load_dataset(\"teknium/OpenHermes-2.5\", split=\"train\", streaming=True)",
-              "decisions": ["Model: deepseek-ai/deepseek-coder-6.7b-instruct", "Quran: ReySajju742/Quran (fields: verse, translation, surah_name)", "Code: google-research-datasets/mbpp (open, no auth)", "Conversation: teknium/OpenHermes-2.5 (open, no auth)", "bigcode/the-stack is GATED - cannot use without HF login"],
+              "summary": "Fixed training notebook: replaced tiny MBPP (374 examples) with CodeSearchNet Python (2M snippets, streaming). Fixed conversation loading to use Dataset.from_list() instead of broken load_dataset('json', data=...).",
+              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct. Quran: ReySajju742/Quran (62K rows). Code: code_search_net/python (streaming, 15K sampled). Conversation: teknium/OpenHermes-2.5 (streaming, 15K sampled). Use Dataset.from_list() for in-memory data instead of load_dataset('json', data=...).",
+              "code": "code_ds = load_dataset(\"code_search_net\", \"python\", split=\"train\", streaming=True)\nconvo_ds = Dataset.from_list(convo_samples)",
+              "decisions": ["MBPP too small (374 examples) - use CodeSearchNet Python instead", "load_dataset('json', data=...) broken in newer datasets - use Dataset.from_list()", "Stream big datasets, sample 15K each, convert to Dataset.from_list()"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
             }
           ]
