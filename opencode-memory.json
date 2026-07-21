@@ -9,17 +9,17 @@
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Created complete Colab training notebook for DeepSeek-Coder-6.7B with mixed data (Quran 30% + Code 40% + Conversation 30%). Based on Unsloth Llama3.1 notebook, adapted for DeepSeek with Arabic data.",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Uses unsloth/deepseek-coder-6.7b-instruct-bnb-4bit, LoRA r=16, SFTTrainer, loads Quran from zusmani/the-holy-quran, code from bigcode/the-stack, conversation from teknium/OpenHermes-2.5. Saves LoRA + GGUF (q4_k_m).",
-              "code": "!pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128",
-              "decisions": ["Used deepseek-coder-6.7b-instruct-bnb-4bit for 4bit quantization", "LoRA r=16, alpha=16", "15k code samples, 10k quran, 15k conversation", "GGUF q4_k_m for Ollama deployment"],
+              "summary": "Created complete Colab training notebook for DeepSeek-Coder-6.7B with mixed data (Quran 30% + Code 40% + Conversation 30%). Fixed model name from unsloth/... to deepseek-ai/deepseek-coder-6.7b-instruct.",
+              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Uses deepseek-ai/deepseek-coder-6.7b-instruct with bitsandbytes 4bit, LoRA r=16, SFTTrainer. UNSLOTH DOES NOT HAVE a pre-quantized deepseek-coder-6.7b. Must use original model name.",
+              "code": "model_name = \"deepseek-ai/deepseek-coder-6.7b-instruct\"",
+              "decisions": ["Model: deepseek-ai/deepseek-coder-6.7b-instruct (NOT unsloth/...)", "LoRA r=16, alpha=16", "15k code samples, 10k quran, 15k conversation", "GGUF q4_k_m for Ollama deployment"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
             },
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Earlier attempts to install Unsloth on Colab failed due to version conflicts (torch 2.10 vs torchvision 0.25 mismatch, transformers version pinning).",
-              "details": "Installed torch==2.10.0+cu128, unsloth==2026.7.4, transformers==5.5.0, trl==0.24.0. Error: RuntimeError: operator torchvision::nms does not exist. Fix: pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128",
+              "summary": "torchvision mismatch error on Colab - torch 2.10+cu128 needs torchvision from same cu128 index.",
+              "details": "Error: RuntimeError: operator torchvision::nms does not exist. Fix: pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128",
               "code": "!pip install torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128",
               "decisions": ["Used cu128 index for both torch and torchvision", "Version constraints: unsloth<=2026.7.4, transformers<=5.5.0, trl<=0.24.0"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
