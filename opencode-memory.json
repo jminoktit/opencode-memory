@@ -9,10 +9,10 @@
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Created complete Colab training notebook for DeepSeek-Coder-6.7B with mixed data (Quran 30% + Code 40% + Conversation 30%). Fixed model name and Quran dataset name.",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct (NOT unsloth/...). Quran dataset: ReySajju742/Quran (62K rows, NOT zusmani/the-holy-quran which doesn't exist). Code: bigcode/the-stack. Conversation: teknium/OpenHermes-2.5.",
-              "code": "model_name = \"deepseek-ai/deepseek-coder-6.7b-instruct\"\nquran = load_dataset(\"ReySajju742/Quran\", split=\"train\")",
-              "decisions": ["Model: deepseek-ai/deepseek-coder-6.7b-instruct", "Quran: ReySajju742/Quran (62K rows, Arabic+English)", "LoRA r=16, alpha=16", "GGUF q4_k_m for Ollama deployment"],
+              "summary": "Fixed training notebook: correct model name, correct Quran field names, replaced gated bigcode/the-stack with open MBPP dataset.",
+              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct. Quran: ReySajju742/Quran (columns: surah_name, verse, translation). Code: google-research-datasets/mbpp (Python problems, open). Conversation: teknium/OpenHermes-2.5 (open). All three datasets are open, no auth needed.",
+              "code": "model_name = \"deepseek-ai/deepseek-coder-6.7b-instruct\"\nquran = load_dataset(\"ReySajju742/Quran\", split=\"train\")  # verse, translation, surah_name\ncode_ds = load_dataset(\"google-research-datasets/mbpp\", split=\"train\")  # question, code\nconvo_ds = load_dataset(\"teknium/OpenHermes-2.5\", split=\"train\", streaming=True)",
+              "decisions": ["Model: deepseek-ai/deepseek-coder-6.7b-instruct", "Quran: ReySajju742/Quran (fields: verse, translation, surah_name)", "Code: google-research-datasets/mbpp (open, no auth)", "Conversation: teknium/OpenHermes-2.5 (open, no auth)", "bigcode/the-stack is GATED - cannot use without HF login"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
             }
           ]
