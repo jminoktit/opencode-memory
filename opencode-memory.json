@@ -1,23 +1,41 @@
 ﻿{
-  "projects": {
-    "P:\\aura-book": {
-      "name": "aura-book",
-      "topics": {
-        "ai-model-training": {
-          "keywords": ["training", "deepseek", "coder", "qlora", "unsloth", "quran", "arabic"],
-          "entries": [
-            {
-              "date": "2026-07-21",
-              "directory": "P:\\aura-book",
-              "summary": "Fixed schema mismatch: OpenHermes has extra 'weight' field in conversations. Added normalize_conversations() to strip extra fields. Also fixed missing format_quran() call.",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. All 3 datasets now produce same schema: List({'from': Value('string'), 'value': Value('string')}). normalize_conversations() strips weight/role/etc fields. format_quran() was defined but not called - fixed.",
-              "code": "def normalize_conversations(example):\n    msgs = example.get(\"conversations\", [])\n    normalized = [{\"from\": m.get(\"from\", m.get(\"role\", \"\")), \"value\": m.get(\"value\", m.get(\"content\", \"\"))} for m in msgs]\n    return {\"conversations\": normalized}",
-              "decisions": ["All datasets must have same schema: {\"from\": str, \"value\": str}", "normalize_conversations() strips extra fields like 'weight'", "format_quran() must be called before normalize_conversations()"],
-              "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
-            }
-          ]
-        }
-      }
-    }
-  }
+    "projects":  {
+                     "P:\\aura-book":  {
+                                           "name":  "aura-book",
+                                           "topics":  {
+                                                          "ai-model-training":  {
+                                                                                    "keywords":  [
+                                                                                                     "training",
+                                                                                                     "deepseek",
+                                                                                                     "coder",
+                                                                                                     "qlora",
+                                                                                                     "unsloth",
+                                                                                                     "quran",
+                                                                                                     "arabic"
+                                                                                                 ],
+                                                                                    "entries":  [
+                                                                                                    {
+                                                                                                        "date":  "2026-07-21",
+                                                                                                        "directory":  "P:\\aura-book",
+                                                                                                        "summary":  "Fixed schema mismatch: OpenHermes has extra \u0027weight\u0027 field in conversations. Added normalize_conversations() to strip extra fields. Also fixed missing format_quran() call.",
+                                                                                                        "details":  "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. All 3 datasets now produce same schema: List({\u0027from\u0027: Value(\u0027string\u0027), \u0027value\u0027: Value(\u0027string\u0027)}). normalize_conversations() strips weight/role/etc fields. format_quran() was defined but not called - fixed.",
+                                                                                                        "code":  "def normalize_conversations(example):\n    msgs = example.get(\"conversations\", [])\n    normalized = [{\"from\": m.get(\"from\", m.get(\"role\", \"\")), \"value\": m.get(\"value\", m.get(\"content\", \"\"))} for m in msgs]\n    return {\"conversations\": normalized}",
+                                                                                                        "decisions":  [
+                                                                                                                          "All datasets must have same schema: {\"from\": str, \"value\": str}",
+                                                                                                                          "normalize_conversations() strips extra fields like \u0027weight\u0027",
+                                                                                                                          "format_quran() must be called before normalize_conversations()"
+                                                                                                                      ],
+                                                                                                        "session_id":  "ses_097ccd7a5ffeMG06ZhNZZroFJy"
+                                                                                                    }
+                                                                                                ]
+                                                                                }
+                                                      }
+                                       },
+                     "P:\\\\AI_Meeting_Summerizing":  {
+                                                          "name":  "AI-Meeting-Summarizer",
+                                                          "topics":  {
+
+                                                                     }
+                                                      }
+                 }
 }

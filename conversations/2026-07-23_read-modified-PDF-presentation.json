@@ -1,0 +1,24 @@
+﻿{
+    "date":  "2026-07-23",
+    "title":  "read-modified-PDF-presentation",
+    "directory":  "P:\\\\AI_Meeting_Summerizing",
+    "summary":  "قرأ الـ PDF اللي على سطح المكتب بعد ما المستخدم عدله بـ ilovepdf.com. الـ PDF يحتوي على 11 شريحة عن مشروع AI Meeting Summarizer.",
+    "messages":  [
+                     {
+                         "content":  "What did we do so far?",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "[Full project summary response]",
+                         "role":  "assistant"
+                     },
+                     {
+                         "content":  "Continue if you have next steps, or stop and ask for clarification if you are unsure how to proceed.",
+                         "role":  "user"
+                     },
+                     {
+                         "content":  "[PDF text extraction + memory save]",
+                         "role":  "assistant"
+                     }
+                 ]
+}
