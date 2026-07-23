@@ -1,0 +1,6 @@
+﻿{
+    "date":  "2026-07-23",
+    "title":  "Add-free-API-providers",
+    "directory":  "P:\\\\AI_Meeting_Summerizing",
+    "summary":  "Added free API providers (Groq 🆓, Hugging Face 🆓) to the AI Model Provider system. Updated backend models with new provider choices. Updated api_transcribe to support Groq (whisper-large-v3). Updated api_summarize to support Groq (llama3-70b) and Hugging Face (Mistral). Frontend: providers show free badges, dynamic model suggestions and API key placeholders per provider."
+}

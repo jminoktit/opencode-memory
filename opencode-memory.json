@@ -116,6 +116,35 @@
                                                                                                                      "whisper",
                                                                                                                      "local"
                                                                                                                  ]
+                                                                                                },
+                                                                         "free-api-providers":  {
+                                                                                                    "entries":  [
+                                                                                                                    {
+                                                                                                                        "decisions":  [
+                                                                                                                                          "Groq uses OpenAI-compatible client with different base_url",
+                                                                                                                                          "Hugging Face uses direct requests to Inference API",
+                                                                                                                                          "Frontend shows provider-specific hints with signup links",
+                                                                                                                                          "Default models change based on provider selection"
+                                                                                                                                      ],
+                                                                                                                        "code":  "",
+                                                                                                                        "details":  "Model choices updated: openai/anthropic/google/groq/huggingface. Frontend: placeholder and model auto-suggest based on provider selection with free badges and links.",
+                                                                                                                        "directory":  "P:\\\\AI_Meeting_Summerizing",
+                                                                                                                        "summary":  "Added free API providers (Groq, Hugging Face) with dynamic provider hints. Groq uses OpenAI-compatible API with whisper-large-v3 and llama3-70b free. Hugging Face uses Inference API with Mistral-7B free.",
+                                                                                                                        "session_id":  "",
+                                                                                                                        "date":  "2026-07-23",
+                                                                                                                        "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_Add-free-API-providers.json"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                    "keywords":  [
+                                                                                                                     "groq",
+                                                                                                                     "huggingface",
+                                                                                                                     "free",
+                                                                                                                     "api",
+                                                                                                                     "provider",
+                                                                                                                     "whisper",
+                                                                                                                     "llama",
+                                                                                                                     "mistral"
+                                                                                                                 ]
                                                                                                 }
                                                                      }
                                                       }
