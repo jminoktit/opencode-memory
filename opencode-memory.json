@@ -53,12 +53,41 @@
                                                                                                                        "code":  "",
                                                                                                                        "decisions":  [
 
-                                                                                                                                      ],
-                                                                                                                       "session_id":  "",
-                                                                                                                       "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_read-modified-PDF-presentation.json"
-                                                                                                                   }
-                                                                                                               ]
-                                                                                               }
+                                                       ],
+                                                                                                                        "session_id":  "",
+                                                                                                                        "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_read-modified-PDF-presentation.json"
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                },
+                                                                          "gpu-detection-pitch":  {
+                                                                                                     "keywords":  [
+                                                                                                                      "gpu",
+                                                                                                                      "cuda",
+                                                                                                                      "whisper",
+                                                                                                                      "scalability",
+                                                                                                                      "pitch",
+                                                                                                                      "presentation",
+                                                                                                                      "hackathon",
+                                                                                                                      "server-requirements"
+                                                                                                                  ],
+                                                                                                     "entries":  [
+                                                                                                                     {
+                                                                                                                         "date":  "2026-07-23",
+                                                                                                                         "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                         "summary":  "Added auto GPU detection for Whisper (CUDA/CPU fallback), created gpu_utils.py, modified transcription_service.py. Created 11-slide hackathon pitch deck PDF focused on value, scalability, server requirements, benchmarks, and security.",
+                                                                                                                         "details":  "Created backend/api/services/gpu_utils.py with detect_gpu() that tries 3 methods (ctranslate2, torch, CUDA_VISIBLE_DEVICES). Modified transcription_service.py to auto-detect device. Added USE_GPU and WHISPER_FORCE_CPU to settings.py. Generated AI_Meeting_Summarizer_Pitch.pdf with 11 slides: Cover, Problem & Value, Solution & Target Users, Core Features, Tech Stack, Scalability, Server Requirements, Performance Benchmarks, Security & Privacy, Future Roadmap, Closing — all in Arabic with Ocean Gradient styling.",
+                                                                                                                         "code":  "",
+                                                                                                                         "decisions":  [
+                                                                                                                                           "GPU detection via ctranslate2 first (faster-whisper dependency), fallback to torch, then CUDA_VISIBLE_DEVICES",
+                                                                                                                                           "WHISPER_FORCE_CPU env var for testing without GPU",
+                                                                                                                                           "Pitch deck focus: value proposition, scalability, server requirements (not just features)",
+                                                                                                                                           "11 slides for hackathon judges — emphasizing business impact and technical depth"
+                                                                                                                                       ],
+                                                                                                                         "session_id":  "",
+                                                                                                                         "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_GPU-detection-and-pitch-deck.json"
+                                                                                                                     }
+                                                                                                                 ]
+                                                                                             }
                                                                           }
                                                        }
                  }
