@@ -1,0 +1,6 @@
+﻿{
+    "date":  "2026-07-23",
+    "title":  "API-Model-Provider-Settings",
+    "directory":  "P:\\\\AI_Meeting_Summerizing",
+    "summary":  "Added API Model Provider option in Settings page - users can choose between local models and OpenAI/Anthropic/Google API models. Full stack: UserSettings model, serializer, view, route, frontend API methods, and Settings.vue card."
+}

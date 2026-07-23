@@ -31,35 +31,35 @@
                                                                                 }
                                                       }
                                        },
-                      "P:\\\\AI_Meeting_Summerizing":  {
-                                                           "name":  "AI-Meeting-Summarizer",
-                                                           "topics":  {
-                                                                          "pdf-presentation":  {
-                                                                                                   "keywords":  [
-                                                                                                                    "pdf",
-                                                                                                                    "presentation",
-                                                                                                                    "slides",
-                                                                                                                    "ilovepdf",
-                                                                                                                    "Arabic",
-                                                                                                                    "English",
-                                                                                                                    "RTL"
-                                                                                                                ],
-                                                                                                   "entries":  [
-                                                                                                                   {
-                                                                                                                       "date":  "2026-07-23",
-                                                                                                                       "directory":  "P:\\AI_Meeting_Summerizing",
-                                                                                                                       "summary":  "قرأ الـ PDF اللي على سطح المكتب بعد ما المستخدم عدله بـ ilovepdf.com. الـ PDF يحتوي على 11 شريحة عن مشروع AI Meeting Summarizer.",
-                                                                                                                       "details":  "User modified the PDF externally using ilovepdf.com, then asked me to read it back. I extracted ActualText entries from the PDF binary. The PDF contains 11 slides covering: project overview, architecture diagram (Django REST API + Vue SPA + AI Services + SQLite), tech stack (Whisper medium, diarize library, DeepFace+OpenCV, pydub, yt-dlp), data models (Meeting, Tag, Auth), DRF endpoints, UI views (Home, Login, Dashboard, etc.), feature summary, processing pipeline, security fixes (ALLOWED_HOSTS, CORS, .env, import Q bug, threading), and future roadmap (Celery+Redis, pytest, WebSocket, Teams integration).",
-                                                                                                                       "code":  "",
-                                                                                                                       "decisions":  [
+                     "P:\\\\AI_Meeting_Summerizing":  {
+                                                          "name":  "AI-Meeting-Summarizer",
+                                                          "topics":  {
+                                                                         "pdf-presentation":  {
+                                                                                                  "keywords":  [
+                                                                                                                   "pdf",
+                                                                                                                   "presentation",
+                                                                                                                   "slides",
+                                                                                                                   "ilovepdf",
+                                                                                                                   "Arabic",
+                                                                                                                   "English",
+                                                                                                                   "RTL"
+                                                                                                               ],
+                                                                                                  "entries":  [
+                                                                                                                  {
+                                                                                                                      "date":  "2026-07-23",
+                                                                                                                      "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                      "summary":  "قرأ الـ PDF اللي على سطح المكتب بعد ما المستخدم عدله بـ ilovepdf.com. الـ PDF يحتوي على 11 شريحة عن مشروع AI Meeting Summarizer.",
+                                                                                                                      "details":  "User modified the PDF externally using ilovepdf.com, then asked me to read it back. I extracted ActualText entries from the PDF binary. The PDF contains 11 slides covering: project overview, architecture diagram (Django REST API + Vue SPA + AI Services + SQLite), tech stack (Whisper medium, diarize library, DeepFace+OpenCV, pydub, yt-dlp), data models (Meeting, Tag, Auth), DRF endpoints, UI views (Home, Login, Dashboard, etc.), feature summary, processing pipeline, security fixes (ALLOWED_HOSTS, CORS, .env, import Q bug, threading), and future roadmap (Celery+Redis, pytest, WebSocket, Teams integration).",
+                                                                                                                      "code":  "",
+                                                                                                                      "decisions":  [
 
-                                                       ],
-                                                                                                                        "session_id":  "",
-                                                                                                                        "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_read-modified-PDF-presentation.json"
-                                                                                                                    }
-                                                                                                                ]
-                                                                                                },
-                                                                          "gpu-detection-pitch":  {
+                                                                                                                                    ],
+                                                                                                                      "session_id":  "",
+                                                                                                                      "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_read-modified-PDF-presentation.json"
+                                                                                                                  }
+                                                                                                              ]
+                                                                                              },
+                                                                         "gpu-detection-pitch":  {
                                                                                                      "keywords":  [
                                                                                                                       "gpu",
                                                                                                                       "cuda",
@@ -75,7 +75,7 @@
                                                                                                                          "date":  "2026-07-23",
                                                                                                                          "directory":  "P:\\AI_Meeting_Summerizing",
                                                                                                                          "summary":  "Added auto GPU detection for Whisper (CUDA/CPU fallback), created gpu_utils.py, modified transcription_service.py. Created 11-slide hackathon pitch deck PDF focused on value, scalability, server requirements, benchmarks, and security.",
-                                                                                                                         "details":  "Created backend/api/services/gpu_utils.py with detect_gpu() that tries 3 methods (ctranslate2, torch, CUDA_VISIBLE_DEVICES). Modified transcription_service.py to auto-detect device. Added USE_GPU and WHISPER_FORCE_CPU to settings.py. Generated AI_Meeting_Summarizer_Pitch.pdf with 11 slides: Cover, Problem & Value, Solution & Target Users, Core Features, Tech Stack, Scalability, Server Requirements, Performance Benchmarks, Security & Privacy, Future Roadmap, Closing — all in Arabic with Ocean Gradient styling.",
+                                                                                                                         "details":  "Created backend/api/services/gpu_utils.py with detect_gpu() that tries 3 methods (ctranslate2, torch, CUDA_VISIBLE_DEVICES). Modified transcription_service.py to auto-detect device. Added USE_GPU and WHISPER_FORCE_CPU to settings.py. Generated AI_Meeting_Summarizer_Pitch.pdf with 11 slides: Cover, Problem \u0026 Value, Solution \u0026 Target Users, Core Features, Tech Stack, Scalability, Server Requirements, Performance Benchmarks, Security \u0026 Privacy, Future Roadmap, Closing — all in Arabic with Ocean Gradient styling.",
                                                                                                                          "code":  "",
                                                                                                                          "decisions":  [
                                                                                                                                            "GPU detection via ctranslate2 first (faster-whisper dependency), fallback to torch, then CUDA_VISIBLE_DEVICES",
@@ -87,8 +87,37 @@
                                                                                                                          "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_GPU-detection-and-pitch-deck.json"
                                                                                                                      }
                                                                                                                  ]
-                                                                                             }
-                                                                          }
-                                                       }
+                                                                                                 },
+                                                                         "api-model-provider":  {
+                                                                                                    "entries":  [
+                                                                                                                    {
+                                                                                                                        "decisions":  [
+                                                                                                                                          "UserSettings uses OneToOneField to User for per-user settings",
+                                                                                                                                          "API key stored in DB (not ideal security-wise but keeps it simple for hackathon demo)",
+                                                                                                                                          "SettingsView auto-creates UserSettings on first GET if not exists",
+                                                                                                                                          "Frontend loads settings from backend on mount and saves via PUT"
+                                                                                                                                      ],
+                                                                                                                        "code":  "",
+                                                                                                                        "details":  "Created backend/api/models.py: UserSettings model with fields for ai_provider, api_provider, api_key, api_model, whisper_provider, and all existing frontend settings. Created UserSettingsSerializer (excludes user/created/updated). Created UserSettingsView (RetrieveUpdateAPIView with auto-create). Added /api/settings/ route. Frontend: added settings API methods to api/index.js. Updated Settings.vue with new \u0027AI Model Provider\u0027 card showing local vs API toggle, provider select, API key input, model input, and Whisper provider select. All settings saved to backend via PUT /api/settings/. Migrations: 0007_usersettings.",
+                                                                                                                        "directory":  "P:\\\\AI_Meeting_Summerizing",
+                                                                                                                        "summary":  "Added API Model Provider option in Settings — users can now choose between local models and API models (OpenAI, Anthropic, Google). Created UserSettings model, serializer, view, and frontend settings card with API key input.",
+                                                                                                                        "session_id":  "",
+                                                                                                                        "date":  "2026-07-23",
+                                                                                                                        "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_API-Model-Provider-Settings.json"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                    "keywords":  [
+                                                                                                                     "api",
+                                                                                                                     "model",
+                                                                                                                     "provider",
+                                                                                                                     "settings",
+                                                                                                                     "openai",
+                                                                                                                     "anthropic",
+                                                                                                                     "whisper",
+                                                                                                                     "local"
+                                                                                                                 ]
+                                                                                                }
+                                                                     }
+                                                      }
                  }
 }
