@@ -31,11 +31,35 @@
                                                                                 }
                                                       }
                                        },
-                     "P:\\\\AI_Meeting_Summerizing":  {
-                                                          "name":  "AI-Meeting-Summarizer",
-                                                          "topics":  {
+                      "P:\\\\AI_Meeting_Summerizing":  {
+                                                           "name":  "AI-Meeting-Summarizer",
+                                                           "topics":  {
+                                                                          "pdf-presentation":  {
+                                                                                                   "keywords":  [
+                                                                                                                    "pdf",
+                                                                                                                    "presentation",
+                                                                                                                    "slides",
+                                                                                                                    "ilovepdf",
+                                                                                                                    "Arabic",
+                                                                                                                    "English",
+                                                                                                                    "RTL"
+                                                                                                                ],
+                                                                                                   "entries":  [
+                                                                                                                   {
+                                                                                                                       "date":  "2026-07-23",
+                                                                                                                       "directory":  "P:\\AI_Meeting_Summerizing",
+                                                                                                                       "summary":  "قرأ الـ PDF اللي على سطح المكتب بعد ما المستخدم عدله بـ ilovepdf.com. الـ PDF يحتوي على 11 شريحة عن مشروع AI Meeting Summarizer.",
+                                                                                                                       "details":  "User modified the PDF externally using ilovepdf.com, then asked me to read it back. I extracted ActualText entries from the PDF binary. The PDF contains 11 slides covering: project overview, architecture diagram (Django REST API + Vue SPA + AI Services + SQLite), tech stack (Whisper medium, diarize library, DeepFace+OpenCV, pydub, yt-dlp), data models (Meeting, Tag, Auth), DRF endpoints, UI views (Home, Login, Dashboard, etc.), feature summary, processing pipeline, security fixes (ALLOWED_HOSTS, CORS, .env, import Q bug, threading), and future roadmap (Celery+Redis, pytest, WebSocket, Teams integration).",
+                                                                                                                       "code":  "",
+                                                                                                                       "decisions":  [
 
-                                                                     }
-                                                      }
+                                                                                                                                      ],
+                                                                                                                       "session_id":  "",
+                                                                                                                       "github_url":  "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-07-23_read-modified-PDF-presentation.json"
+                                                                                                                   }
+                                                                                                               ]
+                                                                                               }
+                                                                          }
+                                                       }
                  }
 }
