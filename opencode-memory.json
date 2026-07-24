@@ -3,28 +3,16 @@
     "P:\\aura-book": {
       "name": "aura-book",
       "topics": {
-        "ai-model-training": {
-          "keywords": ["training", "deepseek", "coder", "qlora", "unsloth", "quran", "arabic"],
-          "entries": [
-            {
-              "date": "2026-07-21",
-              "directory": "P:\\aura-book",
-              "summary": "Training notebook fixed: all 3 datasets work (Quran 62K, Code 15K, Conversation 15K). Model on GPU float16. Training speed issue under investigation.",
-              "details": "Notebook at P:\\aura-book\\backend\\training\\deepseek_coder_arabic.ipynb. Model: deepseek-ai/deepseek-coder-6.7b-instruct on cuda:0 float16, 4.15GB. Training slow (~100 examples in 13 min). Data loading is fast (0.0s/batch). Need to check Unsloth version and training output.",
-              "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
-            }
-          ]
-        },
         "auth-flow-fix": {
-          "keywords": ["auth", "login", "register", "verify", "google", "serializer", "bug"],
+          "keywords": ["auth", "google", "cors", "login", "oauth"],
           "entries": [
             {
               "date": "2026-07-21",
               "directory": "P:\\aura-book",
-              "summary": "Fixed _VerifySerializer bug: duplicate username/password fields made them required, breaking Google OAuth. Added Django password validation for non-Google registrations.",
-              "details": "agent_app/views.py: _VerifySerializer had username/password defined twice - second definition overwrote first with required=True. Google OAuth verify_view needs optional username/password. Fixed by removing duplicates, keeping required=False. Added validate_password() for non-Google flow.",
-              "code": "class _VerifySerializer(serializers.Serializer):\n    email = serializers.EmailField()\n    code = serializers.CharField(max_length=6)\n    username = serializers.CharField(max_length=150, required=False, allow_blank=True)\n    password = serializers.CharField(max_length=128, required=False, allow_blank=True)",
-              "decisions": ["username/password must be optional for Google OAuth", "Password validation moved to view level for non-Google flow", "Auth flow: register → verify → JWT tokens → me endpoint"],
+              "summary": "Fixed Google sign-in: added port 5174 to CORS_ALLOWED_ORIGINS. User also needs to add http://localhost:5174 to Google Cloud Console authorized origins.",
+              "details": "settings.py CORS was missing port 5174 (Ignite dev server). Google Cloud Console origins need http://localhost:5174 added. Backend GOOGLE_CLIENT_ID matches frontend VITE_GOOGLE_CLIENT_ID.",
+              "code": "CORS_ALLOWED_ORIGINS = [..., 'http://localhost:5174', 'http://127.0.0.1:5174']",
+              "decisions": ["Added port 5174 to CORS", "User must also update Google Cloud Console origins"],
               "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
             }
           ]
