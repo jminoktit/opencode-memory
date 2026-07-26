@@ -18,6 +18,32 @@
           ]
         }
       }
+    },
+    "P:\\عَيادة": {
+      "name": "clinic-management",
+      "topics": {
+        "full-stack-clinic": {
+          "keywords": ["clinic", "django", "react", "doctor", "patient", "appointment", "medical-record", "schedule"],
+          "entries": [
+            {
+              "date": "2026-07-26",
+              "directory": "P:\\عَيادة",
+              "summary": "Full-stack Arabic clinic management system with Django REST backend + React frontend. Completed: models, auth, CRUD, doctor schedule, appointment booking with available slots.",
+              "details": "Backend: Django 5.2, DRF, SimpleJWT, django-filter, Pillow. Models: Custom User (doctor/patient roles), Doctor, DoctorSchedule, Patient, Appointment, MedicalRecord. Frontend: React 19, Vite 8, Tailwind v4, React Router v7, Axios with JWT auto-refresh. All Arabic RTL UI.",
+              "code": "",
+              "decisions": [
+                "Removed departments system entirely; each doctor has icon (ImageField) instead",
+                "DoctorSchedule model for weekly available time slots with unique_together constraint",
+                "Register flow: checkbox 'I am a doctor' -> conditional fields (specialization/fee/bio vs age/gender)",
+                "Dashboard booking shows available slots from backend endpoint based on date selection",
+                "MySchedule page (doctor-only sidebar nav) for managing weekly time slots",
+                "Frontend dev server proxies /api to http://127.0.0.1:8000"
+              ],
+              "session_id": ""
+            }
+          ]
+        }
+      }
     }
   }
 }

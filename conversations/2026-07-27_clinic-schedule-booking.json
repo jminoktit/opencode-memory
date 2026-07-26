@@ -1,0 +1,14 @@
+﻿{
+    "date":  "2026-07-27",
+    "title":  "Clinic - Doctor Schedule + Booking Flow",
+    "directory":  "P:\\عَيادة",
+    "summary":  "Completed DoctorSchedule migration, created MySchedule.jsx for doctors, added booking modal with available slots to Dashboard, verified build passes.",
+    "details":  [
+                    "1. Ran makemigrations + migrate for DoctorSchedule model",
+                    "2. Created MySchedule.jsx page (doctor-only) for managing weekly time slots grouped by day",
+                    "3. Added /my-schedule route to App.jsx",
+                    "4. Updated Dashboard with booking modal: date picker -\u003e available slots from backend -\u003e confirm",
+                    "5. Sidebar shows schedule nav only for doctor role",
+                    "6. All builds pass (frontend + backend check)"
+                ]
+}
