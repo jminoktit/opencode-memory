@@ -19,7 +19,7 @@
         }
       }
     },
-    "P:\\عَيادة": {
+    "P:\\عيادة": {
       "name": "clinic-management",
       "topics": {
         "full-stack-clinic": {
@@ -27,7 +27,7 @@
           "entries": [
             {
               "date": "2026-07-26",
-              "directory": "P:\\عَيادة",
+              "directory": "P:\\عيادة",
               "summary": "Full-stack Arabic clinic management system with Django REST backend + React frontend. Completed: models, auth, CRUD, doctor schedule, appointment booking with available slots.",
               "details": "Backend: Django 5.2, DRF, SimpleJWT, django-filter, Pillow. Models: Custom User (doctor/patient roles), Doctor, DoctorSchedule, Patient, Appointment, MedicalRecord. Frontend: React 19, Vite 8, Tailwind v4, React Router v7, Axios with JWT auto-refresh. All Arabic RTL UI.",
               "code": "",
@@ -38,6 +38,27 @@
                 "Dashboard booking shows available slots from backend endpoint based on date selection",
                 "MySchedule page (doctor-only sidebar nav) for managing weekly time slots",
                 "Frontend dev server proxies /api to http://127.0.0.1:8000"
+              ],
+              "session_id": ""
+            }
+          ]
+        },
+        "dashboard-redesign": {
+          "keywords": ["dashboard", "stats", "chart", "components", "reusable", "UI"],
+          "entries": [
+            {
+              "date": "2026-07-27",
+              "directory": "P:\\عيادة",
+              "summary": "Replaced old Dashboard.jsx with professional medical dashboard using reusable components: StatsCard, AppointmentTable, RecentPatients, RevenueChart, WeeklyChart, NotificationPanel.",
+              "details": "New Dashboard imports 6 reusable dashboard components. Stats cards show patients, appointments, doctors, revenue, waiting patients. Doctor search with filter by department. Booking modal with available time slots from backend. Uses react-icons/hi2 for stat icons.",
+              "code": "",
+              "decisions": [
+                "Uses 5 StatsCards: Total Patients, Today's Appointments, Doctors on Duty, Revenue Today, Waiting Patients",
+                "Doctor search grid with avatar/initials, specialization, department, availability status, Book Now button",
+                "Charts row: RevenueChart + WeeklyChart side by side",
+                "Tables row: AppointmentTable + RecentPatients side by side",
+                "NotificationPanel at bottom",
+                "Booking modal persists with date picker + slot selection + reason input"
               ],
               "session_id": ""
             }
