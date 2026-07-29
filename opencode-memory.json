@@ -43,6 +43,39 @@
             }
           ]
         },
+        "bugfixes-and-error-handling": {
+          "keywords": ["bug fixes", "register", "serializer", "error handling", "notifications", "api urls", "seed data", "doctor schedule", "department", "field"],
+          "entries": [
+            {
+              "date": "2026-07-28",
+              "directory": "P:\\عيادة",
+              "summary": "Multiple bug fixes and major error handling overhaul: Dashboard rewritten to show department tables with doctors, RegisterSerializer `department` field fix (AssertionError), API URL fixes in frontend, seed data rewrite with realistic Arabic data, notification system built, error handling moved from toasts to inline divs.",
+              "details": "BUG FIXES: 1) Dashboard rewritten - shows department tables with expandable doctor list; 2) RegisterSerializer department IntegerField was declared but missing from Meta.fields → AssertionError on POST /api/register/; 3) Doctors.jsx, Appointments.jsx were using /api/ prefix incorrectly (axios baseUrl already /api/); 4) /api/users/ endpoint doesn't exist - removed from Doctors.jsx; 5) RegisterSerializer did not pass department to Doctor creation. ERROR HANDLING: getApiError utility fixed to check data.detail/data.error before status codes; getLoginError provides specific messages (401→اسم المستخدم أو كلمة المرور غير صحيحة); all pages converted from error toasts to inline error divs; NotificationContext - errors persist until clicked, success/warning/info auto-dismiss in 4s. SEED DATA: 7 departments, 52 doctors with realistic Arabic names, Egyptian phone numbers, realistic consultation fees; 155 DoctorSchedule entries created.",
+              "code": "class RegisterSerializer(serializers.ModelSerializer):\n    department = serializers.IntegerField(required=False, default=None, allow_null=True)\n    class Meta:\n        model = User\n        fields = ['...', 'department', '...']  # was missing from fields",
+              "decisions": [
+                "Dashboard now shows department tables (not stats/charts layout)",
+                "Errors shown as inline divs that stay until form resubmit; toasts only for success",
+                "getApiError checks data.detail/data.error first, then status codes",
+                "Error toasts persist until clicked (not auto-dismiss)",
+                "Seed data uses realistic Arabic names and Egyptian phone numbers (01xxxxxxxxx)",
+                "Frontend never uses /api/ prefix in axios calls (baseUrl is /api/)",
+                "Register flow: department field properly included in serializer create()"
+              ],
+              "session_id": ""
+            },
+            {
+              "date": "2026-07-29",
+              "directory": "P:\\عيادة",
+              "summary": "Fixed RegisterSerializer AssertionError: `department` field was declared but missing from Meta.fields. Added 'department' to the fields list, verified backend check (0 issues) and frontend build pass.",
+              "details": "Applied one-line fix: added 'department' to RegisterSerializer.Meta.fields. Both backend `python manage.py check` (0 silenced) and frontend `npm run build` pass cleanly.",
+              "code": "-        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name', 'phone', 'is_doctor', 'specialization', 'consultation_fee', 'bio', 'age', 'gender']\n+        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name', 'phone', 'is_doctor', 'specialization', 'department', 'consultation_fee', 'bio', 'age', 'gender']",
+              "decisions": [
+                "Added 'department' to Meta.fields to match declared field on serializer"
+              ],
+              "session_id": ""
+            }
+          ]
+        },
         "dashboard-redesign": {
           "keywords": ["dashboard", "stats", "chart", "components", "reusable", "UI"],
           "entries": [

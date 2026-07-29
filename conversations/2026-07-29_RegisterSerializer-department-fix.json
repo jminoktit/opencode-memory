@@ -1,0 +1,1 @@
+﻿{"date":"2026-07-29","title":"RegisterSerializer department field fix + backend/frontend verification","directory":"P:\\عيادة","session_id":"ses_051855b47ffes1Pz...","summary":"Fixed AssertionError at POST /api/register/ by adding \u0027department\u0027 to RegisterSerializer.Meta.fields. Verified both backend check and frontend build pass."}
