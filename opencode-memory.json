@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Implemented per-user GitHub video segmentation with per-course repos. YouTube-like video player with streaming proxy and preloading. Next segment preloads 10 seconds before current ends.",
-              "details": "New model: GitHubAccount (user, github_username, github_token). Removed repo_name field. API: GET/POST/DELETE /courses/github/ + GET /courses/{id}/github/. Video upload uses user's GitHub token with per-course repos. Default segment_duration=60 seconds. YouTube player: VideoPlayer.tsx with auto-play, single progress bar, chapters sidebar. Streaming proxy: views_video_stream.py fetches from GitHub and streams to user. Preloading: next segment starts fetching 10 seconds before current ends. Green 'Next ready' badge shows when preloaded.",
-              "code": "POST /api/courses/github/ {github_username, github_token}\nDELETE /api/courses/github/\nGET /api/courses/{id}/github/ - returns repo_url, lessons, segments\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}\nGET /api/courses/stream/{segment_id}/ - streams video from GitHub\n\n# Preloading: triggers at 10 seconds before segment ends\n# Creates hidden video element to preload next segment\n# 'Next ready' badge when preloaded\n# Seamless transition to preloaded segment",
-              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar", "Streaming proxy fetches from GitHub on-demand, no local storage", "Loading indicator shows when fetching from GitHub", "Preload next segment 10 seconds before current ends"],
+              "summary": "Implemented per-user GitHub video segmentation with per-course repos. YouTube-like video player with streaming proxy, preloading, and interactive questions.",
+              "details": "New model: GitHubAccount (user, github_username, github_token). VideoQuestion model with timestamp, question_type, options, correct_answer. VideoQuestionAttempt model for user answers. API: GET/POST /courses/lessons/{id}/questions/, POST /courses/questions/{id}/answer/. VideoPlayer.tsx shows questions at timestamps, pauses video, accepts answers, shows correct/wrong feedback.",
+              "code": "POST /api/courses/github/ {github_username, github_token}\nDELETE /api/courses/github/\nGET /api/courses/{id}/github/ - returns repo_url, lessons, segments\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}\nGET /api/courses/stream/{segment_id}/ - streams video from GitHub\nGET /api/courses/lessons/{id}/questions/ - list questions\nPOST /api/courses/questions/{id}/answer/ - submit answer",
+              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar", "Streaming proxy fetches from GitHub on-demand, no local storage", "Loading indicator shows when fetching from GitHub", "Preload next segment 10 seconds before current ends", "Questions appear at specific timestamps, video pauses", "MCQ and True/False question types", "Points system for correct answers"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
