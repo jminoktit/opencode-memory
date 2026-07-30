@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Implemented per-user GitHub video segmentation with per-course repos. Each course gets its own repo: aura-course-{slug}. Each lesson is a folder. Default segment duration changed from 5min to 1min.",
-              "details": "New model: GitHubAccount (user, github_username, github_token). Removed repo_name field. API: GET/POST/DELETE /courses/github/ + GET /courses/{id}/github/. Video upload uses user's GitHub token with per-course repos. Default segment_duration=60 seconds. User can override via API (30-3600 seconds).",
-              "code": "POST /api/courses/github/ {github_username, github_token}\nDELETE /api/courses/github/\nGET /api/courses/{id}/github/ - returns repo_url, lessons, segments\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}\n\n# segment_duration default changed:\n# - video_services.py: split_video(segment_duration=60)\n# - video_services.py: process_video_upload(segment_duration=60)\n# - serializers.py: default=60",
-              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)"],
+              "summary": "Implemented per-user GitHub video segmentation with per-course repos. YouTube-like video player with auto-play, progress bar, chapters sidebar.",
+              "details": "New model: GitHubAccount (user, github_username, github_token). Removed repo_name field. API: GET/POST/DELETE /courses/github/ + GET /courses/{id}/github/. Video upload uses user's GitHub token with per-course repos. Default segment_duration=60 seconds. YouTube player: VideoPlayer.tsx with auto-play, single progress bar with chapter markers, chapters sidebar.",
+              "code": "POST /api/courses/github/ {github_username, github_token}\nDELETE /api/courses/github/\nGET /api/courses/{id}/github/ - returns repo_url, lessons, segments\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}\n\n# segment_duration default = 60 seconds (1 minute)\n# VideoPlayer.tsx - YouTube-like player\n# styles.css - yt-player classes",
+              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
