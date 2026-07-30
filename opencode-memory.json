@@ -9,10 +9,10 @@
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Implemented video segmentation feature: upload video, split with FFmpeg, upload segments to GitHub, display with chapter links.",
-              "details": "New models: VideoSegment (segment_number, duration, github_url, github_path), UploadedVideo (file, status, segment_count). Services: video_services.py (get_video_duration, split_video, upload_segment_to_github, process_video_upload). API: POST /courses/video-upload/, GET /courses/lessons/<id>/segments/. Frontend: VideoSegments.tsx component. Config: GITHUB_VIDEO_REPO_OWNER, GITHUB_VIDEO_REPO_NAME, GITHUB_VIDEO_TOKEN in settings.py and .env.",
-              "code": "POST /api/courses/video-upload/ {file, lesson_id, segment_duration}\nGET /api/courses/lessons/{id}/segments/",
-              "decisions": ["Default segment duration 5 minutes (300s)", "Segments uploaded to GitHub repo aura-videos", "If no GitHub token, saves locally only", "VideoSegment has github_url for raw file link"],
+              "summary": "Implemented per-user GitHub video segmentation. Each user connects their own GitHub account, video segments uploaded to their personal repo.",
+              "details": "New model: GitHubAccount (user, github_username, github_token, repo_name). API: GET/POST/DELETE /courses/github/. Video upload now uses user's GitHub token. Auto-creates repo if not exists. Frontend: GitHubConnect.tsx component.",
+              "code": "POST /api/courses/github/ {github_username, github_token, repo_name}\nDELETE /api/courses/github/\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}",
+              "decisions": ["Each user has their own GitHub repo", "Token verified via GitHub API before saving", "Repo auto-created if not exists", "If no GitHub connected, saves locally only"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
