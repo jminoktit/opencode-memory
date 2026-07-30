@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Created sample Python tutorial videos, fixed streaming proxy, added VideoPlayerPage for React app with Watch Video button in course detail.",
-              "details": "Created 11 sample videos for Python for Beginners course. Updated views_video_stream.py to serve local files. Added VideoPlayerPage.jsx with full video player, chapters list, progress bar. Added 'Watch Video' button in CourseDetail.jsx for lessons with videos. Added has_video field to LessonPublicSerializer.",
-              "code": "Route: /lessons/:id/video → VideoPlayerPage\n\n# CourseDetail.jsx\n{lesson.has_video && (\n  <Link to={`/lessons/${lesson.id}/video`} className=\"video-link\">\n    ▶ Watch Video\n  </Link>\n)}\n\n# VideoPlayerPage.jsx\n- Full video player with controls\n- Chapters sidebar\n- Auto-play next segment\n- Preload indicator\n- Buffering indicator",
-              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar", "Streaming proxy fetches from GitHub on-demand, no local storage", "Loading indicator shows when fetching from GitHub", "Preload next segment 10 seconds before current ends", "Questions appear at specific timestamps, video pauses", "MCQ and True/False question types", "Points system for correct answers", "AI agent explains wrong answers with retry option", "Sample videos created using ffmpeg", "Streaming proxy serves local files when no GitHub connected", "Added routes for course detail and lesson view", "Added CSS for course detail and lesson pages", "Added VideoPlayerPage for React app"],
+              "summary": "Fixed video player by removing authentication requirements. Videos now accessible without login.",
+              "details": "Changed LessonView to AllowAny for GET requests. Changed VideoStreamView to AllowAny. Removed ProtectedRoute from video player page. Videos can now be accessed without login.",
+              "code": "# Changes made:\n1. LessonView - AllowAny (GET without auth)\n2. VideoStreamView - AllowAny (stream without auth)\n3. Route /lessons/:id/video - removed ProtectedRoute\n\n# VideoPlayerPage.jsx\n- Full video player with controls\n- Chapters sidebar\n- Auto-play next segment\n- Buffering indicator",
+              "decisions": ["Videos accessible without login", "LessonView allows GET without auth", "VideoStreamView allows streaming without auth", "Removed ProtectedRoute from video player"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
