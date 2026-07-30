@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Implemented per-user GitHub video segmentation with per-course repos. YouTube-like video player with auto-play, progress bar, chapters sidebar.",
-              "details": "New model: GitHubAccount (user, github_username, github_token). Removed repo_name field. API: GET/POST/DELETE /courses/github/ + GET /courses/{id}/github/. Video upload uses user's GitHub token with per-course repos. Default segment_duration=60 seconds. YouTube player: VideoPlayer.tsx with auto-play, single progress bar with chapter markers, chapters sidebar.",
-              "code": "POST /api/courses/github/ {github_username, github_token}\nDELETE /api/courses/github/\nGET /api/courses/{id}/github/ - returns repo_url, lessons, segments\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}\n\n# segment_duration default = 60 seconds (1 minute)\n# VideoPlayer.tsx - YouTube-like player\n# styles.css - yt-player classes",
-              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar"],
+              "summary": "Implemented per-user GitHub video segmentation with per-course repos. YouTube-like video player with streaming proxy. Only one segment loaded at a time from GitHub through server.",
+              "details": "New model: GitHubAccount (user, github_username, github_token). Removed repo_name field. API: GET/POST/DELETE /courses/github/ + GET /courses/{id}/github/. Video upload uses user's GitHub token with per-course repos. Default segment_duration=60 seconds. YouTube player: VideoPlayer.tsx with auto-play, single progress bar, chapters sidebar. Streaming proxy: views_video_stream.py fetches from GitHub and streams to user. Loading indicator shows when fetching from GitHub.",
+              "code": "POST /api/courses/github/ {github_username, github_token}\nDELETE /api/courses/github/\nGET /api/courses/{id}/github/ - returns repo_url, lessons, segments\nPOST /api/courses/video-upload/ {file, lesson_id, segment_duration}\nGET /api/courses/stream/{segment_id}/ - streams video from GitHub\n\n# segment_duration default = 60 seconds (1 minute)\n# VideoPlayer.tsx - YouTube-like player with streaming proxy\n# views_video_stream.py - server-side streaming proxy\n# styles.css - yt-player, yt-buffering classes",
+              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar", "Streaming proxy fetches from GitHub on-demand, no local storage", "Loading indicator shows when fetching from GitHub"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
