@@ -3,97 +3,17 @@
     "P:\\aura-book": {
       "name": "aura-book",
       "topics": {
-        "auth-flow-fix": {
-          "keywords": ["auth", "google", "cors", "login", "oauth"],
+        "video-segmentation": {
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters"],
           "entries": [
             {
-              "date": "2026-07-21",
+              "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Fixed Google sign-in: added port 5174 to CORS_ALLOWED_ORIGINS. User also needs to add http://localhost:5174 to Google Cloud Console authorized origins.",
-              "details": "settings.py CORS was missing port 5174 (Ignite dev server). Google Cloud Console origins need http://localhost:5174 added. Backend GOOGLE_CLIENT_ID matches frontend VITE_GOOGLE_CLIENT_ID.",
-              "code": "CORS_ALLOWED_ORIGINS = [..., 'http://localhost:5174', 'http://127.0.0.1:5174']",
-              "decisions": ["Added port 5174 to CORS", "User must also update Google Cloud Console origins"],
-              "session_id": "ses_097ccd7a5ffeMG06ZhNZZroFJy"
-            }
-          ]
-        }
-      }
-    },
-    "P:\\عيادة": {
-      "name": "clinic-management",
-      "topics": {
-        "full-stack-clinic": {
-          "keywords": ["clinic", "django", "react", "doctor", "patient", "appointment", "medical-record", "schedule"],
-          "entries": [
-            {
-              "date": "2026-07-26",
-              "directory": "P:\\عيادة",
-              "summary": "Full-stack Arabic clinic management system with Django REST backend + React frontend. Completed: models, auth, CRUD, doctor schedule, appointment booking with available slots.",
-              "details": "Backend: Django 5.2, DRF, SimpleJWT, django-filter, Pillow. Models: Custom User (doctor/patient roles), Doctor, DoctorSchedule, Patient, Appointment, MedicalRecord. Frontend: React 19, Vite 8, Tailwind v4, React Router v7, Axios with JWT auto-refresh. All Arabic RTL UI.",
-              "code": "",
-              "decisions": [
-                "Removed departments system entirely; each doctor has icon (ImageField) instead",
-                "DoctorSchedule model for weekly available time slots with unique_together constraint",
-                "Register flow: checkbox 'I am a doctor' -> conditional fields (specialization/fee/bio vs age/gender)",
-                "Dashboard booking shows available slots from backend endpoint based on date selection",
-                "MySchedule page (doctor-only sidebar nav) for managing weekly time slots",
-                "Frontend dev server proxies /api to http://127.0.0.1:8000"
-              ],
-              "session_id": ""
-            }
-          ]
-        },
-        "bugfixes-and-error-handling": {
-          "keywords": ["bug fixes", "register", "serializer", "error handling", "notifications", "api urls", "seed data", "doctor schedule", "department", "field"],
-          "entries": [
-            {
-              "date": "2026-07-28",
-              "directory": "P:\\عيادة",
-              "summary": "Multiple bug fixes and major error handling overhaul: Dashboard rewritten to show department tables with doctors, RegisterSerializer `department` field fix (AssertionError), API URL fixes in frontend, seed data rewrite with realistic Arabic data, notification system built, error handling moved from toasts to inline divs.",
-              "details": "BUG FIXES: 1) Dashboard rewritten - shows department tables with expandable doctor list; 2) RegisterSerializer department IntegerField was declared but missing from Meta.fields → AssertionError on POST /api/register/; 3) Doctors.jsx, Appointments.jsx were using /api/ prefix incorrectly (axios baseUrl already /api/); 4) /api/users/ endpoint doesn't exist - removed from Doctors.jsx; 5) RegisterSerializer did not pass department to Doctor creation. ERROR HANDLING: getApiError utility fixed to check data.detail/data.error before status codes; getLoginError provides specific messages (401→اسم المستخدم أو كلمة المرور غير صحيحة); all pages converted from error toasts to inline error divs; NotificationContext - errors persist until clicked, success/warning/info auto-dismiss in 4s. SEED DATA: 7 departments, 52 doctors with realistic Arabic names, Egyptian phone numbers, realistic consultation fees; 155 DoctorSchedule entries created.",
-              "code": "class RegisterSerializer(serializers.ModelSerializer):\n    department = serializers.IntegerField(required=False, default=None, allow_null=True)\n    class Meta:\n        model = User\n        fields = ['...', 'department', '...']  # was missing from fields",
-              "decisions": [
-                "Dashboard now shows department tables (not stats/charts layout)",
-                "Errors shown as inline divs that stay until form resubmit; toasts only for success",
-                "getApiError checks data.detail/data.error first, then status codes",
-                "Error toasts persist until clicked (not auto-dismiss)",
-                "Seed data uses realistic Arabic names and Egyptian phone numbers (01xxxxxxxxx)",
-                "Frontend never uses /api/ prefix in axios calls (baseUrl is /api/)",
-                "Register flow: department field properly included in serializer create()"
-              ],
-              "session_id": ""
-            },
-            {
-              "date": "2026-07-29",
-              "directory": "P:\\عيادة",
-              "summary": "Fixed RegisterSerializer AssertionError: `department` field was declared but missing from Meta.fields. Added 'department' to the fields list, verified backend check (0 issues) and frontend build pass.",
-              "details": "Applied one-line fix: added 'department' to RegisterSerializer.Meta.fields. Both backend `python manage.py check` (0 silenced) and frontend `npm run build` pass cleanly.",
-              "code": "-        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name', 'phone', 'is_doctor', 'specialization', 'consultation_fee', 'bio', 'age', 'gender']\n+        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name', 'phone', 'is_doctor', 'specialization', 'department', 'consultation_fee', 'bio', 'age', 'gender']",
-              "decisions": [
-                "Added 'department' to Meta.fields to match declared field on serializer"
-              ],
-              "session_id": ""
-            }
-          ]
-        },
-        "dashboard-redesign": {
-          "keywords": ["dashboard", "stats", "chart", "components", "reusable", "UI"],
-          "entries": [
-            {
-              "date": "2026-07-27",
-              "directory": "P:\\عيادة",
-              "summary": "Replaced old Dashboard.jsx with professional medical dashboard using reusable components: StatsCard, AppointmentTable, RecentPatients, RevenueChart, WeeklyChart, NotificationPanel.",
-              "details": "New Dashboard imports 6 reusable dashboard components. Stats cards show patients, appointments, doctors, revenue, waiting patients. Doctor search with filter by department. Booking modal with available time slots from backend. Uses react-icons/hi2 for stat icons.",
-              "code": "",
-              "decisions": [
-                "Uses 5 StatsCards: Total Patients, Today's Appointments, Doctors on Duty, Revenue Today, Waiting Patients",
-                "Doctor search grid with avatar/initials, specialization, department, availability status, Book Now button",
-                "Charts row: RevenueChart + WeeklyChart side by side",
-                "Tables row: AppointmentTable + RecentPatients side by side",
-                "NotificationPanel at bottom",
-                "Booking modal persists with date picker + slot selection + reason input"
-              ],
-              "session_id": ""
+              "summary": "Implemented video segmentation feature: upload video, split with FFmpeg, upload segments to GitHub, display with chapter links.",
+              "details": "New models: VideoSegment (segment_number, duration, github_url, github_path), UploadedVideo (file, status, segment_count). Services: video_services.py (get_video_duration, split_video, upload_segment_to_github, process_video_upload). API: POST /courses/video-upload/, GET /courses/lessons/<id>/segments/. Frontend: VideoSegments.tsx component. Config: GITHUB_VIDEO_REPO_OWNER, GITHUB_VIDEO_REPO_NAME, GITHUB_VIDEO_TOKEN in settings.py and .env.",
+              "code": "POST /api/courses/video-upload/ {file, lesson_id, segment_duration}\nGET /api/courses/lessons/{id}/segments/",
+              "decisions": ["Default segment duration 5 minutes (300s)", "Segments uploaded to GitHub repo aura-videos", "If no GitHub token, saves locally only", "VideoSegment has github_url for raw file link"],
+              "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
         }
