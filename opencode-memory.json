@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Created sample Python tutorial videos and uploaded to course. Fixed streaming proxy to serve local files when no GitHub connected.",
-              "details": "Created 11 sample videos for Python for Beginners course. Updated views_video_stream.py to serve local files from UploadedVideo when no GitHub URL exists. Supports range requests for seeking.",
-              "code": "python create_sample_videos.py\n\n# Updated views_video_stream.py:\n# - Checks for github_url first\n# - Falls back to UploadedVideo.file.path\n# - Supports range requests\n# - Serves local files when no GitHub connected",
-              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar", "Streaming proxy fetches from GitHub on-demand, no local storage", "Loading indicator shows when fetching from GitHub", "Preload next segment 10 seconds before current ends", "Questions appear at specific timestamps, video pauses", "MCQ and True/False question types", "Points system for correct answers", "AI agent explains wrong answers with retry option", "Sample videos created using ffmpeg", "Streaming proxy serves local files when no GitHub connected"],
+              "summary": "Created sample Python tutorial videos and uploaded to course. Fixed streaming proxy to serve local files. Added routes for course detail and lesson view.",
+              "details": "Created 11 sample videos for Python for Beginners course. Updated views_video_stream.py to serve local files from UploadedVideo when no GitHub URL exists. Added routes: /courses/:id for course detail, /lessons/:id for lesson view with VideoPlayer component.",
+              "code": "Routes added:\n#/courses/:id → CourseDetail\n#/lessons/:id → LessonView (with VideoPlayer)\n\n# Updated App.tsx:\nimport VideoPlayer from './views/VideoPlayer'\n<VideoPlayer lessonId={lesson().id} />",
+              "decisions": ["Each course gets its own repo: aura-course-{course-slug}", "Each lesson is a folder: lesson-{id}-{title}", "Default segment duration = 60 seconds (1 minute)", "User can override segment_duration via API (30-3600 seconds)", "YouTube-like player with auto-play, progress bar, chapters sidebar", "Streaming proxy fetches from GitHub on-demand, no local storage", "Loading indicator shows when fetching from GitHub", "Preload next segment 10 seconds before current ends", "Questions appear at specific timestamps, video pauses", "MCQ and True/False question types", "Points system for correct answers", "AI agent explains wrong answers with retry option", "Sample videos created using ffmpeg", "Streaming proxy serves local files when no GitHub connected", "Added routes for course detail and lesson view"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
