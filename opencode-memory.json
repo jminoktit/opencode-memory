@@ -47,7 +47,7 @@
               "code": "from pagesmith import App, HTMLResponse, tags\n\napp = App(name=\"hello\")\n\n@app.get(\"/\")\ndef index(request):\n    return HTMLResponse(tags.h1(\"Hello, Pagesmith!\"))\n\nif __name__ == \"__main__\":\n    app.serve()\n\n# WSGI bridge (PEP 3333): App is callable\n# gunicorn myapp:app -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8000\n\n# Quality gates:\n# python scripts/dev.py check   # ruff check + format --check + mypy\n# python scripts/dev.py test    # 141 passing\n# mkdocs build --strict\n# benchmarks: bench_html / bench_router / bench_server",
               "decisions": ["Zero runtime dependencies (stdlib only, ThreadingHTTPServer)", "HTML escaped by default; Raw() opts out explicitly (XSS-safe)", "Page/Site API + export_static للصفحات الكتير", "Route converters: int, slug, str, path + *wildcard", "WSGI bridge أضفناه عشان docs تبقى صادقة (كانت كاتبة claim غلط)", "mkdocs-material theme بدل mkdocstrings (الـ API reference مكتوب يدوي)", "docs extra: mkdocs + mkdocs-material; scripts مجرداً في ruff checks", "Benchmarks sequential new-connections => throughput منخفض (~88 req/s) طبيعي؛ keep-alive أسرع بكثير"],
               "session_id": "ses_04e2f0ff5f2eX",
-              "github_url": "https://github.com/MohammedElmouge/opencode-memory"
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-08-01_pagesmith-docs-scripts-github-wsgi-bridge.json"
             }
           ]
         }
