@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions", "github-connect-component", "settings-page-github", "frontend-v2", "vanilla-js", "no-framework", "error-handling", "features-migration"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions", "github-connect-component", "settings-page-github", "frontend-v2", "vanilla-js", "no-framework", "error-handling", "features-migration", "configurable-api-url"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Migrated features from old React frontend to new vanilla JS frontend. Added search, filters, pagination, dashboard, notifications, products, cart, and more.",
-              "details": "Enhanced frontend-v2 with features from old React app: 1) Courses page with search, category/level/sort filters, pagination. 2) CourseDetail with tabs, lesson completion, sidebar with links. 3) Search overlay in navbar. 4) Notifications view. 5) My Courses view. 6) Dashboard with stats. 7) Home page with hero + featured courses. 8) Products and Product Detail views. 9) Cart view. 10) Improved CSS with level badges, back links, meta rows.",
-              "code": "// New views added:\n- my-courses.js\n- dashboard.js\n- notifications.js\n- search.js\n- products.js\n- product-detail.js\n- cart.js\n\n// Updated views:\n- courses.js (search, filters, pagination)\n- course-detail.js (tabs, completion, sidebar)\n- home.js (hero, featured courses)\n- app.js (search overlay, new routes)\n\n// New CSS:\n- .filters\n- .search-overlay\n- .detail-layout\n- .badge-level\n- .hero",
-              "decisions": ["Migrate features from React to vanilla JS", "Keep same visual style", "Hash-based routing", "No dependencies"],
+              "summary": "Made API URL configurable via config.js. Frontend can now be deployed anywhere by changing one file.",
+              "details": "Created config.js with window.APP_CONFIG.API_URL. All hardcoded localhost:8000 references replaced with configurable URLs. Frontend is now deployable to GitHub Pages, Netlify, Vercel, etc.",
+              "code": "// config.js\nwindow.APP_CONFIG = {\n  API_URL: 'http://localhost:8000/api',\n};\n\n// To deploy:\n// 1. Change API_URL to your backend URL\n// 2. Upload frontend-v2 folder to any static host\n// 3. Done!",
+              "decisions": ["Configurable API URL via config.js", "No build step required", "Works with any static host"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
