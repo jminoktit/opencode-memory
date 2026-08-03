@@ -4,50 +4,16 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions", "github-connect-component", "settings-page-github"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions", "github-connect-component", "settings-page-github", "frontend-v2", "vanilla-js", "no-framework"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Added GitHubConnect component to React app Settings page. Users can now connect their GitHub account from Settings > GitHub tab.",
-              "details": "Created GitHubConnect.jsx component with username + token form. Added GitHub tab to Settings.jsx. Users can now enter their GitHub Personal Access Token in Settings > GitHub to connect their account for video uploads.",
-              "code": "// GitHubConnect.jsx - New component\n// - Username field\n// - Token field (password input)\n// - Connect/Disconnect buttons\n// - Shows connected status\n\n// Settings.jsx changes:\n// - Added GitHub tab\n// - Import GitHubConnect component\n// - Tab shows when user clicks GitHub",
-              "decisions": ["Added GitHub tab to Settings page", "GitHubConnect component for React app", "Token stored in database, not localStorage"],
+              "summary": "Created new vanilla JS frontend (frontend-v2) with zero dependencies. Minimal memory usage, API-based, hash routing.",
+              "details": "Built frontend-v2 from scratch using pure HTML/CSS/JS. Features: hash-based routing, localStorage token management, responsive design, dark mode support. Views: home, login, register, courses, course-detail, lesson, settings with GitHub connection.",
+              "code": "// Structure:\nfrontend-v2/\n├── index.html\n├── css/style.css\n├── js/\n│   ├── app.js (router setup)\n│   ├── store.js (state management)\n│   ├── api.js (HTTP client)\n│   ├── router.js (hash routing)\n│   ├── utils.js (helpers)\n│   └── views/\n│       ├── home.js\n│       ├── login.js\n│       ├── register.js\n│       ├── courses.js\n│       ├── course-detail.js\n│       ├── lesson.js\n│       └── settings.js\n\n// Running on port 5175",
+              "decisions": ["Pure HTML/CSS/JS, no frameworks", "Hash-based routing", "localStorage for tokens", "CSS variables for theming", "Responsive grid layout"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
-            }
-          ]
-        }
-      }
-    },
-    "C:\\Users\\Mohammed Elmouge\\Desktop\\github_frontend": {
-      "name": "github-frontend",
-      "topics": {
-        "github-pages-template": {
-          "keywords": ["github pages", "frontend", "react", "vite", "template", "قالب", "فرونت اند", "النشر التلقائي", "github actions", "rollup", "windows native module blocked", "application control policy", "hashrouter", "vite 4", "deploy workflow"],
-          "entries": [
-            {
-              "date": "2026-08-01",
-              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\github_frontend",
-              "summary": "بنيت قالب React + Vite خفيف جاهز للتشغيل على GitHub Pages، فيه كل حاجة: راوتر، صفحات، ستايل RTL، ونشر تلقائي بـ GitHub Actions.",
-              "details": "المستخدم عايز نظام فرونت-اند يعمل على GitHub بس، خفيف. اخترنا React + Vite. المشكلة الكبيرة: Rollup 4 (في Vite 5) استخدم native binaries وWindows policy منعته (Error: Application Control policy blocked rollup.win32-x64-msvc.node). الحل: النزول لـ Vite 4.5.5 اللي يستخدم Rollup 3 (JS خالص بدون native) واشتغل فوراً. البناء 981ms وgzip 55KB فقط.\n\nالملفات:\n- package.json (react 18, react-router-dom 6, vite 4.5.5)\n- vite.config.js بـ base: './' (مهم لـ GitHub Pages sub-path)\n- src/main.jsx يستخدم HashRouter (بيعمل بدون مشاكل 404 على Pages)\n- src/App.jsx فيه Routes\n- src/components/Layout.jsx (ناف بار + فوتر)\n- src/pages/ (Home, About, Features, NotFound)\n- .github/workflows/deploy.yml (نشر تلقائي مع كل push على main)\n- src/index.css (تصميم RTL عربي كله في ملف واحد)",
-              "code": "// vite.config.js\nimport { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nexport default defineConfig({\n  plugins: [react()],\n  base: './',\n})\n\n// main.jsx — يستخدم HashRouter\n<HashRouter>\n  <App />\n</HashRouter>",
-              "decisions": ["Vite 4 بدل Vite 5 لأن Rollup 4 native binaries محجوبة بسياسة Windows (Application Control Policy)", "HashRouter بدل BrowserRouter ليتوافق مع GitHub Pages", "base: './' في vite.config للروابط النسبية", "نشر تلقائي عبر GitHub Actions workflow في .github/workflows/deploy.yml", "RTL تصميم عربي كله في index.css"],
-              "session_id": "ses_042de4e75ffeJaHX"
-            }
-          ]
-        },
-        "pagesmith-web-framework": {
-          "keywords": ["pagesmith", "web framework", "zero dependency", "html", "python", "framework", "مكتبة بايثون", "ويب فريمورك", "ssr", "many pages", "many-page sites", "static export", "wsgi", "middleware", "plugins", "di container", "routing", "typed converters", "layouts", "components", "escaping", "xss", "open source", "github release", "benchmarks", "ci"],
-          "entries": [
-            {
-              "date": "2026-08-01",
-              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\github_frontend",
-              "summary": "بنيت Pagesmith من الصفر: web framework بايثون بدون أي dependencies — لبناء مواقع HTML كثيرة الصفحات و JSON APIs، جاهز للإصدار مفتوح المصدر على GitHub.",
-              "details": "المستخدم عايز 'تسهيل ل HTML و تعامل مع صفحات كتير' => فريمورك بايثون خفيف مخصوص للمواقع اللي فيها صفحات كتير. القرارات المعمارية: clean architecture ليّنة (composition root App)، HTML بيتم escape افتراضياً (XSS-safe، و Raw للإختيار الصريح)، routing بنوعي params ({id:int}, {slug:slug}, {path:path}, *wildcard)، middleware stack (outermost-first request / innermost-first response)، plugin lifecycle hooks، DI container مع autowiring (محتاج typing.get_type_hints بسبب from __future__ import annotations)، Site بيعيّن Page classes على routes وبيعمل static export ( / → index.html، /docs/ → docs/index.html ).\n\nآخر جلسة كاملة (اللي فاتت وصلت لـ 134 اختبار): أكملنا docs + scripts + .github + root docs، وأضفنا WSGI bridge جديد (PEP 3333) — App نفسه callable فبيمشي على gunicorn/wsgiref (كانت docs كاتبة claim غلط إن في WSGI موجود، فأضفناه فعلياً). دلوقتي 141 اختبار كلهم ناجحين، ruff + format + mypy كله green، mkdocs build --strict ناجح، والـ benchmarks كلهم شغالين.\n\nالنتائج النهائية:\n- 141 passed (pytest)\n- mypy strict: 29 source files OK\n- ruff check/format: clean (src, tests, examples, benchmarks, scripts)\n- bench_html: ~1,194 renders/sec (3,667 bytes output)\n- bench_router: ~156k matches/sec (1.2M/1.2M)\n- bench_server: ~88 req/sec (2000 sequential new-connection requests)\n- mkdocs build --strict OK\n\nالبنية: src/pagesmith/{app.py (composition root + _PagesmithServer + WSGI bridge), router.py, middleware.py (CORSMiddleware/GZipMiddleware/StaticFileMiddleware/RequestLogMiddleware), requests.py, responses.py (Response/TextResponse/JSONResponse/HTMLResponse/RedirectResponse), errors.py (HTTPError + subclasses), config.py (frozen Config + from_env PAGESMITH_*), logging_.py, html/{escaping,nodes,render,tags,components,layout}.py, pages/{page,registry,site}.py, plugins/{hooks,manager}.py, di/container.py, utils/{match,context}.py}. Public API في __init__.py __all__ (SemVer contract).\n\nبقي: تشغيل scripts/dev.py check كاملاً (بعد كل تعديل)، وإذا عايز نعمل GitHub repo لـ pagesmith نفسه نبدأ.",
-              "code": "from pagesmith import App, HTMLResponse, tags\n\napp = App(name=\"hello\")\n\n@app.get(\"/\")\ndef index(request):\n    return HTMLResponse(tags.h1(\"Hello, Pagesmith!\"))\n\nif __name__ == \"__main__\":\n    app.serve()\n\n# WSGI bridge (PEP 3333): App is callable\n# gunicorn myapp:app -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8000\n\n# Quality gates:\n# python scripts/dev.py check   # ruff check + format --check + mypy\n# python scripts/dev.py test    # 141 passing\n# mkdocs build --strict\n# benchmarks: bench_html / bench_router / bench_server",
-              "decisions": ["Zero runtime dependencies (stdlib only, ThreadingHTTPServer)", "HTML escaped by default; Raw() opts out explicitly (XSS-safe)", "Page/Site API + export_static للصفحات الكتير", "Route converters: int, slug, str, path + *wildcard", "WSGI bridge أضفناه عشان docs تبقى صادقة (كانت كاتبة claim غلط)", "mkdocs-material theme بدل mkdocstrings (الـ API reference مكتوب يدوي)", "docs extra: mkdocs + mkdocs-material; scripts مجرداً في ruff checks", "Benchmarks sequential new-connections => throughput منخفض (~88 req/s) طبيعي؛ keep-alive أسرع بكثير"],
-              "session_id": "ses_04e2f0ff5f2eX",
-              "github_url": "https://github.com/jminoktit/opencode-memory/blob/master/conversations/2026-08-01_pagesmith-docs-scripts-github-wsgi-bridge.json"
             }
           ]
         }
