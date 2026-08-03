@@ -4,15 +4,15 @@
       "name": "aura-book",
       "topics": {
         "video-segmentation": {
-          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions", "github-connect-component", "settings-page-github", "frontend-v2", "vanilla-js", "no-framework"],
+          "keywords": ["video", "segmentation", "github", "upload", "ffmpeg", "chapters", "per-course-repo", "segment-duration", "youtube-player", "streaming-proxy", "lazy-loading", "preloading", "video-questions", "ai-explanation", "sample-videos", "local-file-serving", "routes", "course-detail-css", "video-player-page", "allow-any-permissions", "github-connect-component", "settings-page-github", "frontend-v2", "vanilla-js", "no-framework", "error-handling"],
           "entries": [
             {
               "date": "2026-07-30",
               "directory": "P:\\aura-book",
-              "summary": "Created new vanilla JS frontend (frontend-v2) with zero dependencies. Minimal memory usage, API-based, hash routing.",
-              "details": "Built frontend-v2 from scratch using pure HTML/CSS/JS. Features: hash-based routing, localStorage token management, responsive design, dark mode support. Views: home, login, register, courses, course-detail, lesson, settings with GitHub connection.",
-              "code": "// Structure:\nfrontend-v2/\n├── index.html\n├── css/style.css\n├── js/\n│   ├── app.js (router setup)\n│   ├── store.js (state management)\n│   ├── api.js (HTTP client)\n│   ├── router.js (hash routing)\n│   ├── utils.js (helpers)\n│   └── views/\n│       ├── home.js\n│       ├── login.js\n│       ├── register.js\n│       ├── courses.js\n│       ├── course-detail.js\n│       ├── lesson.js\n│       └── settings.js\n\n// Running on port 5175",
-              "decisions": ["Pure HTML/CSS/JS, no frameworks", "Hash-based routing", "localStorage for tokens", "CSS variables for theming", "Responsive grid layout"],
+              "summary": "Improved error handling in vanilla JS frontend. Added status code messages, field validation errors, network error handling, and multi-line toast with close button.",
+              "details": "Enhanced api.js with ERROR_MESSAGES map for all HTTP status codes. Added getErrorMessage() to extract DRF field errors, non_field_errors, detail/error fields. Toast now supports multi-line messages with close button. Added warning toast type.",
+              "code": "// api.js improvements:\nconst ERROR_MESSAGES = {\n  400: 'Invalid request...',\n  401: 'Session expired...',\n  403: 'Permission denied...',\n  404: 'Not found...',\n  500: 'Server error...',\n};\n\nfunction getErrorMessage(res, data) {\n  // 1. Check field errors\n  // 2. Check detail/error/non_field_errors\n  // 3. Fallback to status code\n}\n\n// utils.js toast improvements:\n// - Multi-line support (\\n)\n// - Close button\n// - 5s timeout",
+              "decisions": ["Added ERROR_MESSAGES map", "Extract DRF field errors", "Multi-line toast support", "Close button on toasts", "5s timeout instead of 3s"],
               "session_id": "ses_04cc8324dffe8yHJj988SrkawS"
             }
           ]
