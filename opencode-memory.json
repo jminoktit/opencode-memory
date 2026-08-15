@@ -50,6 +50,16 @@
               "decisions": ["خط Cairo + fallback نظامي", "hero جديد + موج SVG", "أنيميشن fadeUp للأقسام", "دعم mobile 640px"],
               "session_id": "ses_current",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_pretty-design.json"
+            },
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "أضفنا نظام عرض الكود: كل code block (مشاهد وبلوكات عادية) بقى code-box بشريط أدوات فيه زرار 🖥️ عرض (overlay ملء الشاشة بخط كبير للعرض على المشاهد وقت التصوير) و📋 نسخ (لصق في VSCode).",
+              "details": "دوال جديدة: codeBox(comment,lines) بتولّد code-box، openDisplay/closeDisplay بيشغّلوا الـ overlay (#display-overlay ثابت في body)، copyText بنسخ عبر navigator.clipboard مع fallback execCommand. الإغلاق بـ ESC أو click برا. CSS: .code-toolbar/.code-btn/.display-overlay. حصل تعديل غلط أثناء العمل (اختفى إغلاق init IIFE) واتصلح، والتحقق node --check ناجح وسيرفر 200. مفيش تغيير على ملفات JSON — الشيفرة في index.html فقط.",
+              "code": "codeBox(comment, lines) -> .code-box (.code-toolbar + pre)\nopenDisplay(comment, lines) // overlay ملء الشاشة\ncopyText(text, btn) // navigator.clipboard + fallback",
+              "decisions": ["كل كود له toolbar (عرض + نسخ)", "عرض الـ overlay بخط كبير داكن للمشاهد", "إغلاق بـ ESC/click خارجي"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_code-display-system.json"
             }
           ]
         },

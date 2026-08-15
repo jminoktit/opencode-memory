@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "نظام عرض الكود - نسخ لـ VSCode وعرض على الشاشة",
+  "messages": [
+    {
+      "role": "user",
+      "content": "طب زود كمان نظام تاني علشان نعرض علي الشاشه وقت التصوير يعني نعمل مفاهيم كود ننسخه علشان انفذه علي vscode"
+    },
+    {
+      "role": "assistant",
+      "content": "أضفنا نظام عرض الكود في index.html: كل كود (في المشاهد وفي البلوكات العادية) بيترسم كـ code-box فيه شريط أدوات فيه زرارين: 🖥️ عرض (يفتح overlay ملء الشاشة بخلفية داكنة وكود كبير لتوضيحه للمشاهد وقت التصوير) و📋 نسخ (ينسخ الكود للـ clipboard عشان لصقه في VSCode ويشتغل عليه مباشرة). الـ overlay فيه كمان زرار نسخ و إغلاق + ESC أو ضغطة برا بيقفل. fallback للـ clipboard عبر execCommand لو الـ API مش متاح. حصلت مشكلة أثناء التعديل (اختفى إغلاق الـ IIFE) واتصلحت فورًا والـ JS syntax OK."
+    }
+  ],
+  "decisions": [
+    "كل code block بيتحول لـ code-box مع toolbar (عرض + نسخ)",
+    "الـ overlay للعرض على الشاشة بخط كبير داكن و copy زر",
+    "نسخ عبر navigator.clipboard مع fallback execCommand",
+    "إغلاق الـ overlay بـ ESC أو click خارجي"
+  ],
+  "note": "تعديل في index.html فقط: codeBox() + openDisplay/closeDisplay/copyText + CSS code-toolbar/display-overlay. لا حاجة لتغيير ملفات JSON."
+}
