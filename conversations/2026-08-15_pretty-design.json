@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "تحديث تصميم المنصة - الشكل حلو",
+  "messages": [
+    {
+      "role": "user",
+      "content": "اعمل الشكل حلو"
+    },
+    {
+      "role": "assistant",
+      "content": "عملنا تحديث شامل للتصميم في index.html: أضفنا خط Cairo + IBM Plex Sans Arabic من Google Fonts (fallback لو أوفلاين). Hero جديد بتدرج بنفسجي-وردي مع موج SVG أسفل، عنوان بتدرج شفاف، خلفية الصفحة فيها radial gradients ناعمة، tabs sticky بخلفية بلير. البطاقات: زوايا أنعم، ظلال أعمق، hover يرفعها، رقم المستوى مع glow بلونه. chips بتحوم، code blocks فيها شريط جانبي ملون، flow/formula/scene بتحسينات، زرار التصوير عليه نبضة لما يفعال، وأنيميشن fadeUp لظهور الأقسام. Responsive لـ 640px. أضفنا متغير --c-shadow في drawTopic لتلوين الظلال."
+    }
+  ],
+  "decisions": [
+    "خط Cairo من Google Fonts مع fallback نظامي",
+    "Hero بتدرج بنفسجي/وردي + موج SVG",
+    "كل قسم بيفتح بأنيميشن fadeUp",
+    "--c-shadow = color+55 alpha لتلوين الظلال حسب لون المستوى",
+    "دعم mobile 640px"
+  ],
+  "note": "التحسينات CSS فقط في index.html + متغير --c-shadow في JS."
+}

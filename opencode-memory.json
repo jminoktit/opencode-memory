@@ -40,6 +40,16 @@
               "decisions": ["إخفاء presenter-note فقط (الملاحظات الداخلية) وليس الـ visuals", "الحالة تفضل محفوظة بين الجلسات"],
               "session_id": "ses_current",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_recording-mode-button.json"
+            },
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "تحديث شامل لتصميم المنصة (index.html): خط Cairo من Google Fonts، hero متدرج بنفسجي/وردي بموج SVG، ظلال وأنيميشن fadeUp، chips/formula/code/scene محسنة، زرار تصوير بنبضة، وحجم استجابة للجوال.",
+              "details": "أضفنا متغير --c-shadow (color+55 alpha) في drawTopic لتلوين الظلال حسب لون كل مستوى. الـ font stack: Cairo ثم IBM Plex Sans Arabic ثم نظامي. hero::before/after blobs ضبابية. body خلفية radial gradients ناعمة. pre بشريط جانبي ملون. media query 640px. تحقق: node --check ناجح والسيرفر 200 (25KB).",
+              "code": "sec.style.setProperty('--c-shadow', c + '55');",
+              "decisions": ["خط Cairo + fallback نظامي", "hero جديد + موج SVG", "أنيميشن fadeUp للأقسام", "دعم mobile 640px"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_pretty-design.json"
             }
           ]
         },
