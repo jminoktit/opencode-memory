@@ -1,5 +1,25 @@
 ﻿{
   "projects": {
+    "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts": {
+      "name": "courses-scripts",
+      "topics": {
+        "docx-to-html-conversion": {
+          "keywords": ["docx", "html", "word", "2.docx", "javascript", "roadmap", "course", "تحويل", "تنظيم", "zip", "document.xml", "RTL", "PowerShell"],
+          "entries": [
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "حولنا محتوى الملف 2.docx (خارطة طريق كورس JavaScript بـ 8 مستويات) إلى ملف HTML منظم وجميل باسم 2.html.",
+              "details": "الملف كان مقفول من Word فانتظرنا حتى اتحفظ. فككنا الـ docx كـ zip (System.IO.Compression.FileSystem) وقرينا word/document.xml. استخرجنا النص بـ XML DOM؛ واجهنا مشكلة تكرار النص (double counting) من دالة Get-Text وصلحناها بدالة بسيطة بتجمع InnerText كل عناصر w:t. الناتج: 205 فقرة. أنشأنا 2.html بصفحة RTL عربي فيها 8 أقسام ملونة للمستويات، chips للمواضيع، code blocks، flow diagram، formula boxes. تأكدنا إن صيغة الـ HTML سليمة. يوجد 1.docx في نفس المجلد ممكن تحويله بنفس الطريقة.",
+              "code": "# فك docx:\nAdd-Type -AssemblyName System.IO.Compression.FileSystem\n$zip = [System.IO.Compression.ZipFile]::OpenRead((Resolve-Path \"2.docx\"))\n$entry = $zip.GetEntry(\"word/document.xml\")\n$reader = New-Object System.IO.StreamReader($entry.Open())\n$xml = $reader.ReadToEnd()\n\n# استخراج نص الفقرات (بلا تكرار):\nfunction Get-ParaText($p) {\n  $sb = [System.Text.StringBuilder]::new()\n  foreach ($r in $p.SelectNodes(\".//*[local-name()='t']\")) { [void]$sb.Append($r.InnerText) }\n  return $sb.ToString()\n}",
+              "decisions": ["الملف الناتج 2.html بنفس مجلد الـ docx", "RTL بالعربي مع لون مميز لكل مستوى (green/yellow/blue/purple/red/orange/black/brown)", "Vanilla HTML/CSS بدون مكتبات خارجية عشان يشتغل أوفلاين", "استخراج النص بمجموع InnerText لعناصر w:t لتجنب التكرار"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/MohammedElmouge/opencode-memory/blob/main/conversations/2026-08-15_docx-to-html-js-roadmap.json"
+            }
+          ]
+        }
+      }
+    },
     "P:\\aura-book": {
       "name": "aura-book",
       "topics": {

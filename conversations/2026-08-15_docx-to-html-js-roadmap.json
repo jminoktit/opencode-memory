@@ -1,0 +1,46 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "تحويل 2.docx إلى ملف HTML منظم - خارطة طريق JavaScript",
+  "messages": [
+    {
+      "role": "user",
+      "content": "."
+    },
+    {
+      "role": "assistant",
+      "content": "Memory loaded. You sent just \".\" — what would you like help with today?"
+    },
+    {
+      "role": "user",
+      "content": "احنا هنا هنعمل تنظيم ل الملف 2.docx في ملف html تاني"
+    },
+    {
+      "role": "assistant",
+      "content": "بدأنا نفحص الملف 2.docx. لقينا إنه كان مقفول من Word (0 bytes) وبعدين اتحفظ وأصبح مقروء (20196 bytes)."
+    },
+    {
+      "role": "assistant",
+      "content": "فككنا الـ docx كـ zip باستخدام System.IO.Compression.FileSystem وقرينا word/document.xml. استخرجنا النص بـ XML parsing. كان فيه مشكلة تكرار نص في دالة الاستخراج (Double counting)، اتصلحت بدالة Get-ParaText باستخدام SelectNodes على w:t."
+    },
+    {
+      "role": "user",
+      "content": "احنا هنا هنعمل تنظيم ل الملف 2.docx في ملف html تاني"
+    },
+    {
+      "role": "assistant",
+      "content": "الملف اتحفظ (20196 bytes). استخرجنا المحتوى الكامل: 205 فقرة. المحتوى عبارة عن خارطة طريق كورس JavaScript كاملة بـ 8 مستويات: المستوى الأول JavaScript Basics، الثاني التعامل مع البيانات، الثالث Functions، الرابع Modern JavaScript، الخامس DOM & Browser، السادس Asynchronous JavaScript، السابع JavaScript Advanced، الثامن Node.js."
+    },
+    {
+      "role": "assistant",
+      "content": "أنشأنا ملف 2.html — منظمة Down سلمية RTL بستايل عربي مميز مع: هيدر متدرج، شريط تنقل sticky بألوان المستويات، 8 أقسام ملونة كل واحدة بلونها (green/yellow/blue/purple/red/orange/black/brown)، chips للمواضيع، code blocks داكنة، flow diagram للنصوص (JavaScript Code ← Engine ← Parsing...)، formula blocks للتمييز. تأكدنا إن الـ HTML صالح (xml parse نجح)."
+    }
+  ],
+  "decisions": [
+    "اسم الملف الناتج: 2.html في نفس مجلد الـ docx",
+    "تصميم RTL بالعربي مع ألوان مميزة لكل مستوى",
+    "استخدام vanilla HTML/CSS بدون مكتبات خارجية لتشتغل أوفلاين",
+    "خطوة الاستخراج: فك docx كـ zip ثم قراءة word/document.xml بالـ XML DOM"
+  ],
+  "note": "الملف 2.docx محتواه JavaScript Course Roadmap. يوجد أيضاً 1.docx في نفس المجلد (0 bytes) ويمكن تحويله بنفس الطريقة."
+}
