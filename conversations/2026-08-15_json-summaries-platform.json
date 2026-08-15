@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "منصة ملخصات JSON عامة - رسم تعليمي ديناميكي",
+  "messages": [
+    {
+      "role": "user",
+      "content": "بس انا عاوز اعمل حاجه تانيه دوال رسم و ملفات json"
+    },
+    {
+      "role": "assistant",
+      "content": "سألنا توضيح عن المقصود. المستخدم اختار 'رسم في السياق التعليمي' (دوال JavaScript بتولد محتوى أو ترسم عناصر والبيانات في ملفات JSON)."
+    },
+    {
+      "role": "assistant",
+      "content": "سؤال توضيحي تاني — المستخدم حدد: لا ملف JSON عام يبقي ده الأساسي، كل ما يلخص موضوع يعمل فيه لينك ويحط ملف JSON جديد والبيانات اللي فيه تترسم بشكل حلو. أي منصة ملخصات عامة: data.json = manifest باللينكات، وكل موضوع ملف JSON منفصل بيتقرا وبيترسم تلقائيًا."
+    },
+    {
+      "role": "assistant",
+      "content": "بنينا المنصة: index.html (صفحة عامة بقرا data.json وترسم المواضيع بالدوال), data.json (manifest فيه topics مع id/title/emoji/color/file), topics/js-roadmap.json (أول محتوى: خارطة JS الـ 8 مستويات), start.bat (سيرفر Python محلي). الاتصال عبر fetch — عشان كده محتاج سيرفر محلي مش فتح مباشر (file://)."
+    },
+    {
+      "role": "assistant",
+      "content": "تحققنا: JSON صالح، node --check للـ JS ناجح، والسيرفر على port 8765 رجع 200 لكل الملفات الثلاثة. الهيكل: schema بلوكات (text, question, label, chips/groups, code, flow, formula, note) مع دعم **عريض** و`كود` في النصوص. كيفية إضافة موضوع: انسخ js-roadmap.json، ضيف سطر في data.json، اللينك بيتكون index.html#id."
+    }
+  ],
+  "decisions": [
+    "منصة عامة: data.json (manifest) + مجلد topics/ فيه ملف JSON لكل موضوع",
+    "الرسم تلقائي بـ draw functions حسب type البلوك (chips/code/flow/formula/note...)",
+    "لازم سيرفر محلي بسبب fetch — عملنا start.bat بـ python -m http.server 8000",
+    "الشيفرة: esc() للسلامة + mdBold و wrapCode بدعم **عريض** و`كود`",
+    "ألوان المواضيع من الـ JSON نفسه (color) و level بياخد alpha شفاف للـ bg"
+  ],
+  "note": "متوفر: Python 3.11/3.14 و Node 22 و npx. نفس المجلد فيه 1.docx (0 bytes) و2.html (نسخة ثابتة من خارطة JS)."
+}
