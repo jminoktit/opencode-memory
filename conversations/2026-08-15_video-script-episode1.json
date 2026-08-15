@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "اسكربت أول فيديو - منصة ملخصات JS للكورس",
+  "messages": [
+    {
+      "role": "user",
+      "content": "تعالي بقي نعمل اسكربت حلو كبدايه"
+    },
+    {
+      "role": "assistant",
+      "content": "سألنا توضيح — المستخدم أوضح الغرض الحقيقي من المشروع كله: \"مشروع جمعت فيه أفكار صحيحة عن JS علشان أصور فيديوهات كورس جافاسكربت\". يبقى المنصة أصلاً لتجميع المعلومة الصحيحة لتصوير فيديوهات."
+    },
+    {
+      "role": "assistant",
+      "content": "بنينا أول اسكربت فيديو كامل: أضفنا نوع بلوك جديد script للمنصة (index.html) بيترسم كبطاقات مشاهد: meta (المدة/الجمهور/الهدف/التحضير) + مشاهد (name/time/say/code/visual/note). وأنشأنا topics/js-video1.json — حلقة 1: 'إزاي JavaScript بتشتغل؟ الـ Engine' بـ 8 مشاهد بتوقيتات، فيها معلومات صحيحة 100%: ديناميكية + Interpretation + JIT، V8/SpiderMonkey/JavaScriptCore، Browser/Node.js بيئات، معادلة Language/Engine/Environment."
+    },
+    {
+      "role": "assistant",
+      "content": "سجلنا الموضوع في data.json بالعنصر video1 بلون بنفسجي. تحققنا: JSON صالح، node --check ناجح، السيرفر رجع 200 للملفين. مفيش أخطاء."
+    }
+  ],
+  "decisions": [
+    "أول اسكربت جاهز للتصوير: حلقة الـ Engine (js-video1.json)",
+    "block type جديد: script (meta + scenes) — ترسم كبطاقات مشاهد بالوقت والكلام والكود والملاحظات",
+    "معلومات الحلقة مثبتة/صحيحة — الهدف الأساسي للمشروع",
+    "المواضيع بتتسجل في data.json كل مرة"
+  ],
+  "note": "المستخدم بيصور فيديوهات كورس JS والمشروع ده لإدارة المعلومة والاسكربتات. الحلقة 1 جاهزة، التالية هي Variables (let/const/var)."
+}

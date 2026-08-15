@@ -3,6 +3,21 @@
     "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts": {
       "name": "courses-scripts",
       "topics": {
+        "video-scripts": {
+          "keywords": ["video", "script", "فيديو", "اسكربت", "تصوير", "course", "episode", "حلقة", "scene", "JIT", "Engine", "V8", "Node.js", "تصوير videos"],
+          "entries": [
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "أضفنا نوع بلوك script في المنصة + أول اسكربت فيديو جاهز للتصوير: topics/js-video1.json (حلقة: إزاي JavaScript بتشتغل؟ الـ Engine). المشروع كله بيتستعمل لتجميع أفكار JS صحيحة لتصوير فيديوهات كورس.",
+              "details": "المستخدم كشف إن المشروع هدفه: جمع أفكار صحيحة عن JS لعمل كورس فيديو. بنينا block type 'script' في index.html: meta (video/title/duration/audience/goal/prep) + scenes (name/time/say/code/codeComment/visual/note). رسمة: بطاقة meta بتدرج غامق + مشاهد بشارات وقت ملونة و say/code/vnote. أنشأنا js-video1.json بـ 8 مشاهد بتوقيتات لحد 10:40، بمعلومات صحيحة: JS ديناميكية بتتفسر + JIT، Engines V8/SpiderMonkey/JavaScriptCore، بيئات Browser/Node.js، معادلة Language = Engine = Environment. سجّلنا الموضوع video1 في data.json.",
+              "code": "# block script schema:\n{ \"type\": \"script\", \"meta\": { \"video\": \"..\", \"title\": \"..\", \"duration\": \"..\", \"audience\": \"..\", \"goal\": \"..\", \"prep\": [\"..\"] },\n  \"scenes\": [ { \"name\": \"..\", \"time\": \"0:00 - 0:40\", \"say\": \"..\", \"code\": [\"..\"], \"codeComment\": \"..\", \"visual\": \"..\", \"note\": \"..\" } ] }",
+              "decisions": ["أول اسكربت: حلقة الـ Engine بمعادلة Language/Engine/Environment", "المشاهد بتتحدد بالتوقيت عشان تسهل التصوير", "كتابة معلومات صحيحة فقط — ده الغرض الأساسي من المنصة", "الحلقة الجاية المحددة: Variables (let/const/var)"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_video-script-episode1.json"
+            }
+          ]
+        },
         "json-summaries-platform": {
           "keywords": ["json", "منصة ملخصات", "draw", "رسم", "fetch", "data.json", "topics", "schema", "chips", "flow", "formula", "canvas", "education", "html", "local-server", "start.bat", "ملخص"],
           "entries": [
