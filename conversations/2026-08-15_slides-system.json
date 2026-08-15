@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "نظام عرض الشرائح (slides.html) للتصوير",
+  "messages": [
+    {
+      "role": "user",
+      "content": "لا انا عاوز نظام تاني في ملف تاني يتعمل فيه عرض للمفاهيم و الاكواد وقت التصوير يبقي عامل slides زي docx"
+    },
+    {
+      "role": "assistant",
+      "content": "بنينا نظام عرض شرائح منفصل تمامًا: slides.html بيقرا slides/episode1.json ويعرض المفاهيم والأكواد كسلايدز شاشة كاملة (Presentation mode) للتصوير. التحكم: أسهم يمين/شمال، مسافة، Enter، Home/End، F لملء الشاشة، N لإظهار/إخفاء ملاحظات المقدم. شريط تقدم أعلى + شريط تحكم سفلي. أنواع البلوكات: concept, code (مع زرار نسخ), list, formula, flow. التصميم داكن متدرج بخط Cairo، مع أنيميشن انتقالي. أضفنا لينك '📽️ وضع العرض (Slides)' في شريط تبويبات index.html يشاور على slides.html?file=episode1."
+    }
+  ],
+  "decisions": [
+    "نظام منفصل: slides.html + مجلد slides/ فيه ملف لكل حلقة",
+    "عرض الشاشة الكامل داكن بملاحة أسهم/مسافة",
+    "بلوكات: concept/code/list/formula/flow + notes للمقدم",
+    "لينك في تبويبات index.html => slides.html?file=...",
+    "الملاحظات مخفية افتراضيًا وبتظهر بـ N"
+  ],
+  "note": "الملفات: slides.html + slides/episode1.json + لينك في index.html. التحقق: JSON صالح، JS syntax OK، السيرفر 200."
+}

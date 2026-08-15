@@ -60,6 +60,16 @@
               "decisions": ["كل كود له toolbar (عرض + نسخ)", "عرض الـ overlay بخط كبير داكن للمشاهد", "إغلاق بـ ESC/click خارجي"],
               "session_id": "ses_current",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_code-display-system.json"
+            },
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "بنينا نظام عرض شرائح منفصل للتصوير: slides.html بيقرا slides/episode1.json ويعرض المفاهيم والأكواد سلايدز شاشة كاملة مثل العرض التقديمي، بملاحة أسهم/مسافة وفول سكرين وملاحظات مقدم.",
+              "details": "الملفات: slides.html (محرك العرض) + slides/episode1.json (سلايدز الحلقة 1: إزاي JS بتشتغل — 10 سلايدز) + لينك في تبويبات index.html يشاور على slides.html?file=episode1. البلوكات: concept (نص كبير), code (مع زرار نسخ)، list، formula، flow. التحكم بالكيبورد: ArrowLeft/Right، Space/Enter، Home/End، F فول سكرين، N ملاحظات. شريط تقدم علوي + شريط تحكم سفلي (السابق/التالي، عدّاد، ملاحظات، فول سكرين). ملاحظات المقدم مخفية افتراضيًا. التصميم داكن متدرج بخط Cairo.",
+              "code": "slides.html?file=episode1\n# بلوكات السلايد: concept / code / list / formula / flow / notes",
+              "decisions": ["نظام منفصل تمامًا: slides.html + slides/*.json", "عرض شاشة كاملة داكن بملاحة أسهم/مسافة", "ملاحظات المقدم بتظهر بـ N ومخفية افتراضيًا", "لينك في تبويبات index.html"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_slides-system.json"
             }
           ]
         },
