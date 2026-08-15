@@ -70,6 +70,16 @@
               "decisions": ["نظام منفصل تمامًا: slides.html + slides/*.json", "عرض شاشة كاملة داكن بملاحة أسهم/مسافة", "ملاحظات المقدم بتظهر بـ N ومخفية افتراضيًا", "لينك في تبويبات index.html"],
               "session_id": "ses_current",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_slides-system.json"
+            },
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "عملنا طريقتين لعمل سلايدز كتير بسرعة: تحويل تلقائي في slides.html من أي topics/*.json (levels/blocks وحتى الـ script scenes) + مولّد make-slides.ps1 من ملف نصي بسيط (صيغة: # عنوان، ## فرعي، - قائمة، > كود، = معادلة، نص فكرة).",
+              "details": "slides.html: ?file= بيتقبل مسار مرن — لو فيه / ياخده زي ما هو (مثل topics/js-roadmap)، غير كده بيضيف slides/. topicToSlides() بتحول levels+blocks لسلايدز (text/code/chips/flow/formula/note/question/label/script). make-slides.ps1: قراءة deck.txt وتوليد slides/*.json بـ ConvertTo-Json. حاجة مهمة: الـ ps1 لازم UTF-8 مع BOM عشان باورشيل 5.1 يقرا العربي، وinline-if مش شغال في 5.1. مثال: slides/deck-example.txt → slides/example.json (6 سلايدز).",
+              "code": "slides.html?file=topics/js-roadmap\n# أو file=topics/js-video1 (يتحول لسلايدز من المشاهد)\npowershell -ExecutionPolicy Bypass -File make-slides.ps1 -File slides\\deck-example.txt -Out example",
+              "decisions": ["تحويل تلقائي topics→slides في slides.html", "مسار مرن في ?file=", "مولد من نص بسيط", "ps1 بـ UTF-8 BOM"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_many-slides-workflow.json"
             }
           ]
         },

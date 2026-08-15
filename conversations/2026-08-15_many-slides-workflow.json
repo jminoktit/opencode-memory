@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "طريقة عمل سلايدز كتير - تحويل تلقائي + مولد",
+  "messages": [
+    {
+      "role": "user",
+      "content": "هيكون فيه عندي اسلاد كتير هنعملها ازاي"
+    },
+    {
+      "role": "assistant",
+      "content": "جهزنا طريقتين لعمل سلايدز كتير بسرعة: (1) تحويل تلقائي في slides.html: أي ملف topics/*.json (بـ levels/blocks) بيتحول لسلايدز لوحده — حتى الـ video script (block type script) بيتحول كل مشهد لسلايد. يبقى تكتب المحتوى مرة واحدة وتفتح slides.html?file=topics/js-roadmap مثلاً. (2) مولّد make-slides.ps1: تكتب السلايدز في ملف نصي بسيط deck.txt بصيغة (# عنوان، ## فرعي، نص فكرة، - عنصر قائمة، > سطر كود، = معادلة) ويسكربت يولّد slides/*.json."
+    },
+    {
+      "role": "assistant",
+      "content": "حلينا مشاكل: inline-if مش موجود في PS 5.1، والـ ps1 لازم يكون UTF-8 مع BOM عشان العربي يشتغل. أضفنا مثال slides/deck-example.txt وولّدنا slides/example.json (6 سلايدز) بنجاح. التحقق: slides.js syntax OK وكل الملفات 200."
+    }
+  ],
+  "decisions": [
+    "slides.html يدعم تحويل topic JSON تلقائيًا (levels/blocks → slides)",
+    "المسار في ?file= مرن: لو فيه / ياخده زي ما هو (topics/..) غير كده يضيف slides/",
+    "make-slides.ps1 بيفهم صيغة نصية بسيطة (# , ## , - , > , = , نص)",
+    "الـ ps1 لازم UTF-8 BOM عشان العربي",
+    "مثال deck-example.txt + slides/example.json"
+  ],
+  "note": "التحويل التلقائي: slides.html?file=topics/js-roadmap أو topics/js-video1. المولد: powershell -File make-slides.ps1 -File slides\\deck-example.txt -Out example"
+}
