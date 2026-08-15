@@ -1,0 +1,21 @@
+{
+  "date": "2026-08-15",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "زرار وضع التصوير - إخفاء الملاحظات",
+  "messages": [
+    {
+      "role": "user",
+      "content": "اعمل زرار ان الملاخظات تختفي علشان وقت التصوير"
+    },
+    {
+      "role": "assistant",
+      "content": "أضفنا زرار ثابت أسفل يسار الصفحة '🎬 وضع التصوير' في index.html: لما يتفعل body بياخد class recording والملاحظات (📌 presenter-note) بتختفي كلها. الحالة بتتخزن في localStorage عشان تفضل فعالة بين الجلسات. الصور المرئية (🖥️ على الشاشة) فضلت ظاهرة لإنها تعليمات للعرض مش ملاحظات داخلية. تحققنا: node --check ناجح والسيرفر رجع 200."
+    }
+  ],
+  "decisions": [
+    "زرار ثابت fixed bottom-left بيتبدل label حسب الحالة",
+    "إخفاء ملاحظات التصوير فقط (presenter-note) وليس visuals",
+    "الحالة محفوظة في localStorage"
+  ],
+  "note": "التعديل في index.html فقط."
+}

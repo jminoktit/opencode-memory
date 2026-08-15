@@ -19,7 +19,7 @@
           ]
         },
         "json-summaries-platform": {
-          "keywords": ["json", "منصة ملخصات", "draw", "رسم", "fetch", "data.json", "topics", "schema", "chips", "flow", "formula", "canvas", "education", "html", "local-server", "start.bat", "ملخص"],
+          "keywords": ["json", "منصة ملخصات", "draw", "رسم", "fetch", "data.json", "topics", "schema", "chips", "flow", "formula", "canvas", "education", "html", "local-server", "start.bat", "ملخص", "recording", "تصوير", "زرار", "localStorage"],
           "entries": [
             {
               "date": "2026-08-15",
@@ -27,9 +27,19 @@
               "summary": "بنينا منصة ملخصات عامة: index.html بيقرا data.json (manifest فيه اللينكات) وكل موضوع ملف JSON منفصل في topics/، وبيترسم تلقائيًا بدوال رسم. أول موضوع: topics/js-roadmap.json (خارطة JS الـ 8 مستويات).",
               "details": "المستخدم طلب: ملف JSON عام أساسي، كل ما يلخص موضوع يعمل لينك ويضيف ملف JSON جديد والبيانات تترسم بشكل حلو. الاتصال بـ fetch فلازم سيرفر محلي → start.bat بيشغل python -m http.server 8000 ويفتح المتصفح. الـ schema بلوكات: text, question, label, chips (items/groups), code (comment+lines), flow (steps), formula (items k/v), note (dark). دعم **عريض** و`كود` في النصوص. اللينك بيتكون auto: index.html#id. Verified: JSON صالح، node --check ناجح، السيرفر رجع 200 لكل الملفات.",
               "code": "# schema مثال:\n{\n  \"type\": \"chips\", \"groups\": [\n    { \"name\": \"Variables\", \"items\": [\"`let`\", \"`const`\"] }\n  ]\n}\n# إضافة موضوع جديد:\n{ \"id\": \"html\", \"title\": \"أساسيات HTML\", \"emoji\": \"📄\", \"color\": \"#f97316\", \"file\": \"topics/html.json\" }",
-              "decisions": ["data.json = manifest + topics/ لك ملف موضوع", "رسم تلقائي حسب block type", "لازم سيرفر محلي (fetch + CORS) → start.bat بالبايثون", "esc() للسلامة + mdBold/wrapCode للتنسيق", "اللون بييجي من الـ JSON نفسه"],
+              "decisions": ["data.json = manifest + topics/ لك ملف موضوع", "رسم تلقائي حسب block type", "لازم سيرفر محلي (fetch + CORS) → start.bat بالبايثون", "esc() للسلامة + mdBold/wrapCode للتنسيق", "اللون بييجي من الـ JSON نفسه", "زرار وضع التصوير الثابت بيخفي الملاحظات وقت التسجيل (localStorage)"],
               "session_id": "ses_current",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_json-summaries-platform.json"
+            },
+            {
+              "date": "2026-08-15",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+              "summary": "أضفنا زرار ثابت '🎬 وضع التصوير' في index.html: بيفعّل class recording على body فبتختفي كل الملاحظات الداخلية (📌 presenter-note) وقت تصوير الفيديو، والحالة متخزنة في localStorage.",
+              "details": "الزرار fixed أسفل يسار screen، label بيتبدل على حسب الحالة، وCSS: body.recording .presenter-note { display:none }. ملاحظات الشاشة (🖥️) فضلوا ظاهرين لأنهم تعليمات عرض. تحقق: node --check OK + serf 200. التعديل في index.html فقط.",
+              "code": "body.recording .presenter-note { display: none; }\n# localStorage.setItem('recording', body.classList.contains('recording') ? '1' : '0')",
+              "decisions": ["إخفاء presenter-note فقط (الملاحظات الداخلية) وليس الـ visuals", "الحالة تفضل محفوظة بين الجلسات"],
+              "session_id": "ses_current",
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_recording-mode-button.json"
             }
           ]
         },
