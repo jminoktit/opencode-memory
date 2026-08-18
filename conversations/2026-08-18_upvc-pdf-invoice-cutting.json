@@ -1,0 +1,37 @@
+{
+  "title": "فاتورة PDF للعميل + تقطيع PDF للورشة",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "model": "deepseek-v4-flash-free",
+  "project": "ubvc-maker",
+  "summary": "بنينا مولّد PDF حقيقي (reportlab 5.0) بفاتورة عميل تفصيلية وملف تقطيع منفصل للورشة، بدل طباعة HTML. النتيجة: 17/17 smoke PASS.",
+  "request": "حط بقي فاتوره للعميل يبقي فيها التفاصيل و تبقي الفاتوره pdf و شيل التقطيع من صفحه العميل و حطها في pdf تاني و ابعتها لصاحب الورشه.",
+  "steps": [
+    "ثبتنا reportlab==5.0.0 + arabic-reshaper==3.0.1 + python-bidi==0.6.11 + charset-normalizer==3.5.1 في env (من جلسة سابقة) واختارت خطوط Tahoma.",
+    "أنشأنا calc/pdfgen.py: build_pdf(data) — مولّد عام RTL. يسجل Tahoma/tahomabd.ttf، توابع ar()/num()/money(). الرأس براند + كود + تاريخ، صفوف meta، data['tables'] لقائمة جداول، footer_blocks، note، right_footer.",
+    "views.py: أضفنا _company_name(), _order_calc(o) (calc_batch بنفس opts بتاعة _recalc_order + ValueError لو مفيش items), invoice_pdf(), cutting_pdf().",
+    "urls.py: path('/invoices/<id>/') + path('/cutting/<id>/').",
+    "quotes.html: زرارين '🧾 فاتورة PDF' + '🪚 تقطيع (ورشة)' + JS يحدد الـ href. style.css: .btn-dark.",
+    "smoke_test.py: req_bin() للثنائي + فحص #13b يتحقق أن body يبدأ بـ %PDF-.",
+    "بدأنا السيرفر من جديد (--noreload) وشغلنا smoke: 17/17 PASS."
+  ],
+  "decisions": [
+    "فاتورة العميل PDF فيها التفاصيل كاملة بدون تقطيع",
+    "التقطيع في PDF منفصل للورشة وليس لصفحة العميل",
+    "reportlab + arabic_reshaper + python-bidi للعربي RTL",
+    "خط Tahoma من C:/Windows/Fonts",
+    "wow عرض inline والملف يفتح في المتصفح",
+    "data['tables'] قائمة عشان تقدر تحط أكتر من جدول",
+    "smoke يرصد أول 5 بايت من body تساوي %PDF-",
+    "الأشياء اللي محتاجة إعادة تشغيل السيرفر بعد التعديل"
+  ],
+  "files": [
+    "calc/pdfgen.py (جديد)",
+    "calc/views.py (invoice_pdf + cutting_pdf + _order_calc + _company_name)",
+    "calc/urls.py (مسارين PDF)",
+    "calc/templates/calc/quotes.html (زرارين PDF)",
+    "calc/static/calc/style.css (.btn-dark)",
+    "smoke_test.py (req_bin + فحص PDF)"
+  ],
+  "next": "ربما عرض الفاتورة PDF داخل صفحة العميل اللي بيتسلمها، أو طباعة الفواتير المتعددة، أو إضافة رقم الفاتورة المتسلسل."
+}
