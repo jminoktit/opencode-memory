@@ -1,0 +1,32 @@
+{
+  "session": "2026-08-18_upvc-multi-tenant-login",
+  "title": "إعادة بناء برنامج ورش PVC كمنصة multi-tenant بتسجيل دخول",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "summary": "أعدنا بناء البرنامج كمنصة متعددة المستأجرين: تسجيل دخول لكل ورشة PVC، طلب اشتراك يوافق عليه الأدمن (سنوي)، كتالوج افتراضي يتزرع تلقائيًا لكل ورشة، وبوابات عملاء برابط خاص /w/<slug>/. اتنصّلت أخطاء smoke (متابعة redirects)، وbug الـ dashboard (dicts)، وتزاحم سيرفرين على البورت 8001. النتيجة: 17/17 PASS.",
+  "key_decisions": [
+    "منصة لكل ورش PVC — كل ورشة حسابها وبياناتها المعزولة",
+    "الورشة تعمل طلب اشتراك → الأدمن يوافق/يرفض → الاشتراك سنوي",
+    "إعادة كتابة نظيفة تمامًا بدل الترقيع، DB تبدأ من صفر",
+    "سلغ من الاسم العربي (ترانزلتراشن) + username ws_<slug>",
+    "بوابة /w/<slug>/ لكل ورشة يقدم منها العملاء مقاسات"
+  ],
+  "technical_notes": [
+    "Models: WorkshopRequest + Workshop (slug فريد، owner OneToOne(User)، subscription_expires) — كل النماذج فيها workshop FK، حذف Company نهائيًا",
+    "calc/service.py: create_workshop_from_request + slugify_name + get_workshop + generate_password",
+    "calc/seed_data.py: DEFAULT_PROFILES/COLORS/HARDWARE/GLASS/SHAPES للكتالوج الافتراضي",
+    "seed: admin/admin12345 + ورشة demo/ws_demo/demo1234 + بوابة /w/demo/",
+    "views.py: login/register/admin APIs + @login_required على كل شيء داخلي + public_portal/api_portal_submit",
+    "settings.py: LOGIN_URL='/login/' وحذف PANEL_PASSWORD",
+    "Bug#1: urllib بيعمل follow redirects — أضفنا NoRedirect handler في smoke_test",
+    "Bug#2: api_dashboard كان يعمل sum(s.balance) على dicts — اتصلح لـ s['balance']",
+    "Bug#3: server قديم (Python311/Django4.2) كان بينافس على البورت 8001 (SO_REUSEADDR) → 500/200 عشوائية — قتل كل عمليات runserver والبدء بواحد فقط",
+    "فحص الموافقة بيفشل عند إعادة التشغيل (طلب APPROVED بنفس الاسم) — استخدمنا اسم فريد بوقت مؤقت"
+  ],
+  "commands": [
+    "$env:PYTHONIOENCODING='utf-8'; env\\Scripts\\python.exe manage.py migrate; env\\Scripts\\python.exe manage.py seed",
+    "env\\Scripts\\python.exe smoke_test.py",
+    "Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | ? { $_.CommandLine -like '*runserver*' } | % { Stop-Process -Id $_.ProcessId -Force }",
+    "Start-Process env\\Scripts\\python.exe -ArgumentList 'manage.py runserver 127.0.0.1:8001 --noreload --nothreading' -WorkingDirectory 'C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker'"
+  ]
+}
