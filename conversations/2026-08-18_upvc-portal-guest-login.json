@@ -1,0 +1,28 @@
+{
+  "session": "2026-08-18_upvc-portal-guest-login",
+  "title": "تسجيل كضيف للعملاء في بوابة الورشة",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "summary": "أضفنا حسابات عملاء للبوابة العامة: تسجيل كضيف (اسم/موبايل/باسورد) أو دخول بحساب موجود أو متابعة كضيف بدون حساب — العميل يشوف طلباته وحالتها. النتيجة: 19/19 smoke PASS.",
+  "key_decisions": [
+    "PortalUser نموذج منفصل عن Django User وعن Customer",
+    "كلمة السر مشفرة بـ make_password/check_password",
+    "الطلبات المقدمة وهو مسجل بتترتبط بـ portal_user",
+    "جلسة مستقلة portal_user_id في session",
+    "الاسم/الموبايل بيتخزنوا من الحساب لو مسجل",
+    "أرقام فريدة في smoke بوقت مؤقت عشان الاختبار يتعاد"
+  ],
+  "technical_notes": [
+    "النموذج: PortalUser (name, phone فريد, password, created) + Order.portal_user FK (SET_NULL)",
+    "المسارات: /w/<slug>/register/ + /login/ + /logout/ + /me/ + /submit/",
+    "public_portal بيمرر me_json (name/phone/orders) للقالب",
+    "portal.html: accountBar + مواڈل تسجيل/دخول + لوحة طلباتي (myOrdersPanel)",
+    "فحوص smoke 16 و17: تسجيل → طلب → طلباتي → خروج + دخول بباسورد صحيح/غلط",
+    "19/19 PASS وتعاد بلا مشاكل"
+  ],
+  "commands": [
+    "$env:PYTHONIOENCODING='utf-8'; env\\Scripts\\python.exe manage.py makemigrations calc",
+    "env\\Scripts\\python.exe manage.py migrate; env\\Scripts\\python.exe manage.py seed",
+    "env\\Scripts\\python.exe smoke_test.py"
+  ]
+}
