@@ -14,7 +14,7 @@
               "code": "cd 'C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker' && env\\Scripts\\python.exe manage.py runserver 127.0.0.1:8001\n# seed: env\\Scripts\\python.exe manage.py seed\n# admin: admin / admin12345\n# لوحة الأشكال: كلمة سر upvc123 (panel.html)\n# smoke: env\\Scripts\\python.exe smoke_test.py\n# إعادة الحساب: PUT /api/orders/{id}/ {profit_pct, labor, discount, data:{items:[...]}}",
               "decisions": ["دعم grid وfree في محرك calc_design (bars/openings/cells)", "عمق البروفيل = Profile.width/depth لكل تصنيف", "زجاج دبل = مجموع نوعين مختلفين في glass_ids", "بانل PVC = سعر للم² من Company.panel_price_per_m2", "إعادة حساب المقايسة عند الحفظ: _recalc_order() تولد بنود القطاعات/الزجاج/السلك/المصنعية/الأجهزة من calc_batch", "الإدخال بالمتر: قيم <50 × 1000 تلقائيًا", "سلك دائمًا ضلفتين (عرض=(inner+10)/2)", "محرك الرسم في shapes.html (layoutCells + shapePath لدعم arch/triangle/trapezoid)", "رفع صور الأشكال عبر FormData بـ PANEL_PASSWORD"],
               "session_id": "ses_current",
-              "github_url": ""
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-18_upvc-master-rebuild.json"
             }
           ]
         },
