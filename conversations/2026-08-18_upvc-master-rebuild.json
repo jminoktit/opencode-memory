@@ -1,0 +1,62 @@
+{
+  "date": "2026-08-18",
+  "title": "UPVC Master — إعادة بناء شامل بدون بخار",
+  "project": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "summary": "إعادة بناء برنامج UPVC من الصفر في نفس المكان كـ Django موحد باسم UPVC Master بميزات: رسم أشكال + مقاسات متعددة + تخصيمات/تقطيع + إدارة كتالوج + حسابات/دفعات/مشتريات + لوحة تحكم أشكال + تقرير طباعة. أرشفة المشروعين القديمين في _old/.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What did we do so far?",
+      "session": "start"
+    },
+    {
+      "role": "assistant",
+      "content": "قراءة الذاكرة وتلخيص الوضع: مشروع UBVC Maker فيه مشروعان (Flask كامل + Django Engaze)، المستخدم طلب إعادة بناء من الصفر بعد فهم المشروع."
+    },
+    {
+      "role": "user",
+      "content": "معلومات الطريقة: تقنية؟ موقع؟ ميزات؟"
+    },
+    {
+      "role": "assistant",
+      "content": "استخدام أداة السؤال. الإجابات: Django (موحد)، إعادة بناء في نفس المكان، وكل الميزات مطلوبة (رسم+مقاسات متعددة، مقايسات+تقطيع، إدارة كتالوج، حسابات+مشتريات، لوحة أشكال، تقارير PDF/طباعة)."
+    },
+    {
+      "role": "assistant",
+      "content": "تحليل الواجهات الأمامية عبر explore agent: Flask (design.html محرك canvas grid/free + مكتبة أشكال + undo/zoom/PNG) و Engaze (index/draw/panel.html)."
+    },
+    {
+      "role": "assistant",
+      "content": "البناء: أرشفة القديم في _old/ (Engaze + ملفات Flask)، إنشاء مشروع Django (upvc + calc)، كتابة 12 نموذج موحد، محرك calc/engine.py (calc_batch + cutting_plan + glass_area arch/tri/trap + mesh سلك ضلفتين + panel), views.py (9 صفحات + 28 endpoint), seed.py (شركة ايكو + 6 قطاعات + 4 ألوان + 7 أجهزة + 8 زجاج + 16 شكل), قوالب (base/index/catalog/shapes/quotes/accounts/panel/report), استايل RTL + app.js, migration + seed + superuser(admin/admin12345), start.bat, smoke_test.py."
+    },
+    {
+      "role": "assistant",
+      "content": "الاختبار: كل الصفحات 200، calc API نجح (مقاسات متعددة + تقطيع موحد مع فراميات 6م)، تدفق مقايسة كامل (إنشاء + بنود + دفعة + تقرير + إعادة حساب). smoke_test: 14/14 PASS. رفع صورة shape عبر panel API نجح بـ PANEL_PASSWORD=upvc123. admin وmedia 200."
+    },
+    {
+      "role": "user",
+      "content": "التثبيت والذاكرة",
+    },
+    {
+      "role": "assistant",
+      "content": "حفظ الذاكرة بـ upvc-master-rebuild-django topic + نسخ opencode-memory.json إلى opencode-memory repo على GitHub (jminoktit/opencode-memory)."
+    }
+  ],
+  "code_snippets": {
+    "run": "env\\Scripts\\python.exe manage.py runserver 127.0.0.1:8001",
+    "seed": "env\\Scripts\\python.exe manage.py seed",
+    "admin": "admin / admin12345",
+    "panel_password": "upvc123",
+    "smoke": "env\\Scripts\\python.exe smoke_test.py"
+  },
+  "decisions_made": [
+    "Django موحد في نفس المكان، كل الميزات",
+    "أرشفة القديم في _old/",
+    "عمق البروفيل = Profile.width/depth لكل تصنيف",
+    "زجاج دبل = مجموع نوعين مختلفين في glass_ids",
+    "بانل PVC = سعر للم² من Company.panel_price_per_m2",
+    "سلك دائمًا ضلفتين (عرض=(inner+10)/2)",
+    "إعادة حساب المقايسة عند الحفظ (_recalc_order)",
+    "الإدخال بالمتر: قيم <50 × 1000"
+  ]
+}
