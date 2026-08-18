@@ -14,7 +14,7 @@
               "code": "# views.py landing:\ndef landing(req):\n    if req.user.is_authenticated:\n        return redirect('dashboard')\n    workshops = [{'name': w.name, 'slug': w.slug}\n                 for w in Workshop.objects.filter(subscription_expires__gte=date.today()).order_by('name')]\n    return render(req, 'calc/landing.html', {'workshops': workshops})\n# urls.py:\npath('', views.landing, name='home')\npath('dashboard/', views.dashboard, name='dashboard')\n# ريستارت السيرفر بعد تعديل views/قوالب:\nGet-NetTCPConnection -LocalPort 8001 -State Listen | Select-Object -ExpandProperty OwningProcess -Unique | % { Stop-Process -Id $_ -Force }\nStart-Process env\\Scripts\\python.exe -ArgumentList 'manage.py runserver 127.0.0.1:8001 --noreload'\n# smoke:\n$env:PYTHONIOENCODING='utf-8'; env\\Scripts\\python.exe smoke_test.py",
               "decisions": ["'/' بقت صفحة هبوط عامة تختار الدور، ولو مسجل دخول بتحول للـ dashboard تلقائيًا", "Dashboard انتقلت لمسار /dashboard/ والاسم fetl dashboard محفوظ", "عرض الورش النشطة بس في قايمة العميل (subscription_expires__gte مش active لأنه property)", "لوحة الور\u0634ة: دخول + طلب اشتراك (كلها على /login/)", "لوحة العميل: قايمة باسماء الورش + دخول /w/<slug>/"],
               "session_id": "ses_current",
-              "github_url": ""
+              "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-18_upvc-landing-role-page.json"
             },
             {
               "date": "2026-08-18",
