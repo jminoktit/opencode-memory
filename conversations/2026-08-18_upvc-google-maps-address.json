@@ -1,0 +1,42 @@
+{
+  "title": "تحديد العنوان من خرائط جوجل في بوابة العملاء",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "project": "ubvc-maker",
+  "model": "opencode/deepseek-v4-flash-free",
+  "summary": "أضفنا تحديد العنوان من خرائط جوجل في بوابة العملاء: زر Geolocation + لصق رابط خرائط + معاينة مدمجة + reverse-geocode مجاني، ورفعنا smoke_test ليتأكد من lat/lng (16/16).",
+  "messages": [
+    {
+      "role": "assistant",
+      "summary": "فهمت المطلوب: بدل ما العميل يكتب العنوان في /portal/، يحدده من خرائط جوجل. قرأت models.py وviews.py api_portal_submit وquotes.html لفهم البنية."
+    },
+    {
+      "role": "assistant",
+      "summary": "أضفنا lat/lng FloatField (null=True) على Order في calc/models.py. حدّثنا api_portal_submit في views.py ليقرأ lat/lng من الـ body + _order_to_dict يرجع customer_address وlat وlng."
+    },
+    {
+      "role": "assistant",
+      "summary": "أنشأنا migration 0003_order_lat_order_lng وطبقناها بنجاح."
+    },
+    {
+      "role": "assistant",
+      "summary": "عدّلنا portal.html: زرار 📡 تحديد موقعي + خانة uMapLink للصق رابط خرائط جوجل + زرار عرض + mapBox iframe معاينة (maps.google.com/maps?q=lat,lng&z=16&output=embed&hl=ar). أضفنا JS: parseMapCoords() (regex @lat,lng أو daddr=)، onCoords() بتملأ الخريطة + reverse-geocode مجاني عبر nominatim (بدون key) لملء العنوان."
+    },
+    {
+      "role": "assistant",
+      "summary": "أصلحنا بنية الـ HTML (خطأ في إغلاق grid-2 + زر تحديد الموقع) وsendOrder صار يرسل lat/lng في الـ body."
+    },
+    {
+      "role": "assistant",
+      "summary": "عدّلنا quotes.html: في جدول المقايسات سطر 📍 بالعنوان + لينك 'خريطة ↗' لو فيه إحداثيات، وفي محرر المقايسة eoCustomerAddress. أعدنا تشغيل السيرفر (لأن تعديل templates في --noreload لا يُحمَّل إلا بإعادة التشغيل) وفحصنا JS أصبح portal JS OK + quotes JS OK."
+    },
+    {
+      "role": "assistant",
+      "summary": "اختبرنا submit بـ lat/lng عبر curl من ملف JSON (ترميز utf-8): REQ-0006 علی طابور 30.0444,31.2357 نجح والـ detail رجع الإحداثيات. حدّثنا smoke_test ليتأكد من lat/lng في فحص طلب البوابة: 16 PASS / 16."
+    },
+    {
+      "role": "assistant",
+      "summary": "حفظنا الذاكرة (opencode-memory.json + conversation JSON) وتنبيه للدفع على GitHub."
+    }
+  ]
+}
