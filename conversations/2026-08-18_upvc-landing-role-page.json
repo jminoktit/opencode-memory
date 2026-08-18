@@ -1,0 +1,25 @@
+{
+  "session_id": "ses_current",
+  "title": "الصفحة الرئيسية قبل التسجيل باختيار ورشة/عميل",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "model": "opencode/deepseek-v4-flash-free",
+  "messages": [
+    {
+      "role": "user",
+      "content": "اعمل بقي صفحه رئيسيه قبل التسجيل تخلي المستخدم يختار ورشه ولا عميل و لو ورشه ميظهرش خيارات العميل و لو عميل ميظهرش خيارات الورشه"
+    },
+    {
+      "role": "assistant",
+      "content": "Implemented landing page at '/' with two role cards (ورشة / عميل). Workshop shows only login+subscription options, customer shows only workshop picker+portal link. Moved dashboard to /dashboard/. Updated login redirect and smoke tests. Restarted server (--noreload). Result: 19/19 smoke PASS."
+    }
+  ],
+  "changes": [
+    "views.py: added landing(req) view",
+    "urls.py: '/' -> views.landing (name='home'), dashboard moved to /dashboard/ (name='dashboard')",
+    "calc/templates/calc/landing.html: new landing page with role cards + panels",
+    "login.html: post-login redirect to /dashboard/",
+    "smoke_test.py: tests 1 & 2 updated for landing page + /dashboard/"
+  ],
+  "notes": "active is a property not a DB field - use subscription_expires__gte for filtering. Server runs with --noreload so must be restarted after edits."
+}
