@@ -1,0 +1,55 @@
+{
+  "title": "بوابة عملاء UPVC + إصلاحات localization",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "project": "ubvc-maker",
+  "model": "opencode/deepseek-v4-flash-free",
+  "summary": "أضفنا بوابة عملاء عامة كاملة للبرنامج Django الموحد ثم رفعنا smoke_test من 14 إلى 16/16 PASS.",
+  "messages": [
+    {
+      "role": "system",
+      "summary": "بدأنا جلسة استئناف عن مشروع UPVC Maker (Django موحد مبني حديثًا في UBVC Maker)."
+    },
+    {
+      "role": "assistant",
+      "summary": "عرض ملخص استئنافي: العنوان المطلوب هو إضافة بوابة عملاء عامة — صفحة للعميل يختار الشكل والمقاس ويرسل الطلب. العمل السابق: إعادة بناء Django كاملة + 14/14 smoke. المطلوب: portal view + api_portal_submit + قالب portal.html standalone + عرض الطلبات في المقايسات بحالة request مع زر قبول."
+    },
+    {
+      "role": "user",
+      "summary": "طلب التحديث: متابعة العمل على بوابة العملاء."
+    },
+    {
+      "role": "assistant",
+      "summary": "التحقق من /portal/ على السيرفر الحي أعطى ValueError at /portal/ رغم أن test client أعطى 200 بعد إصلاح s.image."
+    },
+    {
+      "role": "assistant",
+      "summary": "السبب: السيرفر يعمل بـ --noreload فقد كان يحمل نسخة قالب قديمة (قبل إصلاح s.image). أعدنا تشغيل السيرفر فجاء portal: 200 len=19496."
+    },
+    {
+      "role": "assistant",
+      "summary": "فحص JS المصدّر من القالب فشل: GLASS كانت تظهر 150,0 بدل 150.0 بسبب تنسيق الأرقام باللوكال العربي. الحل: serialize البيانات من view عبر json.dumps(ensure_ascii=False) وتمريرها كـ shapes_json / glasses_json إلى القالب بدل حلقات for."
+    },
+    {
+      "role": "assistant",
+      "summary": "عدّلنا calc/views.py فدالة portal() تولد shapes وglasses كقوائم قواميس ثم تمرر JSON safe. وعدّلنا portal.html ليستخدم {{ shapes_json|safe }} و{{ glasses_json|safe }}."
+    },
+    {
+      "role": "assistant",
+      "summary": "أعدنا تشغيل السيرفر: portal 200 + node --check على JS المصدّر => portal JS OK."
+    },
+    {
+      "role": "assistant",
+      "summary": "اختبرنا تدفق الإرسال عبر PowerShell Invoke-WebRequest لكن ترميز PowerShell شوّه العربي (الطلب وصل باسم/هاتف خاطئين). انتقلنا لـ curl عبر ملف JSON مع UTF-8: نجح — طلب سارة نصار 01222233344 أصبح REQ-0004 total 2201.09."
+    },
+    {
+      "role": "assistant",
+      "summary": "أضفنا فحصين إلى smoke_test.py: صفحة بوابة العملاء (t_portal) وطلب بوابة + قبوله (t_portal_submit). أول تشغيل: 14 PASS / 16 — فشل صفحة البوابة لأن اختبارنا بحث عن 'بوابة' والقالب يستخدم 'أطلب شباكك'، وفشل submit لأن PUT للـ status لا يرجع key status في الرد. أصلحنا كليهما."
+    },
+    {
+      "role": "assistant",
+      "summary": "النتيجة النهائية: 16 PASS / 16. حفظنا الذاكرة (opencode-memory.json + conversation JSON) ونشير للدفع إلى GitHub."
+    }
+  ],
+  "conversation_json": "C:\\Users\\Mohammed Elmouge\\opencode-memory\\conversations\\2026-08-18_upvc-customer-portal.json"
+}
