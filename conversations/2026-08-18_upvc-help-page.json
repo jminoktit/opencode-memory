@@ -1,0 +1,25 @@
+{
+  "session_id": "ses_current",
+  "title": "صفحة شرح البرنامج الكامل",
+  "date": "2026-08-18",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "model": "opencode/deepseek-v4-flash-free",
+  "messages": [
+    {
+      "role": "user",
+      "content": "اعمل بقي شرح للبرنامج في صفحه html شرح كل حاجه في البرنامج"
+    },
+    {
+      "role": "assistant",
+      "content": "Created /help/ standalone page explaining the whole app: roles, registration, dashboard, quotes, calc engine, shapes, catalog, accounts, shapes panel, customer portal, PDFs, admin role, and how to run. Added link on landing page. Updated smoke test. 19/19 PASS."
+    }
+  ],
+  "changes": [
+    "calc/templates/calc/help.html: new standalone documentation page (14 sections + sticky TOC)",
+    "views.py: added help_page view (no login required)",
+    "urls.py: path('help/', views.help_page, name='help')",
+    "landing.html: added help link below role cards",
+    "smoke_test.py: test 2 now verifies /help/ returns 200 with content"
+  ],
+  "notes": "First attempt placed the help link inside the .roles CSS grid which would render it as a grid cell - fixed by moving it outside the divs before the script tag. Server runs with --noreload so must restart after edits."
+}
