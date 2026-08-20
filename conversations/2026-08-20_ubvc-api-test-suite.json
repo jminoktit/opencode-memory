@@ -1,0 +1,41 @@
+{
+  "title": "UPVC Master — فحص شامل لـ 20 API + إصلاح أخطاء حقيقية",
+  "date": "2026-08-20",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+  "messages": [
+    {
+      "role": "user",
+      "text": "What did we do so far?"
+    },
+    {
+      "role": "assistant",
+      "text": "راجعنا أرشيف الذاكرة. الجلسة الحالية كانت: فحص API للمشروع الموحد (UPVC Master — django upvc + calc) عبر _check_api.py اللي بيفحص كل الـ endpoints بـ Django test Client، وكان في فشل في تحديث عميل. بدأنا نعلّي الأخطاء بالتسلسل."
+    },
+    {
+      "role": "user",
+      "text": "Continue if you have next steps, or stop and ask for clarification if you are unsure how to proceed."
+    },
+    {
+      "role": "assistant",
+      "text": "أنهيت فحص _check_api.py وإصلاح الأخطاء حتى وصلت النتيجة: 20 OK / 0 FAIL + تأكيد إن كل صفحات البرنامج بترندر 200."
+    }
+  ],
+  "work_summary": {
+    "goal": "فحص شامل لكل API المشروع الموحد + التأكد أن كل الصفحات تترندر وترجّع 200.",
+    "steps": [
+      "قراءة views.py لفهم عقد الـ API الحقيقي (GET/POST/PUT/DELETE) بدل الافتراضات.",
+      "تصحيح _check_api.py حسب العقد الحقيقي: تحديث العملاء/الموردين بـ PUT مش POST، إنشاء طلب بـ data.items مش items، kitchen بـ customer_name مش name، تسجيل بوابة بباسورد إلزامي، /w/demo/me/ بعد تقديم الطلب.",
+      "إصلاح خلل حقيقي: views.py كان بيستخدم HttpResponse بدون استيراده (NameError في kitchen_pdf) — أضفنا الاستيراد.",
+      "إصلاح دالة portal() لتستخدم أرقام موبايل وأسماء فريدة (random/time) عشان الـ DB بتفضل ثابتة بين الـ runs.",
+      "تأكيد أن كل الصفحات المرتبطة في base.html ترند 200 والتغييرات تصلح لمدى تكرارية العملية."
+    ],
+    "result": "_check_api.py: 20 OK / 0 FAIL. كل الصفحات (/dashboard /catalog /quotes /accounts /panel /shapes /design /kcatalog /kitchens /help /w/demo/) تعيد 200.",
+    "real_bug_fixed": "calc/views.py — استيراد HttpResponse مفقود كان بيودي NameError في kitchen_pdf. أضفنا: from django.http import HttpResponse, JsonResponse",
+    "learnings": [
+      "عقد الـ API الحقيقي: تحديثات customers/suppliers/orders بـ PUT، items بتتحدد جوه data.items، designs بـ POST مع did=update.",
+      "formula_API بينتج إن items جوه data, وأن kitchen_status الافتراضي quote.",
+      "_check_api.py يعاد تشغيله على نفس DB فيلزم أرقام/أسماء فريدة لكل run.",
+      "/w/demo/me/ بيحسب الـ orders بـ orders__workshop=ws فلازم الطلب يبقى موجود قبل مراجعة الاسم."
+    ]
+  }
+}

@@ -85,6 +85,16 @@
               "decisions": ["فاتورة العميل PDF كل التفاصيل بدون تقطيع + تقطيع PDF منفصل للورشة", "reportlab + arabic_reshaper + python-bidi لـ RTL في PDF", "خط Tahoma للعربي في reportlab", "العرض inline مش attachment عشان يفتح في المتصفح", "data['tables'] في build_pdf عشان أكتر من جدول في صفحة واحدة", "_order_calc يعيد نفس opts بتاعة _recalc_order", "smoke_test بفحص أن أول 5 بايتات من الـ body هي %PDF-"],
               "session_id": "ses_current",
               "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-18_upvc-pdf-invoice-cutting.json"
+            },
+            {
+              "date": "2026-08-20",
+              "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+              "summary": "فحص شامل لكل API المشروع الموحد (UPVC Master) عبر _check_api.py بـ Django test Client + إصلاح خلل حقيقي. النتيجة: 20 OK / 0 FAIL + كل الصفحات بترندر 200.",
+              "details": "افترضت العقد الخاطئ في أول فحص: عمليات التحديث (customers/suppliers/orders) في المشروع بـ PUT/PATCH مش POST؛ items بتتحدد جوه data.items (data=d.get('data', {})) مش items على السطح؛ kitchen الليست بتصيف customer_name مش name (POST بترفض الـ name بتاع المطبخ، بتاخد customer_name فقط)؛ حقل status الافتراضي للـ Kitchen بيتولد quote. بوابة العملاء: التغطية — api_portal_register بيطلب password إجباري (≥4 حروف)، وبيبعت الـ response {ok, name} من غير توليد password، وapi_portal_me بيحسب الـ orders عبر orders__workshop=ws فلازم يكون في طلب مرسل قبل ما الاسم يظهر ليان (لأنه الفلتر بين السيرة د/يا ولو مفيش طلبات بيرجع name صفر). الاستمرارية fine مع DB ثابتة: الـ homes/في نفس الـ second بيجيب 400 'يوجد طلب بنفس الاسم' والأرقام الفريدة لا بد منها. خلل حقيقي عُثر عليه وأُصلِح: calc/views.py كان بيستخدم HttpResponse في kitchen_pdf من غير استيراد (NameError: name 'HttpResponse' is not defined) — أضفنا from django.http import HttpResponse, JsonResponse. الصفحات المكشوفة في base.html (/dashboard /quotes /shapes /design /catalog /accounts /panel /kitchens /kcatalog) + /help + /w/demo/ كلها 200.",
+              "code": "env\\Scripts\\python.exe _check_api.py\n# الخلل المصلح في views.py:\nfrom django.http import HttpResponse, JsonResponse",
+              "decisions": ["عقود API الحقيقية تعتمد على توقيع الطلبات الحالية: updates بـ PUT، items جوه data، kitchen الليست بـ customer_name", "اختبارات API تعمل على نفس sqlite فالنماذج الفريدة (random) ضرورية للدورات المتكررة", "التأكد من render الصفحات بجانب الـ API tests (لأن القوالب ممكن تكون 404 بدون ربط في urls)"],
+              "session_id": "ses_current",
+              "github_url": ""
             }
           ]
         },
