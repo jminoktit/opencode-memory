@@ -1,0 +1,13 @@
+﻿{
+    "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\UBVC Maker",
+    "steps":  [
+                  "تحقق من الميزة كاملة (models/engine/views/templates/seed)",
+                  "اكتشاف فشل فحص تعديل مقياس مطبخ",
+                  "إصلاح update_fields في _recalc_kitchen",
+                  "إعادة تشغيل السيرفر + 26/26 PASS"
+              ],
+    "session":  "ses_current",
+    "date":  "2026-08-20",
+    "summary":  "المطابخ مبنية سابقاً — تحقق + إصلاح خلل تعديل المقياس",
+    "title":  "upvc-kitchens-verify-fix"
+}
