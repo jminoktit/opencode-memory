@@ -1,0 +1,19 @@
+﻿{
+    "date":  "2026-08-22",
+    "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+    "title":  "زرار السلايدز من صفحة التحضير",
+    "messages":  [
+                     {
+                         "role":  "user",
+                         "content":  "اعمل زرار يودي علي صفحة الاسلايدز من صفحه التحضير"
+                     },
+                     {
+                         "role":  "assistant",
+                         "content":  "اتضاف زرار عائم \u0027📽️ عرض السلايدز\u0027 في index.html (تحت يمين الشاشة) يفتح slides.html للموضوع الحالي اللي بيتعرض."
+                     }
+                 ],
+    "decisions":  [
+                      "زرار ديناميكي لكل موضوع مش لينك ثابت",
+                      "bottom-right عشان rec-btn واخد bottom-left"
+                  ]
+}
