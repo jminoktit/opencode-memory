@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-22",
+  "directory": "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+  "title": "تحضير اسكربت الحلقة 2 - Variables",
+  "messages": [
+    {
+      "role": "user",
+      "content": "عاوزين نحضر الاسكربت التاني"
+    },
+    {
+      "role": "assistant",
+      "content": "حضرنا اسكربت الحلقة 2 عن Variables (let/const/var) في topics/js-video2.json بنفس هيكل الحلقة 1: meta (video/title/duration/audience/goal/prep) + 9 مشاهد بأوقاتها وكلام المقدم وcode وvisual وnote. المشاهد: مقدمة، يعني إيه Variable (تشبيه العلبة)، let، const (+ نقطة إن الأوبجكت محتاجه قابل للتغيير)، مشكلة var وHoisting بشكل مبدئي، قواعد التسمية camelCase، مثال عداد عملي، معادلة ختامية، وخلاصة بتشوّق للحلقة 3 عن Data Types."
+    },
+    {
+      "role": "assistant",
+      "content": "اتضاف تبويب 'اسكربت الحلقة 2' في data.json بلون #0ea5e9. اتأكدنا: JSON سليم (9 مشاهد)، data.json سليم، وكل الروابط 200 على السيرفر المحلي."
+    }
+  ],
+  "decisions": [
+    "الحلقة 2 = Variables عشان كده التشويق اللي آخر الحلقة 1",
+    "const: أكدنا النقطة الدقيقة — إعادة الإسناد ممنوعة لكن محتوى الأوبجكت قابل للتغيير",
+    "var: شرح مبدئي بس + تأجيل Hoisting التفصيلي لحلقة Advanced",
+    "قاعدة عملية للطلاب: const افتراضيًا وlet لو هتغير",
+    "تشويق آخر الحلقة 2 → Data Types (الحلقة 3)"
+  ],
+  "github_url": "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-22_episode2-script.json"
+}
