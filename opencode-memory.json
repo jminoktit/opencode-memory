@@ -539,6 +539,16 @@
                                                                                                                                                                          "حقل slides اختياري في data.json = اسم الديك المستقل",
                                                                                                                                                                          "Fallback للتلقائي لو الموضوع ملوش ديك"
                                                                                                                                                                      ]
+                                                                                                                                                   },
+                                                                                                                                                   {
+                                                                                                                                                       "date":  "2026-08-22",
+                                                                                                                                                       "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+                                                                                                                                                       "summary":  "الزرار كان لسه بيفتح الرابط القديم رغم إن الكود سليم — السبب كاش المتصفح لـ data.json القديمة. اتضاف cache: no-store لكل fetch في index.html و slides.html.",
+                                                                                                                                                       "details":  "بايثون http.server مبعتش Cache-Control فالمتصفح بيستخدم heuristic caching ويقدم نسخ قديمة من data.json وindex.html. الحل الدائم: fetch(url, { cache: no-store }) في loadJSON في index.html وفي init في slides.html. وللمرة دي واحدة: Ctrl+Shift+R (Hard Refresh).",
+                                                                                                                                                       "code":  "const r = await fetch(url, { cache: \"no-store\" });",
+                                                                                                                                                       "decisions":  [
+                                                                                                                                                                         "no-store دايمًا لأن ده سيرفر تطوير محلي"
+                                                                                                                                                                     ]
                                                                                                                                                    }
                                                                                                                                                ]
                                                                                                                                },

@@ -1,0 +1,18 @@
+﻿{
+    "date":  "2026-08-22",
+    "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+    "title":  "إصلاح كاش المتصفح مع زرار السلايدز",
+    "messages":  [
+                     {
+                         "role":  "user",
+                         "content":  "مش بيفتح علي الصفحه الصح برضو"
+                     },
+                     {
+                         "role":  "assistant",
+                         "content":  "الزرار كان لسه بيفتح الرابط القديم رغم إن الكود سليم — السبب كاش المتصفح لـ data.json القديمة. اتضاف cache: no-store لكل fetch في index.html و slides.html."
+                     }
+                 ],
+    "decisions":  [
+                      "no-store دايمًا لأن ده سيرفر تطوير محلي"
+                  ]
+}
