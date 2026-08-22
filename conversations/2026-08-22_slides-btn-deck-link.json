@@ -1,0 +1,19 @@
+﻿{
+    "date":  "2026-08-22",
+    "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+    "title":  "تصحيح رابط زرار السلايدز للديك المستقل",
+    "messages":  [
+                     {
+                         "role":  "user",
+                         "content":  "http://localhost:8000/slides.html?file=topics%2Fjs-video2 مش المفروض الرابط ده يتغير"
+                     },
+                     {
+                         "role":  "assistant",
+                         "content":  "صحّحنا رابط زرار السلايدز: بعد فصل الديكس عن الاسكربتات، الزرار كان لسه بيفتح التحويل التلقائي (slides.html?file=topics/js-video2) بدل الديك المستقل. اتضاف حقل slides في data.json لكل topic بيشاور على اسم الديك."
+                     }
+                 ],
+    "decisions":  [
+                      "حقل slides اختياري في data.json = اسم الديك المستقل",
+                      "Fallback للتلقائي لو الموضوع ملوش ديك"
+                  ]
+}
