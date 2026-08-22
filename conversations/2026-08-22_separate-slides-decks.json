@@ -1,0 +1,19 @@
+﻿{
+    "date":  "2026-08-22",
+    "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+    "title":  "فصل السلايدز عن الاسكربتات - ديك episode2 مستقل",
+    "messages":  [
+                     {
+                         "role":  "user",
+                         "content":  "لا انا عاوز ده منفصل عن ده اعمل بقي الاسلايد بتاع الحلقتين و ضيف ده في الذاكره عندك"
+                     },
+                     {
+                         "role":  "assistant",
+                         "content":  "اتأكدنا إن slides/episode1.json موجود كديك مستقل (10 سلايدز)، وعملنا slides/episode2.json بنفس الشكل والجودة: deck بلون #0ea5e9 + 10 سلايدز مصاغة يدويًا (مش توليد آلي من الاسكربت) — عنوان، يعني إيه Variable، let، const، const مع الأوبجكت، مشكلة var، قواعد التسمية، عداد عملي، معادلة، خلاصة. كل ديك له notes للمقدم."
+                     }
+                 ],
+    "decisions":  [
+                      "قرار معماري: الاسكربت (topics/js-videoN.json) للتحضير في index.html — والسلايدز (slides/episodeN.json) ملفات مستقلة للعرض، مش تحويل تلقائي",
+                      "الديك بيتكتب يدويًا بجودة أعلى: صياغة مختصرة للشاشة + notes + note blocks"
+                  ]
+}

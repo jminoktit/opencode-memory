@@ -377,6 +377,18 @@
                                                                                                                                                            ],
                                                                                                                                              "session_id":  "ses_current",
                                                                                                                                              "github_url":  "https://github.com/jminoktit/opencode-memory/blob/main/conversations/2026-08-15_video-script-episode1.json"
+                                                                                                                                         },
+                                                                                                                                         {
+                                                                                                                                             "date":  "2026-08-22",
+                                                                                                                                             "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+                                                                                                                                             "summary":  "فصلنا السلايدز عن الاسكربتات: slides/episode1.json كان موجود بالفعل كديك مستقل (10 سلايدز)، واعملنا slides/episode2.json بنفس الشكل — deck (#0ea5e9) + 10 سلايدز مصاغة يدويًا مع notes.",
+                                                                                                                                             "details":  "القرار: topics/js-videoN.json = اسكربت التحضير في index.html. slides/episodeN.json = سلايدز العرض المستقلة في slides.html?file=episodeN — بتتكتب يدويًا بصياغة مختصرة مناسبة للشاشة مش نسخة من الاسكربت. episode2 محتواه: عنوان، يعني إيه Variable، let، const، const مع الأوبجكت (نقطة إعادة الإسناد vs المحتوى)، مشكلة var، قواعد التسمية camelCase، مثال العداد، المعادلة الختامية (let/const/var)، خلاصة بتشوّق لـ Data Types. التحقق: JSON سليم 10 سلايدز + الروابط 200.",
+                                                                                                                                             "code":  "العرض: slides.html?file=episode1 و slides.html?file=episode2",
+                                                                                                                                             "decisions":  [
+                                                                                                                                                               "سلايدز الحلقات = ملفات slides/episodeN.json مستقلة يدوية",
+                                                                                                                                                               "مافيش تحويل تلقائي للحلقات — topicToSlides فضلت موجودة كخيار إضافي بس"
+                                                                                                                                                           ],
+                                                                                                                                             "github_url":  ""
                                                                                                                                          }
                                                                                                                                      ]
                                                                                                                      },
