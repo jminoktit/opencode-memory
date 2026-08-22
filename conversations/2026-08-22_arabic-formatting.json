@@ -1,0 +1,19 @@
+﻿{
+    "date":  "2026-08-22",
+    "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+    "title":  "تعريب تنسيق السلايدز",
+    "messages":  [
+                     {
+                         "role":  "user",
+                         "content":  "اعمل التنسيق بالعربي"
+                     },
+                     {
+                         "role":  "assistant",
+                         "content":  "تعريب التنسيق: عناوين الحلقة 2 بقت تبدأ بكلمة عربية (المتغيرات — let و const و var / يعني إيه المتغير؟) في topics/js-video2.json و slides/episode2.json، وإصلاح bug في slides.html: padding نقط القوايم كان على الشمال والنقطة على اليمين فبتتغط على النص — اتصلحت لـ padding-right."
+                     }
+                 ],
+    "decisions":  [
+                      "العناوين عربي أولًا + المصطلحات التقنية بالإنجليزي",
+                      "إصلاح دائم لنقط القوايم في العارض"
+                  ]
+}

@@ -517,6 +517,17 @@
                                                                                                                                                                          "bottom-right عشان rec-btn واخد bottom-left"
                                                                                                                                                                      ],
                                                                                                                                                        "github_url":  ""
+                                                                                                                                                   },
+                                                                                                                                                   {
+                                                                                                                                                       "date":  "2026-08-22",
+                                                                                                                                                       "directory":  "C:\\Users\\Mohammed Elmouge\\Desktop\\courses\\scripts",
+                                                                                                                                                       "summary":  "تعريب التنسيق: عناوين الحلقة 2 بقت تبدأ بكلمة عربية (المتغيرات — let و const و var / يعني إيه المتغير؟) في topics/js-video2.json و slides/episode2.json، وإصلاح bug في slides.html: padding نقط القوايم كان على الشمال والنقطة على اليمين فبتتغط على النص — اتصلحت لـ padding-right.",
+                                                                                                                                                       "details":  "القاعدة المعتمدة: العناوين تبدأ بكلمة عربية (أحسن للـ bidi)، وكلمات الكود (let/const/var/Engine) تفضل إنجليزي لأنها مصطلحات تقنية. إصلاح CSS: .slide ul li padding: 10px 28px 10px 0 (physical right) عشان النقطة absolute right:0 في dir=rtl.",
+                                                                                                                                                       "code":  ".slide ul li { padding: 10px 28px 10px 0; } /* RTL bullet fix */",
+                                                                                                                                                       "decisions":  [
+                                                                                                                                                                         "العناوين عربي أولًا + المصطلحات التقنية بالإنجليزي",
+                                                                                                                                                                         "إصلاح دائم لنقط القوايم في العارض"
+                                                                                                                                                                     ]
                                                                                                                                                    }
                                                                                                                                                ]
                                                                                                                                },
